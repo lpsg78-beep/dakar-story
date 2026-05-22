@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>306 &middot; Dakar 2026 &middot; The Story of Car #306</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=JetBrains+Mono:wght@400;600&display=swap');
+
+  :root {
+    --bg: #0a0a0c;
+    --bg-card: #111114;
+    --text: #e8e6e1;
+    --text-muted: #8a8780;
+    --accent: #e8651a;
+    --accent-glow: rgba(232, 101, 26, 0.15);
+    --gold: #c9a84c;
+    --border: #222228;
+    --display: 'Bebas Neue', Impact, sans-serif;
+    --sans: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; scrollbar-width: thin; scrollbar-color: var(--accent) var(--bg); }
+
+  body {
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 18px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── TOP NAV (stages) ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(10,10,12,0.9);
+    backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-inner {
+    max-width: 1200px; margin: 0 auto; padding: 0 24px;
+    display: flex; align-items: center; height: 52px; gap: 4px;
+    overflow-x: auto; scrollbar-width: none;
+  }
+  .nav-inner::-webkit-scrollbar { display: none; }
+  .nav-brand {
+    font-family: var(--mono); font-weight: 600; font-size: 14px;
+    color: var(--accent); white-space: nowrap; margin-right: 12px; letter-spacing: 1px;
+    cursor: pointer;
+  }
+  .nav-link {
+    font-family: var(--sans); font-size: 13px; font-weight: 600;
+    color: var(--text-muted); text-decoration: none;
+    padding: 6px 10px; border-radius: 6px; white-space: nowrap;
+    transition: all 0.2s; cursor: pointer; letter-spacing: 0.3px;
+  }
+  .nav-link:hover { color: var(--text); background: rgba(255,255,255,0.05); }
+  .nav-link.active { color: var(--accent); background: var(--accent-glow); }
+
+  /* ── PAGE CONTAINER ── */
+  .page { display: none; padding-top: 52px; min-height: 100vh; }
+  .page.active { display: block; }
+
+  /* ── PAGE HEADER ── */
+  .page-header {
+    max-width: 900px; margin: 0 auto; padding: 48px 24px 0;
+  }
+  .page-tag {
+    font-family: var(--mono); font-size: 12px; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--accent); margin-bottom: 12px;
+  }
+  .page-title {
+    font-family: var(--display); font-size: clamp(32px, 5vw, 56px);
+    font-weight: 400; line-height: 1.1; margin-bottom: 16px;
+    letter-spacing: 1.5px; text-transform: uppercase;
+  }
+  .page-meta {
+    display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px;
+  }
+  .page-meta-badge {
+    font-family: var(--mono); font-size: 11px; letter-spacing: 1px;
+    color: var(--text-muted); padding: 4px 12px;
+    border: 1px solid var(--border); border-radius: 4px;
+  }
+  .page-meta-badge.highlight {
+    color: var(--accent); border-color: var(--accent); background: var(--accent-glow);
+  }
+
+  /* ── TABS ── */
+  .tabs-bar {
+    max-width: 900px; margin: 32px auto 0; padding: 0 24px;
+    display: flex; gap: 0; border-bottom: 1px solid var(--border);
+  }
+  .tab-btn {
+    font-family: var(--mono); font-size: 12px; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--text-muted);
+    padding: 12px 24px; cursor: pointer; border: none; background: none;
+    border-bottom: 2px solid transparent; transition: all 0.2s;
+  }
+  .tab-btn:hover { color: var(--text); }
+  .tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+  .tab-content { display: none; }
+  .tab-content.active { display: block; }
+
+  /* ── STORY TAB ── */
+  .story-content {
+    max-width: 900px; margin: 0 auto; padding: 40px 24px 60px;
+  }
+  .story-content p { margin-bottom: 20px; line-height: 1.8; }
+  .highlight-block {
+  }
+  .highlight-block p { margin-bottom: 0; }
+  .highlight-block p + p { margin-top: 12px; }
+
+  /* ── RESULTS TAB ── */
+  .results-content {
+    max-width: 900px; margin: 0 auto; padding: 40px 24px 60px;
+  }
+  .result-box {
+    display: flex; align-items: center; gap: 32px; padding: 24px 32px;
+    margin: 0 0 36px; background: var(--bg-card);
+    border: 1px solid var(--border); border-radius: 12px; flex-wrap: wrap;
+  }
+  .result-item { text-align: center; }
+  .result-value {
+    font-family: var(--mono); font-size: 32px; font-weight: 600;
+    color: var(--accent); line-height: 1;
+  }
+  .result-label {
+    font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--text-muted); margin-top: 6px;
+  }
+  .result-note {
+    font-size: 13px; color: var(--text-muted); font-style: italic;
+    flex: 1; min-width: 200px;
+  }
+  .standings-title {
+    font-family: var(--mono); font-size: 11px; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--accent);
+    text-align: center; margin-top: 32px; margin-bottom: 8px;
+  }
+  .standings-wrapper {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin: 24px 0;
+  }
+  .standings-table {
+    width: 100%; border-collapse: collapse; font-size: 14px;
+  }
+  .standings-table th {
+    font-family: var(--mono); font-size: 10px; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--text-muted); text-align: left;
+    padding: 12px 16px; border-bottom: 1px solid var(--border);
+  }
+  .standings-table td {
+    padding: 12px 16px; border-bottom: 1px solid var(--border);
+  }
+  .standings-table .our-team td { color: var(--accent); font-weight: 600; }
+  .standings-table .spacer-row td {
+    border-bottom: none; padding: 4px 16px; color: var(--text-muted);
+  }
+
+  /* ── RACE RECORD ── */
+  .race-record-table { overflow-x: auto; }
+  .race-record { font-size: 13px; }
+  .race-record th { font-size: 9px; padding: 10px 12px; white-space: nowrap; }
+  .race-record td { padding: 10px 12px; white-space: nowrap; }
+  .race-record .rest-row td {
+    text-align: center; color: var(--text-muted); font-style: italic;
+    border-bottom: 1px solid var(--border); padding: 8px 12px; font-size: 12px;
+  }
+  .race-record .final-pos { font-weight: 700; }
+  .record-summary { text-align: center; }
+  @media (max-width: 600px) {
+    .race-record { font-size: 11px; }
+    .race-record th, .race-record td { padding: 8px 6px; }
+  }
+
+  /* ── JOURNEY TAB ── */
+  .journey-content {
+    max-width: 1000px; margin: 0 auto; padding: 40px 24px 60px;
+  }
+  .journey-section { margin-bottom: 3rem; }
+  .journey-title {
+    font-family: var(--heading); font-size: 24px; color: var(--accent);
+    text-transform: uppercase; letter-spacing: 2px; text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  .journey-table { font-size: 13px; }
+  .journey-table th { font-size: 9px; padding: 10px 10px; white-space: nowrap; }
+  .journey-table td { padding: 10px 10px; }
+  .journey-table .section-row td {
+    color: var(--accent); font-weight: 700; font-size: 12px;
+    font-family: var(--mono); letter-spacing: 1px;
+    border-bottom: 1px solid var(--accent); padding: 14px 10px 8px;
+    background: rgba(232,101,26,0.05);
+  }
+  .journey-table .event-name { font-weight: 600; white-space: nowrap; }
+  .journey-table .cat-col { color: var(--accent); font-weight: 600; }
+  .journey-table .dnf { color: #e85a5a; }
+  .journey-table .dnf-row { opacity: 0.7; }
+  .journey-footer {
+    text-align: center; font-style: italic; color: var(--text-muted);
+    margin-top: 1.5rem; font-size: 14px;
+  }
+  .numbers-block {
+    text-align: center; font-size: 15px; line-height: 2;
+    color: var(--text-muted); font-style: italic;
+  }
+  .numbers-block p { margin: 0.3rem 0; }
+  @media (max-width: 700px) {
+    .journey-table { font-size: 11px; }
+    .journey-table th, .journey-table td { padding: 8px 5px; }
+    .journey-table .event-name { white-space: normal; }
+  }
+
+  /* ── PHOTOS TAB ── */
+  .photos-content {
+    max-width: 1200px; margin: 0 auto; padding: 40px 24px 60px;
+  }
+  .photos-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 8px;
+  }
+  .photos-grid .photo-item {
+    position: relative; overflow: hidden; border-radius: 8px;
+    cursor: pointer; aspect-ratio: 3/2;
+  }
+  .photos-grid .photo-item img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform 0.5s ease;
+  }
+  .photos-grid .photo-item:hover img { transform: scale(1.03); }
+
+  /* ── INLINE STORY PHOTOS ── */
+  .story-photo {
+    margin: 32px 0;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .story-photo img {
+    width: 100%;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+  .story-photo:hover img { transform: scale(1.02); }
+
+  /* ── LIGHTBOX ── */
+  .lightbox {
+    display: none; position: fixed; inset: 0; z-index: 200;
+    background: rgba(0,0,0,0.95); justify-content: center;
+    align-items: center; cursor: zoom-out;
+  }
+  .lightbox.open { display: flex; }
+  .lightbox img {
+    max-width: 95vw; max-height: 95vh; object-fit: contain; border-radius: 4px;
+  }
+  .lightbox-close {
+    position: absolute; top: 20px; right: 24px; background: none;
+    border: none; color: white; font-size: 32px; cursor: pointer;
+    padding: 8px; line-height: 1;
+  }
+  .lightbox-nav {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
+    color: white; font-size: 48px; line-height: 1; padding: 8px 16px;
+    cursor: pointer; border-radius: 8px; transition: background 0.2s; z-index: 10;
+  }
+  .lightbox-nav:hover { background: rgba(255,255,255,0.25); }
+  .lightbox-prev { left: 16px; }
+  .lightbox-next { right: 16px; }
+  .lightbox-counter {
+    position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);
+    font-family: var(--mono); font-size: 13px; color: rgba(255,255,255,0.5);
+    letter-spacing: 1px;
+  }
+
+  /* ── PAGE NAV (prev/next) ── */
+  .page-nav {
+    max-width: 900px; margin: 0 auto; padding: 40px 24px 80px;
+    display: flex; justify-content: space-between; gap: 16px;
+  }
+  .page-nav-btn {
+    font-family: var(--mono); font-size: 12px; letter-spacing: 1px;
+    color: var(--text-muted); padding: 12px 24px;
+    border: 1px solid var(--border); border-radius: 8px; cursor: pointer;
+    background: none; transition: all 0.2s; text-transform: uppercase;
+  }
+  .page-nav-btn:hover { color: var(--accent); border-color: var(--accent); }
+  .page-nav-btn.hidden { visibility: hidden; }
+
+  /* ── HERO (landing) ── */
+  .hero-page {
+    min-height: 100vh; display: flex; flex-direction: column;
+    justify-content: center; align-items: center; text-align: center;
+    padding: 80px 24px; position: relative; overflow: hidden;
+  }
+  .hero-page::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 100%, rgba(42,108,182,0.08) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .hero-number {
+    font-family: var(--mono); font-size: clamp(80px, 15vw, 200px);
+    font-weight: 600; color: var(--accent); line-height: 1; opacity: 0.15;
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+  .hero-content { position: relative; z-index: 1; max-width: 800px; }
+  .hero-tag {
+    font-family: var(--mono); font-size: 11px; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--accent); margin-bottom: 24px;
+  }
+  .hero-content h1 {
+    font-family: var(--display); font-size: clamp(40px, 8vw, 80px);
+    font-weight: 400; line-height: 1.05; margin-bottom: 24px;
+    letter-spacing: 2px; text-transform: uppercase;
+  }
+  .hero-subtitle {
+    font-size: 18px; font-weight: 300; color: var(--text-muted);
+    max-width: 600px; margin: 0 auto 40px; line-height: 1.6;
+  }
+  .hero-meta {
+    display: flex; flex-wrap: wrap; justify-content: center;
+    gap: 16px; margin-bottom: 40px;
+  }
+  .hero-meta-item {
+    font-family: var(--mono); font-size: 11px; letter-spacing: 1px;
+    color: var(--text-muted); padding: 6px 14px;
+    border: 1px solid var(--border); border-radius: 20px;
+  }
+  .hero-stats {
+    display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;
+    margin-bottom: 48px;
+  }
+  .hero-stat { text-align: center; }
+  .hero-stat-value {
+    font-family: var(--mono); font-size: 28px; font-weight: 600;
+    color: var(--accent);
+  }
+  .hero-stat-label {
+    font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--text-muted); margin-top: 4px;
+  }
+  .hero-start-btn {
+    font-family: var(--mono); font-size: 13px; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--accent);
+    padding: 14px 40px; border: 1px solid var(--accent);
+    border-radius: 8px; cursor: pointer; background: none;
+    transition: all 0.3s;
+  }
+  .hero-start-btn:hover { background: var(--accent-glow); }
+
+  /* ── CAREER TABLE ── */
+  .career-table {
+    width: 100%; border-collapse: collapse; font-size: 13px;
+  }
+  .career-table th {
+    font-family: var(--mono); font-size: 10px; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--text-muted); text-align: left;
+    padding: 10px 12px; border-bottom: 1px solid var(--border);
+  }
+  .career-table td {
+    padding: 10px 12px; border-bottom: 1px solid var(--border);
+  }
+  .career-table tr:hover td { background: rgba(255,255,255,0.02); }
+  .career-table .year-header td { color: var(--accent); font-weight: 600; border-bottom: none; padding-top: 20px; }
+  .career-table .dnf { color: #e05252; }
+  .career-table .result-cat { color: var(--accent); font-weight: 600; }
+
+  /* ── FOOTER ── */
+  footer {
+    text-align: center; padding: 40px 24px; border-top: 1px solid var(--border);
+    font-family: var(--mono); font-size: 11px; letter-spacing: 2px; color: var(--text-muted);
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .standings-wrapper { grid-template-columns: 1fr; }
+    .photos-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+    .result-box { padding: 20px; gap: 20px; }
+    .hero-stats { gap: 24px; }
+    .standings-table { font-size: 12px; }
+    .standings-table th, .standings-table td { padding: 10px 8px; }
+    .nav-brand { margin-right: 8px; }
+    .tab-btn { padding: 12px 16px; font-size: 11px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner" id="nav-inner">
+    <span class="nav-brand" onclick="goTo(0)">#306</span>
+  </div>
+</nav>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="onLightboxClick(event)">
+  <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+  <button class="lightbox-nav lightbox-prev" onclick="navigateLightbox(-1)">&#8249;</button>
+  <img id="lightbox-img" src="" alt="">
+  <button class="lightbox-nav lightbox-next" onclick="navigateLightbox(1)">&#8250;</button>
+  <div class="lightbox-counter" id="lightbox-counter"></div>
+</div>
+
+<!-- ALL PAGES RENDERED BY JS -->
+<div id="app"></div>
+
+<footer>
+  Car #306 &middot; Pedro Gon&ccedil;alves / Hugo Magalh&atilde;es &middot;
+  BBR Motorsport &middot; Taurus T3 Max &middot; Dakar 2026
+</footer>
+
+<script>
+// ── PHOTO DATA ──
+const PHOTOS = {
+"Prologue":["Dakar_2025_002.jpg","H2_Dakar_2025_001.jpg","AbuDhabi_2025_001.jpg","CartaRallye_001.jpg","Personal_2025-12-28_023.jpg","H3_Personal_2025-12-28_081.jpg","H1_Portalegre_2023_002.jpg","RRPortugal_2024_001.jpg"],
+"2026-01-01":["Edophoto_2026-01-01_001.jpg","Edophoto_2026-01-01_002.jpg","Edophoto_2026-01-01_003.jpg","Edophoto_2026-01-01_004.jpg","Edophoto_2026-01-01_005.jpg","Edophoto_2026-01-01_006.jpg","MCH_Photography_2026-01-01_001.jpg","MCH_Photography_2026-01-01_002.jpg","H1_MCH_Photography_2026-01-01_003.jpg"],
+"2026-01-02":["Edophoto_2026-01-02_001.jpg","H2_Edophoto_2026-01-02_002.jpg","Edophoto_2026-01-02_003.jpg","Edophoto_2026-01-02_004.jpg","Edophoto_2026-01-02_005.jpg","Edophoto_2026-01-02_006.jpg","Edophoto_2026-01-02_007.jpg","Edophoto_2026-01-02_009.jpg","Edophoto_2026-01-02_010.jpg","Edophoto_2026-01-02_011.jpg","Edophoto_2026-01-02_012.jpg","Edophoto_2026-01-02_013.jpg","Edophoto_2026-01-02_014.jpg","Edophoto_2026-01-02_015.jpg","Edophoto_2026-01-02_016.jpg"],
+"2026-01-03":["Edophoto_2026-01-03_001.jpg","Edophoto_2026-01-03_002.jpg","Edophoto_2026-01-03_003.jpg","Edophoto_2026-01-03_004.jpg","Edophoto_2026-01-03_005.jpg","MCH_Photography_2026-01-03_001.jpg","MCH_Photography_2026-01-03_002.jpg","Edophoto_2026-01-03_006.jpg","Edophoto_2026-01-03_007.jpg","H1_Edophoto_2026-01-03_008.jpg","Edophoto_2026-01-03_009.jpg","Edophoto_2026-01-03_010.jpg","MCH_Photography_2026-01-03_003.jpg","H3_Edophoto_2026-01-03_016.jpg.jpg","Edophoto_2026-01-03_011.jpg","Edophoto_2026-01-03_012.jpg","H2_Edophoto_2026-01-03_013.jpg","Edophoto_2026-01-03_014.jpg","Edophoto_2026-01-03_015.jpg","MCH_Photography_2026-01-03_005.jpg","Edophoto_2026-01-03_017.jpg","H4_Edophoto_2026-01-03_016.jpg"],
+"2026-01-04":["MCH_Photography_2026-01-04_001.jpg","MCH_Photography_2026-01-04_004.jpg","Edophoto_2026-01-04_004.jpg","Edophoto_2026-01-04_005.jpg","MCH_Photography_2026-01-04_002.jpg","MCH_Photography_2026-01-04_003.jpg","Edophoto_2026-01-04_001.jpg","Edophoto_2026-01-04_002.jpg","Edophoto_2026-01-04_003.jpg"],
+"2026-01-05":["Edophoto_2026-01-05_009.jpg","Edophoto_2026-01-05_010.jpg","Edophoto_2026-01-05_011.jpg","Edophoto_2026-01-05_012.jpg","Edophoto_2026-01-05_013.jpg","Edophoto_2026-01-05_003.jpg","Edophoto_2026-01-05_001.jpg","Edophoto_2026-01-05_002.jpg","MCH_Photography_2026-01-05_001.jpg","MCH_Photography_2026-01-05_004.jpg","MCH_Photography_2026-01-05_002.jpg","MCH_Photography_2026-01-05_003.jpg","MCH_Photography_2026-01-05_005.jpg","Edophoto_2026-01-05_004.jpg","Edophoto_2026-01-05_005.jpg","Edophoto_2026-01-05_006.jpg","Edophoto_2026-01-05_007.jpg","Edophoto_2026-01-05_008.jpg","MCH_Photography_2026-01-05_006.jpg"],
+"2026-01-06":["Edophoto_2026-01-06_001.jpg","MCH_Photography_2026-01-06_003.jpg","Edophoto_2026-01-06_007.jpg","Edophoto_2026-01-06_008.jpg","Edophoto_2026-01-06_009.jpg","Edophoto_2026-01-06_010.jpg","Edophoto_2026-01-06_002.jpg","Edophoto_2026-01-06_003.jpg","MCH_Photography_2026-01-06_004.jpg","MCH_Photography_2026-01-06_002.jpg","MCH_Photography_2026-01-06_001.jpg","Edophoto_2026-01-06_004.jpg","Edophoto_2026-01-06_005.jpg","Edophoto_2026-01-06_006.jpg"],
+"2026-01-07":["MCH_Photography_2026-01-07_002.jpg","MCH_Photography_2026-01-07_001.jpg","Edophoto_2026-01-07_004.jpg","Edophoto_2026-01-07_005.jpg","Edophoto_2026-01-07_006.jpg","Edophoto_2026-01-07_003.jpg","Edophoto_2026-01-07_001.jpg","Edophoto_2026-01-07_002.jpg"],
+"2026-01-08":["Edophoto_2026-01-08_001.jpg","Edophoto_2026-01-08_002.jpg","Edophoto_2026-01-08_003.jpg","Edophoto_2026-01-08_004.jpg","MCH_Photography_2026-01-08_001.jpg","MCH_Photography_2026-01-08_003.jpg","MCH_Photography_2026-01-08_002.jpg","Edophoto_2026-01-08_005.jpg","Edophoto_2026-01-08_006.jpg","Edophoto_2026-01-08_007.jpg","Edophoto_2026-01-08_008.jpg"],
+"2026-01-09":["MCH_Photography_2026-01-09_001.jpg","MCH_Photography_2026-01-09_002.jpg","MCH_Photography_2026-01-09_003.jpg","Edophoto_2026-01-09_001.jpg","Edophoto_2026-01-09_002.jpg","Edophoto_2026-01-09_003.jpg","Edophoto_2026-01-09_004.jpg","Edophoto_2026-01-09_005.jpg","Edophoto_2026-01-09_006.jpg","Edophoto_2026-01-09_014.jpg","Edophoto_2026-01-09_015.jpg","Edophoto_2026-01-09_010.jpg","Edophoto_2026-01-09_011.jpg","Edophoto_2026-01-09_012.jpg","Edophoto_2026-01-09_013.jpg","Edophoto_2026-01-09_007.jpg","Edophoto_2026-01-09_008.jpg","Edophoto_2026-01-09_009.jpg","MCH_Photography_2026-01-09_005.jpg","MCH_Photography_2026-01-09_004.jpg","MCH_Photography_2026-01-09_006.jpg"],
+"2026-01-10":["Edophoto_2026-01-10_002.jpg","Edophoto_2026-01-10_003.jpg","Edophoto_2026-01-10_004.jpg","Edophoto_2026-01-10_005.jpg","Edophoto_2026-01-10_006.jpg","Edophoto_2026-01-10_007.jpg","Edophoto_2026-01-10_008.jpg","Edophoto_2026-01-10_009.jpg","Edophoto_2026-01-10_001.jpg"],
+"2026-01-11":["Edophoto_2026-01-11_004.jpg","Edophoto_2026-01-11_005.jpg","Edophoto_2026-01-11_006.jpg","Edophoto_2026-01-11_007.jpg","Edophoto_2026-01-11_008.jpg","Edophoto_2026-01-11_001.jpg","Edophoto_2026-01-11_002.jpg","Edophoto_2026-01-11_003.jpg","MCH_Photography_2026-01-11_001.jpg","MCH_Photography_2026-01-11_002.jpg","MCH_Photography_2026-01-11_003.jpg"],
+"2026-01-12":["Edophoto_2026-01-12_001.jpg","Edophoto_2026-01-12_002.jpg","Edophoto_2026-01-12_003.jpg","Edophoto_2026-01-12_004.jpg","Edophoto_2026-01-12_005.jpg","Edophoto_2026-01-12_007.jpg","Edophoto_2026-01-12_008.jpg","Edophoto_2026-01-12_006.jpg","Edophoto_2026-01-12_013.jpg","Edophoto_2026-01-12_014.jpg","Edophoto_2026-01-12_015.jpg","Edophoto_2026-01-12_016.jpg","MCH_Photography_2026-01-12_003.jpg","MCH_Photography_2026-01-12_001.jpg","MCH_Photography_2026-01-12_002.jpg","Edophoto_2026-01-12_009.jpg","Edophoto_2026-01-12_010.jpg","Edophoto_2026-01-12_011.jpg","Edophoto_2026-01-12_012.jpg"],
+"2026-01-13":["Edophoto_2026-01-13_001.jpg","Edophoto_2026-01-13_002.jpg","Edophoto_2026-01-13_003.jpg","MCH_Photography_2026-01-13_003.jpg","MCH_Photography_2026-01-13_004.jpg","Edophoto_2026-01-13_004.jpg","Edophoto_2026-01-13_005.jpg","MCH_Photography_2026-01-13_001.jpg","MCH_Photography_2026-01-13_002.jpg"],
+"2026-01-14":["Edophoto_2026-01-14_001.jpg","Edophoto_2026-01-14_002.jpg","Edophoto_2026-01-14_003.jpg","Edophoto_2026-01-14_004.jpg","Edophoto_2026-01-14_005.jpg","Edophoto_2026-01-14_006.jpg","Edophoto_2026-01-14_007.jpg","MCH_Photography_2026-01-14_005.jpg","MCH_Photography_2026-01-14_001.jpg","MCH_Photography_2026-01-14_002.jpg","MCH_Photography_2026-01-14_003.jpg","MCH_Photography_2026-01-14_004.jpg"],
+"2026-01-15":["MCH_Photography_2026-01-15_001.jpg","H1_MCH_Photography_2026-01-15_003.jpg","Edophoto_2026-01-15_014.jpg","Edophoto_2026-01-15_015.jpg","Edophoto_2026-01-15_016.jpg","Edophoto_2026-01-15_017.jpg","MCH_Photography_2026-01-15_002.jpg","Edophoto_2026-01-15_018.jpg","Edophoto_2026-01-15_019.jpg","H2_Edophoto_2026-01-15_001.jpg","Edophoto_2026-01-15_002.jpg","Edophoto_2026-01-15_003.jpg","Edophoto_2026-01-15_004.jpg","Edophoto_2026-01-15_005.jpg","Edophoto_2026-01-15_006.jpg","Edophoto_2026-01-15_007.jpg","Edophoto_2026-01-15_008.jpg","Edophoto_2026-01-15_009.jpg","Edophoto_2026-01-15_010.jpg","Edophoto_2026-01-15_011.jpg","Edophoto_2026-01-15_012.jpg","Edophoto_2026-01-15_013.jpg"],
+"2026-01-16":["Edophoto_2026-01-16_001.jpg","Edophoto_2026-01-16_002.jpg","Edophoto_2026-01-16_003.jpg","Edophoto_2026-01-16_004.jpg","MCH_Photography_2026-01-16_003.jpg","MCH_Photography_2026-01-16_001.jpg","MCH_Photography_2026-01-16_002.jpg","Edophoto_2026-01-16_007.jpg","Edophoto_2026-01-16_008.jpg","Edophoto_2026-01-16_006.jpg","Edophoto_2026-01-16_009.jpg","Edophoto_2026-01-16_010.jpg","Edophoto_2026-01-16_005.jpg"],
+"2026-01-17":["H1_MCH_Photography_2026-01-17_002.jpg","H2_Edophoto_2026-01-17_007.jpg","Edophoto_2026-01-17_008.jpg","Edophoto_2026-01-17_009.jpg","Edophoto_2026-01-17_010.jpg","Edophoto_2026-01-17_011.jpg","Edophoto_2026-01-17_012.jpg","Edophoto_2026-01-17_013.jpg","H3_Edophoto_2026-01-17_014.jpg","Edophoto_2026-01-17_015.jpg","Edophoto_2026-01-17_005.jpg","Edophoto_2026-01-17_006.jpg","Edophoto_2026-01-17_004.jpg"],
+"Epilogue":["MCH_Photography_2026-01-17_001.jpg","Edophoto_2026-01-17_001.jpg","H2_Edophoto_2026-01-17_002.jpg","H3_Edophoto_2026-01-17_003.jpg","H4_Personal_2026-01-21_001.jpg"]
+};
+
+function tbl(rows, ourPos) {
+  let h = '<table class="standings-table"><thead><tr><th>P</th><th>#</th><th>Driver</th><th>Time</th><th>Gap</th></tr></thead><tbody>';
+  const posNum = parseInt(ourPos.replace('P',''));
+  rows.forEach(r => {
+    const rp = parseInt(r[0].replace('P',''));
+    if (rp === posNum && posNum > 10) h += '<tr class="spacer-row"><td colspan="5">&mdash;</td></tr>';
+    const cls = r[0] === ourPos && r[2] === 'P. Gon\u00e7alves' ? ' class="our-team"' : '';
+    h += `<tr${cls}><td>${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td><td>${r[3]}</td><td>${r[4]||''}</td></tr>`;
+  });
+  return h + '</tbody></table>';
+}
+
+// ── PAGE DATA ──
+const PAGES = [
+{id:'hero', navLabel:'', isHero: true},
+{id:'intro', navLabel:'Intro', tag:'Introduction', title:'The Journey to the Dakar',
+ badges:['Pedro Gon\u00e7alves / Hugo Magalh\u00e3es','BBR Motorsport','Taurus T3 Max'],
+ highlightBadges:['Car #306'],
+ photoDirs:['Prologue'],
+ story:`<p>On the 21st of April 2023, a 45-year-old Pedro Gon\u00e7alves climbed into a modest Yamaha YXZ1000R at a local cross-country raid in the hills of central Portugal. It was his absolute debut. Twenty months after that debut at Ferraria, he would line up at the start of the Dakar Rally.</p>
+<p>The path between a Hobby race and the Dakar was paved with ambition and broken machinery. Two races in 2023: the Ferraria raid and the Baja Portalegre 500, where he finished P12 out of 13 in the SSV TT2 class, P42 out of 68 overall. Then six races in 2024, including his first taste of African desert at the Yamaha Desert Challenge in Morocco, where he finished second out of eight. His first W2RC round at Rally-Raid Portugal, P14 Challenger out of 32. But also three retirements, and a last-place finish in his class at Baja TT Norte de Portugal. The learning curve was steep and unforgiving.</p>
+<div class="highlight-block"><p>He changed navigators, changed cars, changed teams. Pedro Ara\u00fajo in 2023. Rui Franco and Lu\u00eds Engeitado rotating through 2024. Then Hugo Magalh\u00e3es arrived for the Dakar 2025. Hugo was at the other end of the spectrum: a professional co-driver in stage rallies, including WRC, for the last 18 years.</p></div>
+<p>The 2025 Dakar was Pedro and Hugo's rookie attempt, and it was not an easy debut. A broken clutch on Stage 6 dropped them into the Dakar Experience category, and the same issue struck again on Stage 11, leaving them out of the race. The disappointment was crushing. The setbacks kept coming. But then the Fenic gave way to a Taurus T3 Max when Pedro joined BBR Motorsport in July 2025. And suddenly: P6 Challenger at Rally-Raid Portugal, P5 at Baja Morocco, P5 at Rallye du Maroc. Three consecutive top-six category finishes to close the 2025 season.</p>
+<p>Now it was January 3, 2026. His 48th birthday. And the second Dakar was about to begin.</p>
+<p>Pedro's family was in Saudi Arabia, they spent some rest days together before the rally began. On January 3rd, their last day in Saudi, they would stood at the start podium and watch Pedro roll down the ramp into the desert, the beginning of the adventure they had all been building toward.</p>`,
+ resultBoxes:null,
+ stageClass:null, stageOurPos:null, genClass:null, genOurPos:null
+},
+{id:'shakedown', navLabel:'Shakedown', tag:'Shakedown & Verifications \u00b7 January 1\u20132', title:'Final Preparations in Yanbu',
+ badges:['Yanbu','Technical Scrutineering','Shakedown'],
+ highlightBadges:['Car #306 Ready'],
+ photoDirs:['2026-01-01','2026-01-02'],
+ story:`<p>Before a single competitive kilometre, there was work to do. The first two days of January were dedicated to the rituals that precede every Dakar: the shakedown test, administrative checks, and technical scrutineering.</p>
+<p>On January 1st, the shakedown \u2014 a short, controlled test run on a designated course near the bivouac. Not a race, but a chance to feel the car on Saudi terrain for the first time, to check that every system worked as intended after the long journey from Portugal. Suspension, engine response, navigation equipment, intercom \u2014 all tested under real conditions.</p>
+<p>January 2nd was dedicated to the verifications. The team went through scrutineering in Yanbu. Every detail of the Taurus T3 Max was inspected \u2014 safety equipment, roll cage, harnesses, fire extinguishers, navigation instruments, tracking systems. The car had to comply with FIA regulations down to the millimetre. For Pedro and Hugo, it was also the moment to collect their credentials, verify documentation, and officially confirm their entry as car #306.</p>
+<div class="highlight-block"><p>For BBR Motorsport, these two days were about making sure nothing was left to chance. The mechanics ran their final checks. Pedro and Hugo settled into their routines: seat position, harness tension, the rhythm of communication between driver and navigator. Everything had to be second nature before the flag dropped.</p></div>
+<p>By the evening of January 2nd, car #306 was cleared, tested, and parked in the bivouac. The next morning \u2014 Pedro\u2019s 48th birthday \u2014 would bring the Prologue.</p>`,
+ resultBoxes:null,
+ stageClass:null, stageOurPos:null, genClass:null, genOurPos:null
+},
+{id:'prologue', navLabel:'Prologue', tag:'Prologue \u00b7 January 3', title:'Birthday at the Start Ramp',
+ badges:['Yanbu \u2192 Yanbu','22 km SS'],
+ highlightBadges:['P18/37 CHG','+0:51'],
+ photoDirs:['2026-01-03'],
+ story:`<p>The start ramp. The cameras. The Saudi sun on the Red Sea coast. Pedro and Hugo rolled out of Yanbu as the 88th car, into 22 kilometres of canyons and rocky sections. A short prologue, designed to set the starting order for the days ahead.</p>
+<p>No problems. Clean run. They crossed the finish 51 seconds behind the fastest Challenger, in P18 out of 37 in class. A controlled opening on a birthday that already meant more than any cake or candle could.</p>
+<p>One year earlier, on this exact date, Pedro had started the Dakar that would end in retirement. This time, it was different, they were prepared and looking for more than just a finish.</p>
+<p>After the Prologue, they gathered at the bivouac. That evening, under the Saudi sky, they sang happy birthday to a man about to spend two weeks racing across a country the size of Western Europe. The next morning, Sandra, Diogo, and Mariana flew home to Portugal. Pedro and Hugo headed for the start line of Stage 1. The family would not see each other again for fourteen days.</p>`,
+ resultBoxes:[{v:'P18',l:'Stage CHG'},{v:'P92',l:'Stage Overall'},{v:'+0:51',l:'Gap to P1'}],
+ resultNote:'Clean run. Controlled opening on a birthday that already meant more than any cake or candle could.',
+ stageClass:[['P1','310','P. Spierings','12:31',''],['P2','302','P. Klaassen','12:37','+0:06'],['P3','301','D. Akeel','12:44','+0:13'],['P4','300','N. Cavigliasso','12:46','+0:15'],['P5','305','D. Zille','12:46','+0:15'],['P6','304','Y. Seaidan','12:52','+0:21'],['P7','347','K. Benavides','12:53','+0:22'],['P8','338','L. Del Rio','12:56','+0:25'],['P9','314','I. Casale','12:59','+0:28'],['P10','317','O. Ral','12:59','+0:28'],['P18','306','P. Gon\u00e7alves','13:22','+0:51']],
+ stageOurPos:'P18', genClass:null, genOurPos:null
+},
+{id:'stage1', navLabel:'S1', tag:'Stage 1 \u00b7 January 4', title:'Into the Canyons',
+ badges:['Yanbu \u2192 Yanbu','305 km SS'],highlightBadges:['P12/37 CHG','+13:53'],
+ photoDirs:['2026-01-04'],
+ story:`<p>Starting 92nd, deep in the pack, Pedro and Hugo drove into the sandy canyons west of Yanbu. Beautiful canyons alternating between fast and very fast, then deteriorating rocky tracks through wadis reshaped by recent rains. After a pit stop at halfway, the stage would finish in sand and the first dunes of the 2026 Dakar.</p>
+<p>The problems started early. The gearbox was hard to shift, not working properly. Probably a shift sensor issue. Every gear change was a negotiation with the car instead of an instinct.</p>
+<p>Then, in the final 60 kilometres, they lost power. Pedro had switched to engine Map 4, and the car felt like it had no front traction. Dunes that should have been routine became a fight, the Taurus struggling to climb where it should have charged.</p>
+<p>Despite fighting the car for 305 kilometres, they finished P12 out of 37 Challengers, +13:53 from the stage winner. A solid result hiding a worrying machine.</p>`,
+ resultBoxes:[{v:'P12',l:'Stage CHG'},{v:'P63',l:'Stage Overall'},{v:'+13:53',l:'Gap to P1'}],
+ stageClass:[['P1','305','D. Zille','3:32:50',''],['P2','310','P. Spierings','3:33:32','+0:42'],['P3','300','N. Cavigliasso','3:34:53','+2:03'],['P4','336','P. Navarro','3:37:40','+4:50'],['P5','316','A. Al-Kuwari','3:38:20','+5:30'],['P6','304','Y. Seaidan','3:41:32','+8:42'],['P7','347','K. Benavides','3:41:58','+9:08'],['P8','301','D. Akeel','3:42:46','+9:56'],['P9','338','L. Del Rio','3:44:36','+11:46'],['P10','321','R. Carneiro','3:44:37','+11:47'],['P12','306','P. Gon\u00e7alves','3:46:43','+13:53']],
+ stageOurPos:'P12',
+ genClass:[['P1','305','D. Zille','3:32:50',''],['P2','310','P. Spierings','3:33:32','+0:42'],['P3','300','N. Cavigliasso','3:34:53','+2:03'],['P4','336','P. Navarro','3:37:40','+4:50'],['P5','316','A. Al-Kuwari','3:38:20','+5:30'],['P6','304','Y. Seaidan','3:41:32','+8:42'],['P7','347','K. Benavides','3:41:58','+9:08'],['P8','301','D. Akeel','3:42:46','+9:56'],['P9','338','L. Del Rio','3:44:36','+11:46'],['P10','321','R. Carneiro','3:44:37','+11:47'],['P12','306','P. Gon\u00e7alves','3:46:43','+13:53']],
+ genOurPos:'P12'
+},
+{id:'stage2', navLabel:'S2', tag:'Stage 2 \u00b7 January 5', title:'Finding the Rhythm',
+ badges:['Yanbu \u2192 Al-Ula','400 km SS'],highlightBadges:['P7/37 CHG','+13:44'],
+ photoDirs:['2026-01-05'],
+ story:`<p>The stage headed into the Hejaz Mountains on very winding and rocky tracks before opening into faster sandy plains and undulating terrain toward Al-Ula. Starting 47th, a big jump forward from the Prologue, Pedro and Hugo had cleaner air and a better rhythm.</p>
+<p>The shifting problems were still there. But the rest was ok.</p>
+<p>They finished P7 Challenger on stage, their best stage result of the first week, and climbed to P8 in the general classification. The gap to the Challenger stage winner was +13:44, the closest Pedro would get to a category leader in the entire rally. At roughly 3 minutes and 26 seconds per 100 kilometres of gap, this was their best normalized pace of the two weeks.</p>
+<p>Al-Ula welcomed them. Halfway through the first week, running inside the top 10 Challenger. The car was not perfect, but the crew was finding its rhythm.</p>`,
+ resultBoxes:[{v:'P7',l:'Stage CHG'},{v:'P8',l:'General CHG'},{v:'+13:44',l:'Gap to P1'}],
+ resultNote:'Best stage result of the first week. Best normalized pace of the entire rally.',
+ stageClass:[['P1','338','L. Del Rio','4:26:49',''],['P2','304','Y. Seaidan','4:29:29','+2:40'],['P3','302','P. Klaassen','4:30:46','+3:57'],['P4','305','D. Zille','4:36:13','+9:24'],['P5','336','P. Navarro','4:38:00','+11:11'],['P6','316','A. Al-Kuwari','4:39:00','+12:11'],['P7','306','P. Gon\u00e7alves','4:40:33','+13:44'],['P8','323','P. Klaassen Jr','4:42:34','+15:45'],['P9','300','N. Cavigliasso','4:45:29','+18:40'],['P10','321','R. Carneiro','4:46:16','+19:27']],
+ stageOurPos:'P7',
+ genClass:[['P1','305','D. Zille','8:09:03',''],['P2','304','Y. Seaidan','8:11:01','+1:58'],['P3','338','L. Del Rio','8:11:25','+2:22'],['P4','336','P. Navarro','8:15:40','+6:37'],['P5','316','A. Al-Kuwari','8:17:20','+8:17'],['P6','300','N. Cavigliasso','8:20:22','+11:19'],['P7','302','P. Klaassen','8:22:19','+13:16'],['P8','306','P. Gon\u00e7alves','8:27:16','+18:13'],['P9','321','R. Carneiro','8:30:53','+21:50'],['P10','301','D. Akeel','8:35:46','+26:43']],
+ genOurPos:'P8'
+},
+{id:'stage3', navLabel:'S3', tag:'Stage 3 \u00b7 January 6', title:'The Highest Climb',
+ badges:['Al-Ula \u2192 Al-Ula','421 km SS'],highlightBadges:['P6/37 CHG','+20:01'],
+ photoDirs:['2026-01-06'],
+ story:`<p>The magnificent sandy canyons of Al-Ula. The briefing had warned that navigation would play a leading role: tracks had largely disappeared on the empty plateaus, erased by months of rain. Winding gravel surfaces, with rhythms and terrain changing regularly between plateaus and canyons.</p>
+<p>Starting 48th, Pedro and Hugo pushed through 421 kilometres and had a puncture. It cost them about five minutes. They still finished P6 Challenger on stage and climbed to P7 in the general, P45 overall out of nearly 200 cars. Their highest general classification position of the entire rally.</p>
+<div class="highlight-block"><p>But there was a catch. Their stage time fell outside the 107% window compared to the Challenger stage winner. Under Dakar rules, that meant a pushback in the starting order for the next stage. Instead of starting around 48th again, matching their general classification, they would be shoved back in the queue.</p>
+<p>And the next stage was the marathon.</p></div>`,
+ resultBoxes:[{v:'P6',l:'Stage CHG'},{v:'P7',l:'General CHG'},{v:'+20:01',l:'Gap to P1'}],
+ stageClass:[['P1','302','P. Klaassen','4:28:25',''],['P2','304','Y. Seaidan','4:36:50','+8:25'],['P3','336','P. Navarro','4:39:43','+11:18'],['P4','338','L. Del Rio','4:40:16','+11:51'],['P5','300','N. Cavigliasso','4:43:30','+15:05'],['P6','306','P. Gon\u00e7alves','4:48:26','+20:01'],['P7','305','D. Zille','4:50:52','+22:27'],['P8','310','P. Spierings','4:59:06','+30:41'],['P9','314','I. Casale','5:00:51','+32:26'],['P10','330','L. Peters','5:13:16','+44:51']],
+ stageOurPos:'P6',
+ genClass:[['P1','304','Y. Seaidan','12:47:51',''],['P2','302','P. Klaassen','12:50:44','+2:53'],['P3','338','L. Del Rio','12:51:41','+3:50'],['P4','336','P. Navarro','12:55:23','+7:32'],['P5','305','D. Zille','12:59:55','+12:04'],['P6','300','N. Cavigliasso','13:03:52','+16:01'],['P7','306','P. Gon\u00e7alves','13:15:42','+27:51'],['P8','303','K. Koolen','14:00:49','+1:12:58'],['P9','323','P. Klaassen Jr','14:10:11','+1:22:20'],['P10','335','C. Munster','14:14:15','+1:26:24']],
+ genOurPos:'P7'
+},
+{id:'stage4', navLabel:'S4', tag:'Stage 4 \u00b7 Marathon 1a \u00b7 January 7', title:'The Marathon Begins',
+ badges:['Al-Ula \u2192 Marathon Bivouac','452 km SS'],highlightBadges:['P16/36 CHG','+1:08:21'],
+ photoDirs:['2026-01-07'],
+ story:`<p>The first marathon stage. Sandy canyons off-piste, then flatter terrain with intense CAP navigation on rocky and rough plateaus, then magnificent sandy plateaus with alternating pace and winding tracks. After this stage, there would be no team, no mechanics, no support. Just a tent in the desert and a military ration.</p>
+<p>Pedro and Hugo started 76th. Pushed back almost 30 positions from where they deserved to be by the 107% rule, behind several trucks and slower cars from other categories. More dust, more traffic, more vehicles clogging narrow tracks where overtaking was impossible.</p>
+<div class="highlight-block"><p>Around KP 140, they had gotten caught in a queue of cars and trucks creeping through a narrow canyon section full of rocks. The car leading the queue made a navigation error, drifted off course, and Pedro followed. By the time they realized, it was too late. They had missed a waypoint. Pedro made the tactical call: not worth going back to search for it. Accept the 15-minute penalty and push on.</p></div>
+<p>Around KP 231, shortly before the refueling point, they hit a narrow section. No more than five metres wide. Another car was stuck in the sand, blocking the passage. Pedro tried to squeeze past and the Taurus got wedged side by side with the other car, both buried in sand in a corridor barely wide enough for one vehicle. Twenty minutes. They sat there for twenty minutes while the rally drove on without them. Eventually, locals arrived with a 4x4 and a rope and pulled them free.</p>
+<p>At the finish, the 15-minute waypoint penalty was applied to their time. Combined with the 20 minutes lost stuck and the time lost in the canyon queue, they finished P16 Challenger on stage, +1:08:21 from the stage winner. They lost roughly 45 minutes to incidents alone.</p>
+<p>But the paradox of the Dakar: despite the worst stage of their rally, they climbed to P6 in the Challenger general classification. Others had suffered even more.</p>
+<p>Pedro drove the Taurus into the marathon bivouac as the sun dropped behind the Saudi plateau. No team waiting. No mechanics. Just the desert, a refuge, and whatever they could carry.</p>`,
+ resultBoxes:[{v:'P16',l:'Stage CHG'},{v:'P6',l:'General CHG'},{v:'+1:08:21',l:'Gap to P1'}],
+ resultNote:'+15:00 penalty (missed waypoint) + ~20 min stuck in sand + canyon queue. ~45 minutes lost to incidents.',
+ stageClass:[['P1','300','N. Cavigliasso','5:23:12',''],['P2','336','P. Navarro','5:25:41','+2:29'],['P3','301','D. Akeel','5:27:48','+4:36'],['P4','304','Y. Seaidan','5:32:28','+9:16'],['P5','321','R. Carneiro','5:40:40','+17:28'],['P6','338','L. Del Rio','5:42:10','+18:58'],['P7','335','C. Munster','5:47:54','+24:42'],['P8','347','K. Benavides','5:54:49','+31:37'],['P9','314','I. Casale','5:55:20','+32:08'],['P10','303','K. Koolen','6:06:19','+43:07'],['P16','306','P. Gon\u00e7alves','6:31:33','+1:08:21']],
+ stageOurPos:'P16',
+ genClass:[['P1','304','Y. Seaidan','18:20:19',''],['P2','336','P. Navarro','18:21:04','+0:45'],['P3','300','N. Cavigliasso','18:27:04','+6:45'],['P4','338','L. Del Rio','18:33:51','+13:32'],['P5','305','D. Zille','19:14:11','+53:52'],['P6','306','P. Gon\u00e7alves','19:47:15','+1:26:56'],['P7','302','P. Klaassen','19:59:20','+1:39:01'],['P8','335','C. Munster','20:02:09','+1:41:50'],['P9','303','K. Koolen','20:07:08','+1:46:49'],['P10','314','I. Casale','20:12:47','+1:52:28']],
+ genOurPos:'P6'
+},
+{id:'stage5', navLabel:'S5', tag:'Stage 5 \u00b7 Marathon 1b \u00b7 January 8', title:'Wounded but Standing',
+ badges:['Marathon Bivouac \u2192 Ha\u2019il','356 km SS'],highlightBadges:['P21/36 CHG','+34:41'],
+ photoDirs:['2026-01-08'],
+ story:`<p>The second half of the marathon. Starting 103rd, the furthest back of the entire rally. Sandy winding tracks deteriorating into stony passages with complicated navigation. Large sandy valleys until the neutralisation, then rough terrain and small valleys demanding careful route-finding.</p>
+<p>Three problems. A puncture. A 6-minute speed zone penalty, they were inside a restricted area and did not realize for a while, exactly the kind of trap the briefing had flagged. And in the final part of the stage, the steering partially broke.</p>
+<p>They finished P21 Challenger on stage, +34:41 from the stage winner. Dropped from P6 to P9 in the general classification. Accumulated 21 minutes of penalties across two stages.</p>
+<p>But they finished. They drove the wounded Taurus into the Ha\u2019il bivouac where, for the first time since leaving Al-Ula, the full BBR team and mechanics were waiting. The marathon was over. The mechanics replaced the broken steering and got to work preparing the car for the longest day of the rally.</p>`,
+ resultBoxes:[{v:'P21',l:'Stage CHG'},{v:'P9',l:'General CHG'},{v:'+34:41',l:'Gap to P1'}],
+ stageClass:[['P1','338','L. Del Rio','4:18:09',''],['P2','336','P. Navarro','4:18:33','+0:24'],['P3','301','D. Akeel','4:18:37','+0:28'],['P4','305','D. Zille','4:19:08','+0:59'],['P5','300','N. Cavigliasso','4:20:58','+2:49'],['P6','302','P. Klaassen','4:21:16','+3:07'],['P7','304','Y. Seaidan','4:23:44','+5:35'],['P8','310','P. Spierings','4:25:44','+7:35'],['P9','335','C. Munster','4:27:23','+9:14'],['P10','347','K. Benavides','4:27:48','+9:39'],['P21','306','P. Gon\u00e7alves','4:52:50','+34:41']],
+ stageOurPos:'P21',
+ genClass:[['P1','336','P. Navarro','22:39:37',''],['P2','304','Y. Seaidan','22:44:03','+4:26'],['P3','300','N. Cavigliasso','22:48:02','+8:25'],['P4','338','L. Del Rio','22:52:00','+12:23'],['P5','305','D. Zille','23:33:19','+53:42'],['P6','302','P. Klaassen','24:20:36','+1:40:59'],['P7','335','C. Munster','24:29:32','+1:49:55'],['P8','303','K. Koolen','24:35:46','+1:56:09'],['P9','306','P. Gon\u00e7alves','24:40:05','+2:00:28'],['P10','314','I. Casale','24:41:19','+2:01:42']],
+ genOurPos:'P9'
+},
+{id:'stage6', navLabel:'S6', tag:'Stage 6 \u00b7 January 9', title:'Into Riyadh',
+ badges:['Ha\u2019il \u2192 Riyadh','326 km SS (920 km total)'],highlightBadges:['P11/36 CHG','+25:49'],
+ photoDirs:['2026-01-09'],
+ story:`<p>A 100% sand stage. Dunes all day. The briefing was unambiguous: alternating between high speed sections in the dunes and track sections between fast ergs, with broken dunes warned in the roadbook. The longest total stage of the rally at 920 kilometres including liaisons, though the timed section was 326 km. A refueling stop at two-thirds distance.</p>
+<p>Starting 100th, still deep in the pack from the marathon fallout, Pedro and Hugo drove into the dunes with a new problem. The power steering was gradually failing. It was a different issue from the broken steering on Stage 5, which the mechanics had replaced. This was something progressive, the steering getting heavier and heavier throughout the stage. On a day of nothing but sand and dunes, where every direction change and every dune correction demands the steering to respond, the car was fighting Pedro with increasing force.</p>
+<p>By the middle of the stage, Pedro was thinking the car was about to die. But it survived.</p>
+<p>The final 10 kilometres were driven in the dark. The lights were not working properly, there was heavy dust, and the briefing had warned this was a difficult navigation zone. Starting 100th meant they were among the last to reach the finish, and by then the sun was gone.</p>
+<p>They finished P11 Challenger on stage, +25:49. Held P9 in the general. Then came the longest liaison of the rally: the drive to Riyadh, and the rest day.</p>`,
+ resultBoxes:[{v:'P11',l:'Stage CHG'},{v:'P9',l:'General CHG'},{v:'+25:49',l:'Gap to P1'}],
+ stageClass:[['P1','314','I. Casale','3:58:57',''],['P2','301','D. Akeel','3:59:35','+0:38'],['P3','347','K. Benavides','4:00:37','+1:40'],['P4','300','N. Cavigliasso','4:03:12','+4:15'],['P5','302','P. Klaassen','4:05:03','+6:06'],['P6','336','P. Navarro','4:06:40','+7:43'],['P7','335','C. Munster','4:12:14','+13:17'],['P8','317','O. Ral','4:15:05','+16:08'],['P9','338','L. Del Rio','4:20:11','+21:14'],['P10','308','A. Giroud','4:21:56','+22:59'],['P11','306','P. Gon\u00e7alves','4:24:46','+25:49']],
+ stageOurPos:'P11',
+ genClass:[['P1','336','P. Navarro','26:46:17',''],['P2','300','N. Cavigliasso','26:51:14','+4:57'],['P3','338','L. Del Rio','27:12:11','+25:54'],['P4','304','Y. Seaidan','27:32:47','+46:30'],['P5','305','D. Zille','28:09:56','+1:23:39'],['P6','302','P. Klaassen','28:25:39','+1:39:22'],['P7','314','I. Casale','28:40:16','+1:53:59'],['P8','335','C. Munster','28:41:46','+1:55:29'],['P9','306','P. Gon\u00e7alves','29:04:51','+2:18:34'],['P10','303','K. Koolen','29:05:57','+2:19:40']],
+ genOurPos:'P9'
+},
+{id:'rest', navLabel:'Rest', tag:'Rest Day', title:'Alive',
+ badges:['Riyadh','January 10, 2026'],highlightBadges:['P9 CHG \u00b7 P52 Overall'],
+ photoDirs:['2026-01-10'],
+ story:`<p>P9 Challenger. P52 overall. Six stages done, seven to go. The mechanics had a full day to work on the Taurus: the power steering, the engine map selector that had not yet shown its worst, and the accumulated wear of a car that had been through canyons, dunes, broken steering, punctures, and 20 minutes wedged in a five-metre-wide passage.</p>
+<p>Pedro arrived at the rest day with high morale. The first week had thrown everything at them: mechanical problems from Stage 1, a puncture on Stage 3, the canyon disaster on Stage 4, a marathon night in the desert, broken steering on Stage 5, power steering failing through dunes on Stage 6, driving the last 10 km in the dark. Six retirements in their career had taught Pedro and Hugo what mattered most. Not the position on the timing screen. Not the gap to the leader. Just the act of arriving at the next bivouac with a car that could start again the next morning.</p>
+<div class="highlight-block"><p>They were P9 Challenger. Alive. And the second week had not started yet.</p></div>`,
+ resultBoxes:[{v:'P9',l:'Challenger'},{v:'P52',l:'Overall'},{v:'6/6',l:'Stages Done'}],
+ stageClass:null, stageOurPos:null, genClass:null, genOurPos:null
+},
+{id:'stage7', navLabel:'S7', tag:'Stage 7 \u00b7 January 11', title:'Holding Ground',
+ badges:['Riyadh \u2192 Wadi Ad-Dawasir','459 km SS'],highlightBadges:['P15/35 CHG','+18:13'],
+ photoDirs:['2026-01-11'],
+ story:`<p>The second week began with the longest southbound stage of the rally, overall very fast. Wide valleys with well-marked tracks to start, then high speed with tricky navigation through a region with many tracks, then off-piste sections where rocks became more present and the canyons narrowed. Dust was significant. Only the final kilometres would allow higher speeds again.</p>
+<p>Before the selective section even started, Pedro and Hugo had to replace a tire by precaution. It had lost some pressure on the liaison.</p>
+<p>Then came the main problem. The engine map selector was malfunctioning. From the beginning of the stage, it was randomly alternating between Map 2 (normal race power), Map 4 (reduced power, designed for lower octane fuel), and even Map 1, the lowest power setting, meant only for road liaisons, not racing. Pedro would be pushing through a fast valley at full pace and the engine would suddenly drop to liaison power. On a 459 km stage where speed was everything, the car was randomly sabotaging itself.</p>
+<p>Despite the unpredictable power, they finished P15 Challenger, +18:13 from the stage winner. Dropped from P9 to P9 in the general, holding position.</p>`,
+ resultBoxes:[{v:'P15',l:'Stage CHG'},{v:'P9',l:'General CHG'},{v:'+18:13',l:'Gap to P1'}],
+ stageClass:[['P1','347','K. Benavides','4:22:57',''],['P2','304','Y. Seaidan','4:27:36','+4:39'],['P3','300','N. Cavigliasso','4:28:37','+5:40'],['P4','301','D. Akeel','4:29:47','+6:50'],['P5','336','P. Navarro','4:30:46','+7:49'],['P6','317','O. Ral','4:31:21','+8:24'],['P7','314','I. Casale','4:31:23','+8:26'],['P8','305','D. Zille','4:31:57','+9:00'],['P9','310','P. Spierings','4:32:05','+9:08'],['P10','302','P. Klaassen','4:33:34','+10:37'],['P15','306','P. Gon\u00e7alves','4:41:10','+18:13']],
+ stageOurPos:'P15',
+ genClass:[['P1','336','P. Navarro','31:17:03',''],['P2','300','N. Cavigliasso','31:19:51','+2:48'],['P3','338','L. Del Rio','31:46:12','+29:09'],['P4','304','Y. Seaidan','32:00:23','+43:20'],['P5','305','D. Zille','32:41:53','+1:24:50'],['P6','302','P. Klaassen','32:59:13','+1:42:10'],['P7','314','I. Casale','33:11:39','+1:54:36'],['P8','301','D. Akeel','33:39:40','+2:22:37'],['P9','306','P. Gon\u00e7alves','33:46:01','+2:28:58'],['P10','303','K. Koolen','33:49:32','+2:32:29']],
+ genOurPos:'P9'
+},
+{id:'stage8', navLabel:'S8', tag:'Stage 8 \u00b7 January 12', title:'483 Kilometres',
+ badges:['Wadi Ad-Dawasir','483 km SS'],highlightBadges:['P14/35 CHG','+22:36'],
+ photoDirs:['2026-01-12'],
+ story:`<p>The longest selective section of the entire 2026 Dakar. 483 kilometres through a complete and varied landscape: a fast start, then dune belts breaking the rhythm, spectacular valleys, rockier sections heading north, frequent terrain changes, and winding tracks. The briefing had called it beautiful. It was also relentless.</p>
+<p>The engine map selector was still malfunctioning, randomly switching between power maps without warning. The same gremlin from Stage 7, unfixed. But Stage 8 brought something else: fatigue. Ten days into the rally, on the longest timed stage, Pedro felt the cumulative weight of everything. The shifting problems from Stage 1. The canyon disaster on Stage 4. The marathon nights. The failing power steering. The engine dropping power without reason. 483 kilometres is a long time to concentrate when your body is telling you it has had enough.</p>
+<p>They finished P14 Challenger, +22:36. Held P10 in the general. The fatigue had a direct impact on the pace, but they managed the stage and kept the car intact heading into the second marathon.</p>`,
+ resultBoxes:[{v:'P14',l:'Stage CHG'},{v:'P10',l:'General CHG'},{v:'+22:36',l:'Gap to P1'}],
+ stageClass:[['P1','302','P. Klaassen','4:55:38',''],['P2','301','D. Akeel','4:55:41','+0:03'],['P3','310','P. Spierings','4:55:59','+0:21'],['P4','305','D. Zille','4:56:36','+0:58'],['P5','314','I. Casale','4:58:58','+3:20'],['P6','300','N. Cavigliasso','5:00:16','+4:38'],['P7','304','Y. Seaidan','5:00:44','+5:06'],['P8','347','K. Benavides','5:00:50','+5:12'],['P9','336','P. Navarro','5:01:02','+5:24'],['P10','321','R. Carneiro','5:06:07','+10:29'],['P14','306','P. Gon\u00e7alves','5:18:14','+22:36']],
+ stageOurPos:'P14',
+ genClass:[['P1','336','P. Navarro','36:18:05',''],['P2','300','N. Cavigliasso','36:20:07','+2:02'],['P3','338','L. Del Rio','36:58:51','+40:46'],['P4','304','Y. Seaidan','37:01:07','+43:02'],['P5','305','D. Zille','37:38:29','+1:20:24'],['P6','302','P. Klaassen','37:54:51','+1:36:46'],['P7','314','I. Casale','38:10:37','+1:52:32'],['P8','301','D. Akeel','38:35:21','+2:17:16'],['P9','321','R. Carneiro','38:57:54','+2:39:49'],['P10','306','P. Gon\u00e7alves','39:04:15','+2:46:10']],
+ genOurPos:'P10'
+},
+{id:'stage9', navLabel:'S9', tag:'Stage 9 \u00b7 Marathon 2a \u00b7 January 13', title:'Best of the Second Week',
+ badges:['Wadi Ad-Dawasir \u2192 Marathon Refuge','410 km SS'],highlightBadges:['P8/35 CHG','+24:08'],
+ photoDirs:['2026-01-13'],
+ story:`<p>The second marathon sequence began. Generally fast terrain: canyons at the start, then open and faster sections, sand discreet at first but very soft in places, then dunes at the end. The common thread between all itineraries was sand.</p>
+<div class="highlight-block"><p>Before the stage even started, drama. At the starting connection between the liaison and the selective section, the front brakes over-pressurized and completely locked the car. Pedro and Hugo could not move. They had to remove a wheel, disassemble the brake pads, release the pressure, and reassemble everything. A mechanical problem that had nothing to do with driving, solved with tools and composure in the dust at the side of the road.</p></div>
+<p>Once the brakes were sorted, the 410-km selective section itself was clean. No problems. And the result showed it: P8 Challenger on stage, +24:08, their best second-week stage result. When the car worked and the crew was free from incidents, the pace was genuinely strong.</p>
+<p>Pedro drove into the second marathon bivouac. Same routine as the first: Hugo checked the car, Pedro set up the tents, military rations, early to bed. No drama. The desert was becoming familiar.</p>`,
+ resultBoxes:[{v:'P8',l:'Stage CHG'},{v:'P8',l:'General CHG'},{v:'+24:08',l:'Gap to P1'}],
+ resultNote:'Best second-week stage result. When the car worked, the pace was genuinely strong.',
+ stageClass:[['P1','310','P. Spierings','4:08:57',''],['P2','347','K. Benavides','4:10:17','+1:20'],['P3','305','D. Zille','4:15:31','+6:34'],['P4','302','P. Klaassen','4:16:10','+7:13'],['P5','304','Y. Seaidan','4:27:37','+18:40'],['P6','336','P. Navarro','4:28:58','+20:01'],['P7','303','K. Koolen','4:31:38','+22:41'],['P8','306','P. Gon\u00e7alves','4:33:05','+24:08'],['P9','314','I. Casale','4:39:55','+30:58'],['P10','338','L. Del Rio','4:45:46','+36:49']],
+ stageOurPos:'P8',
+ genClass:[['P1','336','P. Navarro','40:47:03',''],['P2','304','Y. Seaidan','41:28:44','+41:41'],['P3','338','L. Del Rio','41:44:37','+57:34'],['P4','305','D. Zille','41:54:00','+1:06:57'],['P5','300','N. Cavigliasso','42:00:26','+1:13:23'],['P6','302','P. Klaassen','42:11:01','+1:23:58'],['P7','314','I. Casale','42:50:32','+2:03:29'],['P8','306','P. Gon\u00e7alves','43:37:20','+2:50:17'],['P9','301','D. Akeel','43:38:39','+2:51:36'],['P10','310','P. Spierings','43:52:20','+3:05:17']],
+ genOurPos:'P8'
+},
+{id:'stage10', navLabel:'S10', tag:'Stage 10 \u00b7 Marathon 2b \u00b7 January 14', title:'The Strategic Choice',
+ badges:['Marathon Refuge \u2192 Bisha','420 km SS'],highlightBadges:['P13/35 CHG','+35:50'],
+ photoDirs:['2026-01-14'],
+ story:`<p>The big sand stage. The briefing had presented it as the second dedicated sand stage of the rally, with categories starting in parallel facing the dunes. Regular dunes at first, with ergs and fast off-piste plateaus, but as the stage progressed the dunes changed character. Soft, demanding sand that required careful fuel management. Back-and-forth sections in a wadi crossing with fesh-fesh-like dust demanding vigilance. Orange dunes gaining height, with passages between dark rocks. Then faster plateaus and more winding, rockier sections to the finish.</p>
+<p>Coming off the second marathon night with no mechanics, on a car that had been giving them problems all rally, Pedro and Hugo made a deliberate choice: be conservative. Protect the car. Protect the finish. Do not take risks in the soft dunes that could end the rally three days from Yanbu.</p>
+<p>Looking back, it was probably too conservative. There was pace left on the table. But after everything that had happened, being careful on the hardest sand stage of the Dakar was a rational decision. They could afford to lose positions. They could not afford to lose the car.</p>
+<p>They finished P13 Challenger, +35:50. Dropped from P8 to P11 in the general classification. The marathon was over. The full BBR team was waiting in Bisha. Three stages left.</p>`,
+ resultBoxes:[{v:'P13',l:'Stage CHG'},{v:'P11',l:'General CHG'},{v:'+35:50',l:'Gap to P1'}],
+ stageClass:[['P1','310','P. Spierings','5:14:55',''],['P2','304','Y. Seaidan','5:17:45','+2:50'],['P3','300','N. Cavigliasso','5:18:57','+4:02'],['P4','301','D. Akeel','5:20:56','+6:01'],['P5','347','K. Benavides','5:23:17','+8:22'],['P6','314','I. Casale','5:23:35','+8:40'],['P7','302','P. Klaassen','5:24:28','+9:33'],['P8','338','L. Del Rio','5:29:10','+14:15'],['P9','315','J. Favre','5:30:33','+15:38'],['P10','336','P. Navarro','5:40:56','+26:01'],['P13','306','P. Gon\u00e7alves','5:50:45','+35:50']],
+ stageOurPos:'P13',
+ genClass:[['P1','336','P. Navarro','46:27:59',''],['P2','304','Y. Seaidan','46:46:29','+18:30'],['P3','338','L. Del Rio','47:13:47','+45:48'],['P4','300','N. Cavigliasso','47:19:23','+51:24'],['P5','302','P. Klaassen','47:35:29','+1:07:30'],['P6','305','D. Zille','47:54:51','+1:26:52'],['P7','314','I. Casale','48:14:07','+1:46:08'],['P8','301','D. Akeel','48:59:35','+2:31:36'],['P9','310','P. Spierings','49:07:15','+2:39:16'],['P10','347','K. Benavides','49:23:06','+2:55:07'],['P11','306','P. Gon\u00e7alves','49:28:05','+3:00:06']],
+ genOurPos:'P11'
+},
+{id:'stage11', navLabel:'S11', tag:'Stage 11 \u00b7 January 15', title:'Two Stages to Go',
+ badges:['Bisha \u2192 Al Henakiyah','346 km SS'],highlightBadges:['P16/33 CHG','+17:30'],
+ photoDirs:['2026-01-15'],
+ story:`<p>Plateaus with little variation in terrain, but one of the fastest stages of the 2026 edition. A very high average speed that had to be managed carefully to avoid navigation traps on the open terrain. Dust from previous days had swept across the tracks. Rocky sectors over the first 150 kilometres. Nomadic camps settled in the area.</p>
+<p>The front brakes locked again at the road connection, the same over-pressurization problem from Stage 9. This time, the assistance team was there to help since the liaison was shared with the support vehicles, and support was allowed under the regulations. They fixed it before the selective section.</p>
+<p>During the stage, there were minor problems with the intercom system, the helmet-mounted microphones and headphones that allow driver and navigator to communicate. On a stage where navigation traps on fast open terrain were the main danger, having communication issues between Pedro and Hugo added an extra layer of difficulty. Hugo needed to call out the roadbook instructions clearly, and Pedro needed to hear them.</p>
+<p>Despite the brake scare and the intercom issues, the normalized pace was strong: about 5:04 per 100 km of gap, almost exactly their clean baseline. Once in the selective section, the car ran and the crew delivered. P16 Challenger, +17:30. Held P11 in the general. Two stages to go.</p>`,
+ resultBoxes:[{v:'P16',l:'Stage CHG'},{v:'P11',l:'General CHG'},{v:'+17:30',l:'Gap to P1'}],
+ stageClass:[['P1','300','N. Cavigliasso','3:17:27',''],['P2','310','P. Spierings','3:17:56','+0:29'],['P3','301','D. Akeel','3:18:30','+1:03'],['P4','347','K. Benavides','3:18:45','+1:18'],['P5','302','P. Klaassen','3:20:17','+2:50'],['P6','336','P. Navarro','3:24:47','+7:20'],['P7','338','L. Del Rio','3:24:48','+7:21'],['P8','315','J. Favre','3:26:24','+8:57'],['P9','305','D. Zille','3:28:34','+11:07'],['P10','335','C. Munster','3:30:22','+12:55'],['P16','306','P. Gon\u00e7alves','3:34:57','+17:30']],
+ stageOurPos:'P16',
+ genClass:[['P1','336','P. Navarro','49:52:46',''],['P2','304','Y. Seaidan','50:17:54','+25:08'],['P3','300','N. Cavigliasso','50:36:50','+44:04'],['P4','338','L. Del Rio','50:38:35','+45:49'],['P5','302','P. Klaassen','50:55:46','+1:03:00'],['P6','305','D. Zille','51:23:25','+1:30:39'],['P7','314','I. Casale','51:47:54','+1:55:08'],['P8','301','D. Akeel','52:18:05','+2:25:19'],['P9','310','P. Spierings','52:25:11','+2:32:25'],['P10','347','K. Benavides','52:41:51','+2:49:05'],['P11','306','P. Gon\u00e7alves','53:03:02','+3:10:16']],
+ genOurPos:'P11'
+},
+{id:'stage12', navLabel:'S12', tag:'Stage 12 \u00b7 January 16', title:'280 km Without Brakes',
+ badges:['Al Henakiyah \u2192 Yanbu','311 km SS'],highlightBadges:['P15/33 CHG','+32:43'],
+ photoDirs:['2026-01-16'],
+ story:`<p>The final exam. The briefing had called it a summary of all types of Saudi terrain, with no room for approximation: driving, navigation and technical crossings would make this day the ultimate challenge. Wide sliding tracks, then slower wadi crossings with rougher terrain. Dunes with soft sand. Narrow rocky technical sections, almost trial-like. More dunes, softer than the first. Valleys with rocks. Fast open terrain. Small difficult dunes. Then a very rough section to the finish. Everything the Dakar had to offer, compressed into 311 kilometres.</p>
+<p>It became one of the hardest stages of the entire rally for car #306.</p>
+<p>A puncture in the first 10 kilometres. Then, around KP 30, they lost pressure on the rear brakes. A leak in the rear brake circuit. Pedro and Hugo had to close the rear circuit entirely and drive the remaining 280 kilometres with only the front brakes, which were very weak.</p>
+<p>280 kilometres of the hardest stage of the Dakar, with big rocks in the track and very soft sand, on brakes that barely worked. They had to reduce pace dramatically, and even doing that, there were curves where the front brakes alone could not stop the car in time and they went straight off the track.</p>
+<p>They finished. P15 Challenger, +32:43. Held P11 in the general. The gap rate of 10:31 per 100 km was their second worst of the rally after Stage 4, and this time there was no 15-minute penalty to explain it. Just 280 kilometres of driving a 180-horsepower car through rocks and dunes with almost no brakes.</p>
+<p><em>One stage left. 105 kilometres between them and the finish line in Yanbu.</em></p>`,
+ resultBoxes:[{v:'P15',l:'Stage CHG'},{v:'P11',l:'General CHG'},{v:'+32:43',l:'Gap to P1'}],
+ resultNote:'280 km with only front brakes. Second worst gap rate of the rally.',
+ stageClass:[['P1','347','K. Benavides','3:44:52',''],['P2','301','D. Akeel','3:47:07','+2:15'],['P3','305','D. Zille','3:48:29','+3:37'],['P4','302','P. Klaassen','3:48:53','+4:01'],['P5','300','N. Cavigliasso','3:50:47','+5:55'],['P6','338','L. Del Rio','3:51:10','+6:18'],['P7','314','I. Casale','3:54:55','+10:03'],['P8','336','P. Navarro','3:57:06','+12:14'],['P9','304','Y. Seaidan','3:57:51','+12:59'],['P10','335','C. Munster','4:03:28','+18:36'],['P15','306','P. Gon\u00e7alves','4:17:35','+32:43']],
+ stageOurPos:'P15',
+ genClass:[['P1','336','P. Navarro','53:49:52',''],['P2','304','Y. Seaidan','54:15:45','+25:53'],['P3','300','N. Cavigliasso','54:27:37','+37:45'],['P4','338','L. Del Rio','54:29:45','+39:53'],['P5','302','P. Klaassen','54:44:39','+54:47'],['P6','305','D. Zille','55:11:54','+1:22:02'],['P7','314','I. Casale','55:42:49','+1:52:57'],['P8','301','D. Akeel','56:05:12','+2:15:20'],['P9','347','K. Benavides','56:26:43','+2:36:51'],['P10','310','P. Spierings','57:03:54','+3:14:02'],['P11','306','P. Gon\u00e7alves','57:20:37','+3:30:45']],
+ genOurPos:'P11'
+},
+{id:'stage13', navLabel:'S13', tag:'Stage 13 \u00b7 Final \u00b7 January 17', title:'105 km to the Finish',
+ badges:['Yanbu \u2192 Yanbu','105 km SS'],highlightBadges:['P11/33 CHG','+4:14'],
+ photoDirs:['2026-01-17'],
+ story:`<p>Sandy valleys, rocky sections, coastal tracks. 105 kilometres back to Yanbu and the Red Sea. The final stage of the 2026 Dakar Rally.</p>
+<p>Clean. No issues. They took it home.</p>
+<p>But the stage carried one last punch. Somewhere on the route, Pedro and Hugo passed the wrecked car of David Zille, their BBR teammate. An enormous crash. The car was completely destroyed. For two hours after finishing, they did not know if he was ok.</p>
+<p>Zille was ok. His car was destroyed, and he had to be towed to the finish line, but he was uninjured. He was classified P10 Challenger, 2 minutes and 33 seconds ahead of Pedro. The teammate whose crash they had witnessed on the final stage was the man who kept them out of the top 10.</p>
+<p>Pedro and Hugo crossed the finish line in Yanbu. P11 Challenger out of 33 finishers from 37 starters. P54 overall out of 152 finishers from 202 starters. Total time: 58 hours, 17 minutes and 19 seconds. 22 minutes of penalties. 2 minutes and 33 seconds from the top 10.</p>`,
+ resultBoxes:[{v:'P11',l:'Stage CHG'},{v:'P11',l:'Final CHG'},{v:'+4:14',l:'Gap to P1'},{v:'58h17m19s',l:'Total Time'}],
+ stageClass:[['P1','347','K. Benavides','52:28',''],['P2','335','C. Munster','53:41','+1:13'],['P3','338','L. Del Rio','53:45','+1:17'],['P4','304','Y. Seaidan','53:58','+1:30'],['P5','300','N. Cavigliasso','54:36','+2:08'],['P6','315','J. Favre','54:37','+2:09'],['P7','310','P. Spierings','55:13','+2:45'],['P8','302','P. Klaassen','55:54','+3:26'],['P9','330','L. Peters','56:09','+3:41'],['P10','336','P. Navarro','56:29','+4:01'],['P11','306','P. Gon\u00e7alves','56:42','+4:14']],
+ stageOurPos:'P11',
+ genClass:[['P1','336','P. Navarro','54:46:21',''],['P2','304','Y. Seaidan','55:09:43','+23:22'],['P3','300','N. Cavigliasso','55:22:13','+35:52'],['P4','338','L. Del Rio','55:23:30','+37:09'],['P5','302','P. Klaassen','55:40:33','+54:12'],['P6','305','D. Zille','55:11:54','+1:22:02'],['P7','314','I. Casale','55:42:49','+1:52:57'],['P8','301','D. Akeel','56:05:12','+2:15:20'],['P9','347','K. Benavides','57:19:11','+2:32:50'],['P10','310','P. Spierings','57:59:07','+3:12:46'],['P11','306','P. Gon\u00e7alves','58:17:19','+3:30:58']],
+ genOurPos:'P11'
+},
+{id:'epilogue', navLabel:'Epilogue', tag:'Epilogue', title:'Glory, and Hunger',
+ badges:['Yanbu'],highlightBadges:['P11 Challenger','P54/152 Overall','58h 17m 19s'],
+ photoDirs:['Epilogue'],
+ story:`<p>At the finish line, Pedro felt proud. Proud of the progression from a Hobby race at Raid Ferraria to P11 Challenger at the Dakar. Proud of being a Dakar finisher, one year after the retirement that had left unfinished business in the Saudi desert. Proud of every stage survived, every problem solved, every sunrise seen from behind the wheel of a Taurus T3 Max in the middle of nowhere.</p>
+<p>But he also thought about how close he had gotten to the top 10. 2 minutes and 33 seconds. The 20 minutes stuck in the narrow passage on Stage 4 was eight times that gap. The 15-minute waypoint penalty was six times it. The 6-minute speed penalty on Stage 5 was more than double. Any single incident across the entire rally, avoided, would have put him inside the top 10.</p>
+<p>Looking back, he could have pushed a bit more. Stage 10, the conservative approach in the dunes, had cost positions that never came back. But the Dakar teaches humility before ambition. Finishing is the first victory. Everything else is negotiation.</p>
+<p>In the W2RC Challenger Championship, the Dakar earned Pedro 11 points and 10th position in the standings. Two months later, at Rally-Raid Portugal, he would finish P4 Challenger, his best W2RC result ever. The trajectory that began at Ferraria kept climbing. What will the future hold?</p>`,
+ resultBoxes:[{v:'P11',l:'Challenger'},{v:'P54',l:'Overall'},{v:'58h17m',l:'Total Time'},{v:'2:33',l:'From Top 10'},{v:'13+P',l:'Stages Finished'},{v:'~4,845',l:'SS km'}],
+ stageClass:null, stageOurPos:null, genClass:null, genOurPos:null
+},
+{id:'career', navLabel:'Career', tag:'Complete Racing Career', title:'The Journey: 18 Races in 33 Months',
+ badges:['Pedro Gon\u00e7alves / Hugo Magalh\u00e3es','Taurus T3 Max','BBR Motorsport'],
+ highlightBadges:['P11 Challenger','P54 Overall','58h 17m 19s'],
+ photoDirs:[],
+ journeyOnly:true,
+ story:`<div class="race-record-table"><table class="standings-table race-record"><thead><tr><th>Stage</th><th>Route</th><th>SS km</th><th>Stage P.</th><th>Stage Gap</th><th>GC P.</th><th>GC Gap</th></tr></thead><tbody>
+<tr><td>P</td><td>Yanbu \u2192 Yanbu</td><td>22</td><td>P18/37</td><td>+0:51</td><td>\u2014</td><td>\u2014</td></tr>
+<tr><td>S1</td><td>Yanbu \u2192 Yanbu</td><td>305</td><td>P12/37</td><td>+13:53</td><td>P12</td><td>+13:53</td></tr>
+<tr><td>S2</td><td>Yanbu \u2192 Al-Ula</td><td>400</td><td>P7/37</td><td>+13:44</td><td>P8</td><td>+18:13</td></tr>
+<tr><td>S3</td><td>Al-Ula \u2192 Al-Ula</td><td>421</td><td>P6/37</td><td>+20:01</td><td>P7</td><td>+27:51</td></tr>
+<tr><td>S4</td><td>Al-Ula \u2192 Marathon Bivouac</td><td>452</td><td>P16/36</td><td>+1:08:21</td><td>P6</td><td>+1:26:56</td></tr>
+<tr><td>S5</td><td>Marathon Bivouac \u2192 Ha\u2019il</td><td>356</td><td>P21/36</td><td>+34:41</td><td>P9</td><td>+2:00:28</td></tr>
+<tr><td>S6</td><td>Ha\u2019il \u2192 Riyadh</td><td>326</td><td>P11/36</td><td>+25:49</td><td>P9</td><td>+2:18:34</td></tr>
+<tr class="rest-row"><td colspan="7">Rest Day \u2014 Riyadh \u2014 January 10</td></tr>
+<tr><td>S7</td><td>Riyadh \u2192 Wadi Ad-Dawasir</td><td>459</td><td>P15/35</td><td>+18:13</td><td>P9</td><td>+2:28:58</td></tr>
+<tr><td>S8</td><td>Wadi Ad-Dawasir</td><td>483</td><td>P14/35</td><td>+22:36</td><td>P10</td><td>+2:46:10</td></tr>
+<tr><td>S9</td><td>Wadi Ad-Dawasir \u2192 Marathon Refuge</td><td>410</td><td>P8/35</td><td>+24:08</td><td>P8</td><td>+2:50:17</td></tr>
+<tr><td>S10</td><td>Marathon Refuge \u2192 Bisha</td><td>420</td><td>P13/35</td><td>+35:50</td><td>P11</td><td>+3:00:06</td></tr>
+<tr><td>S11</td><td>Bisha \u2192 Al Henakiyah</td><td>346</td><td>P16/33</td><td>+17:30</td><td>P11</td><td>+3:10:16</td></tr>
+<tr><td>S12</td><td>Al Henakiyah \u2192 Yanbu</td><td>311</td><td>P15/33</td><td>+32:43</td><td>P11</td><td>+3:30:45</td></tr>
+<tr class="our-team"><td>S13</td><td>Yanbu \u2192 Yanbu</td><td>105</td><td>P11/33</td><td>+4:14</td><td class="final-pos">P11</td><td>+3:30:58</td></tr>
+</tbody></table></div>
+<div class="record-summary"><div class="result-boxes" style="margin-top:1.5rem"><div class="result-box"><span class="result-value">P11</span><span class="result-label">Challenger</span></div><div class="result-box"><span class="result-value">P54</span><span class="result-label">Overall (152)</span></div><div class="result-box"><span class="result-value">58h17m</span><span class="result-label">Total Time</span></div><div class="result-box"><span class="result-value">2:33</span><span class="result-label">From Top 10</span></div><div class="result-box"><span class="result-value">~4,845</span><span class="result-label">SS km</span></div><div class="result-box"><span class="result-value">14/14</span><span class="result-label">Stages Finished</span></div></div></div>`,
+ resultBoxes:null,
+ stageClass:null, stageOurPos:null, genClass:null, genOurPos:null,
+ journey:{
+  title:'Complete Racing Career',
+  sections:[
+    {heading:'2023 - Team Franco Sport, Yamaha YXZ1000R', races:[
+      {n:1, date:'Apr 23', event:'XXXV Raid Ferraria', nav:'Pedro Ara\u00fajo', team:'Franco Sport', cat:'P2 Hobby', ovr:'P2'},
+      {n:2, date:'Oct 23', event:'37th Baja Portalegre 500', nav:'Pedro Araujo', team:'Franco Sport', cat:'P12 SSV TT2', ovr:'P42'}
+    ]},
+    {heading:'2024 - Team Franco Sport, Yamaha X-raid YXZ 1000R', races:[
+      {n:3, date:'Mar 24', event:'Yamaha Desert Challenge (Morocco)', nav:'Lu\u00eds Engeitado', team:'Franco Sport', cat:'P2 SSV', ovr:'P2'},
+      {n:4, date:'Apr 24', event:'Rally-Raid Portugal (W2RC)', nav:'Rui Franco', team:'Franco Sport', cat:'P14 CHG', ovr:'P26'},
+      {n:5, date:'Apr 24', event:'XXXVI Raid Ferraria (FPAK)', nav:'Lu\u00eds Engeitado', team:'Franco Sport', cat:'DNF', ovr:''},
+      {n:6, date:'Jun 24', event:'Baja TT Norte de Portugal', nav:'Lu\u00eds Engeitado', team:'Franco Sport', cat:'P12 CHG', ovr:'P36'},
+      {n:7, date:'Jul 24', event:'Baja Espana Aragon (FIA)', nav:'Lu\u00eds Engeitado', team:'Franco Sport', cat:'DNF', ovr:''},
+      {n:8, date:'Oct 24', event:'Rallye du Maroc (W2RC)', nav:'Lu\u00eds Engeitado', team:'Franco Sport', cat:'DNF', ovr:''}
+    ]},
+    {heading:'2025 - Franco Sport then BBR Motorsport', races:[
+      {n:9, date:'Jan 25', event:'Dakar Rally (W2RC)', nav:'Hugo Magalh\u00e3es', team:'Franco Sport', cat:'DNF (Stg 6)', ovr:''},
+      {n:10, date:'Feb 25', event:'Abu Dhabi Desert Challenge', nav:'Hugo Magalh\u00e3es', team:'Franco Sport', cat:'DNF', ovr:''},
+      {n:11, date:'Apr 25', event:'Carta Rallye (Morocco)', nav:'Hugo Magalh\u00e3es', team:'Franco Sport', cat:'P3 Open', ovr:'P4'},
+      {n:12, date:'May 25', event:'TH Clothes Raid Ferraria', nav:'Hugo Magalh\u00e3es', team:'Franco Sport', cat:'DNF', ovr:''},
+      {n:13, date:'Jul 25', event:'Baja Espana Aragon (BBR switch)', nav:'Hugo Magalh\u00e3es', team:'BBR Motorsport', cat:'P17 CHG', ovr:'P44'},
+      {n:14, date:'Sep 25', event:'Rally-Raid Portugal (W2RC)', nav:'Rui Franco', team:'BBR Motorsport', cat:'P6 CHG', ovr:'P21'},
+      {n:15, date:'Oct 25', event:'Baja Morocco', nav:'Hugo Magalh\u00e3es', team:'BBR Motorsport', cat:'P5 Open', ovr:'P8'},
+      {n:16, date:'Oct 25', event:'Rallye du Maroc (W2RC)', nav:'Hugo Magalh\u00e3es', team:'BBR Motorsport', cat:'P5 CHG', ovr:'P28'}
+    ]},
+    {heading:'2026 - BBR Motorsport, Taurus T3 Max, #306', races:[
+      {n:17, date:'Jan 26', event:'Dakar Rally (W2RC)', nav:'Hugo Magalh\u00e3es', team:'BBR Motorsport', cat:'P11 CHG', ovr:'P54'},
+      {n:18, date:'Mar 26', event:'Rally-Raid Portugal (W2RC)', nav:'Hugo Magalh\u00e3es', team:'BBR Motorsport', cat:'P4 CHG', ovr:'P24'}
+    ]}
+  ],
+  footer:'18 races across 5 countries. 6 retirements, 12 finishes. From P2/2 Hobby to P11 Challenger at the Dakar.',
+  numbersTitle:'Dakar 2026: By the Numbers',
+  numbers:[
+    '13 stages + Prologue | ~4,845 km of selective sections | ~8,000 km total',
+    'P11/33 Challenger | P54/152 Overall | 58h 17m 19s',
+    '22 minutes of penalties | 2m 33s from Top 10 | W2RC: P10, 11 points',
+    'Best stage: P6 CHG (Stage 3) | Best general: P6 CHG (after Stage 4)',
+    'Incidents: 3 punctures, broken steering, power steering failure, engine map malfunction, front brake locks (x2), rear brake leak, speed penalty, missed waypoint, 20 min stuck'
+  ]
+ }
+}
+];
+
+// ── RENDER ──
+function render() {
+  const app = document.getElementById('app');
+  const nav = document.getElementById('nav-inner');
+  let html = '';
+
+  // Hero page
+  html += `<div class="page active" id="page-hero" data-idx="0">
+    <div class="hero-page">
+      <span class="hero-number">306</span>
+      <div class="hero-content">
+        <div class="hero-tag">BBR Motorsport &middot; Taurus T3 Max &middot; Challenger</div>
+        <h1>Dakar 2026<br>The Story of Car #306</h1>
+        <p class="hero-subtitle">Finishing is the first victory. Everything else is negotiation. P11 Challenger. 58 hours, 17 minutes. 2:33 minutes from the Top 10.</p>
+        <div class="hero-meta">
+          <span class="hero-meta-item">Dakar Rally 2026</span>
+          <span class="hero-meta-item">W2RC Round 1</span>
+          <span class="hero-meta-item">January 3\u201317, 2026</span>
+          <span class="hero-meta-item">Yanbu \u2192 Yanbu</span>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat"><div class="hero-stat-value">P11</div><div class="hero-stat-label">Challenger</div></div>
+          <div class="hero-stat"><div class="hero-stat-value">P54</div><div class="hero-stat-label">Overall</div></div>
+          <div class="hero-stat"><div class="hero-stat-value">58h17m</div><div class="hero-stat-label">Total Time</div></div>
+          <div class="hero-stat"><div class="hero-stat-value">2:33</div><div class="hero-stat-label">From Top 10</div></div>
+        </div>
+        <button class="hero-start-btn" onclick="goTo(1)">Read the Story</button>
+      </div>
+    </div>
+  </div>`;
+
+  // Stage pages
+  PAGES.forEach((p, i) => {
+    if (p.isHero) return;
+    const navLink = document.createElement('span');
+    navLink.className = 'nav-link';
+    navLink.textContent = p.navLabel;
+    navLink.dataset.idx = i;
+    navLink.onclick = () => goTo(i);
+    nav.appendChild(navLink);
+
+    const hasTabs = true;
+    const hasResults = p.stageClass || p.genClass;
+    const allPhotos = [];
+    (p.photoDirs||[]).forEach(d => {
+      (PHOTOS[d]||[]).forEach(f => allPhotos.push('photos/' + d + '/' + f));
+    });
+
+    html += `<div class="page" id="page-${p.id}" data-idx="${i}">`;
+    // Header
+    html += `<div class="page-header">
+      <div class="page-tag">${p.tag}</div>
+      <h2 class="page-title">${p.title}</h2>
+      <div class="page-meta">
+        ${(p.badges||[]).map(b=>'<span class="page-meta-badge">'+b+'</span>').join('')}
+        ${(p.highlightBadges||[]).map(b=>'<span class="page-meta-badge highlight">'+b+'</span>').join('')}
+      </div>
+    </div>`;
+
+    // Tabs bar
+    const jOnly = p.journeyOnly;
+    if (!jOnly) {
+      html += `<div class="tabs-bar" data-page="${p.id}">
+        <button class="tab-btn active" onclick="switchTab('${p.id}','story',this)">Story</button>
+        ${hasResults ? `<button class="tab-btn" onclick="switchTab('${p.id}','results',this)">Results</button>` : ''}
+        ${allPhotos.length ? `<button class="tab-btn" onclick="switchTab('${p.id}','photos',this)">Photos (${allPhotos.length})</button>` : ''}
+      </div>`;
+    }
+
+    // Story tab - inject H-prefixed photos inline, sorted by H number
+    let storyHtml = p.story;
+    const hPhotos = allPhotos
+      .filter(src => { const fn = src.split('/').pop(); return /^H\d+_/.test(fn); })
+      .sort((a, b) => {
+        const na = parseInt(a.split('/').pop().match(/^H(\d+)_/)[1]);
+        const nb = parseInt(b.split('/').pop().match(/^H(\d+)_/)[1]);
+        return na - nb;
+      });
+    // Use H-prefixed if available, otherwise auto-pick 3 evenly spaced
+    const inlinePhotos = hPhotos.length > 0 ? hPhotos :
+      allPhotos.length >= 3 ? [allPhotos[0], allPhotos[Math.floor(allPhotos.length / 3)], allPhotos[Math.floor(allPhotos.length * 2 / 3)]] :
+      allPhotos.length >= 1 ? allPhotos.slice(0, allPhotos.length) : [];
+    if (inlinePhotos.length > 0) {
+      const blocks = storyHtml.split(/(?<=<\/p>|<\/div>)/);
+      const n = inlinePhotos.length;
+      for (let j = n - 1; j >= 0; j--) {
+        const pos = Math.min(Math.floor((j + 1) * blocks.length / (n + 1)), blocks.length - 1);
+        blocks.splice(pos, 0, `<div class="story-photo photo-item" onclick="openLightbox(this)"><img src="${inlinePhotos[j]}" alt="" loading="lazy"></div>`);
+      }
+      storyHtml = blocks.join('');
+    }
+    if (!jOnly) {
+      html += `<div class="tab-content active" id="tab-${p.id}-story">
+        <div class="story-content">${storyHtml}</div>
+      </div>`;
+    }
+
+    // Results tab
+    if (hasResults) {
+      let rhtml = '<div class="results-content">';
+      if (p.resultBoxes) {
+        rhtml += '<div class="result-box">';
+        p.resultBoxes.forEach(r => rhtml += `<div class="result-item"><div class="result-value">${r.v}</div><div class="result-label">${r.l}</div></div>`);
+        if (p.resultNote) rhtml += `<div class="result-note">${p.resultNote}</div>`;
+        rhtml += '</div>';
+      }
+      if (p.stageClass) {
+        rhtml += '<div class="standings-wrapper"><div>';
+        rhtml += '<div class="standings-title">Stage Classification (CHG)</div>';
+        rhtml += tbl(p.stageClass, p.stageOurPos);
+        rhtml += '</div>';
+        if (p.genClass) {
+          rhtml += '<div><div class="standings-title">General Classification (CHG)</div>';
+          rhtml += tbl(p.genClass, p.genOurPos);
+          rhtml += '</div>';
+        }
+        rhtml += '</div>';
+      }
+      rhtml += '</div>';
+      html += `<div class="tab-content" id="tab-${p.id}-results">${rhtml}</div>`;
+    }
+
+    // Journey tab
+    if (p.journey) {
+      let jhtml = '<div class="journey-content"><div class="journey-section">';
+      jhtml += `<h3 class="journey-title">${p.journey.title}</h3>`;
+      jhtml += '<div class="race-record-table"><table class="standings-table journey-table"><thead><tr><th>#</th><th>Date</th><th>Event</th><th>Navigator</th><th>Team</th><th>Category</th><th>Overall</th></tr></thead><tbody>';
+      p.journey.sections.forEach(s => {
+        jhtml += `<tr class="section-row"><td colspan="7">${s.heading}</td></tr>`;
+        s.races.forEach(r => {
+          const isDnf = r.cat.startsWith('DNF');
+          const cls = isDnf ? ' class="dnf-row"' : '';
+          jhtml += `<tr${cls}><td>${r.n}</td><td>${r.date}</td><td class="event-name">${r.event}</td><td>${r.nav}</td><td>${r.team}</td><td class="cat-col${isDnf?' dnf':''}">${r.cat}</td><td>${r.ovr}</td></tr>`;
+        });
+      });
+      jhtml += '</tbody></table></div>';
+      if (p.journey.footer) jhtml += `<p class="journey-footer">${p.journey.footer}</p>`;
+      jhtml += '</div>';
+      jhtml += `<div class="journey-section"><h3 class="journey-title">${p.journey.numbersTitle}</h3><div class="numbers-block">`;
+      p.journey.numbers.forEach(n => { jhtml += `<p>${n}</p>`; });
+      jhtml += '</div></div></div>';
+      if (jOnly) {
+        html += jhtml;
+      } else {
+        html += `<div class="tab-content" id="tab-${p.id}-journey">${jhtml}</div>`;
+      }
+    }
+
+    // Photos tab
+    html += `<div class="tab-content" id="tab-${p.id}-photos">
+      <div class="photos-content"><div class="photos-grid" id="grid-${p.id}">
+        ${allPhotos.map(src => `<div class="photo-item" onclick="openLightbox(this)"><img src="${src}" alt="" loading="lazy"></div>`).join('')}
+      </div></div>
+    </div>`;
+
+    // Prev/Next nav
+    const prevIdx = i - 1;
+    const nextIdx = i + 1 < PAGES.length ? i + 1 : -1;
+    html += `<div class="page-nav">
+      <button class="page-nav-btn${prevIdx < 0 ? ' hidden':''}" onclick="goTo(${prevIdx})">\u2190 ${prevIdx >= 0 ? PAGES[prevIdx].navLabel || 'Home' : ''}</button>
+      <button class="page-nav-btn${nextIdx < 0 ? ' hidden':''}" onclick="goTo(${nextIdx})">${nextIdx >= 0 ? PAGES[nextIdx].navLabel || '' : ''} \u2192</button>
+    </div>`;
+
+    html += '</div>';
+  });
+
+  app.innerHTML = html;
+}
+
+function switchTab(pageId, tabName, btn) {
+  const page = document.getElementById('page-' + pageId);
+  page.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  page.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + pageId + '-' + tabName).classList.add('active');
+  btn.classList.add('active');
+}
+
+let currentPage = 0;
+function goTo(idx) {
+  if (idx < 0 || idx >= PAGES.length) return;
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page-' + PAGES[idx].id).classList.add('active');
+  document.querySelectorAll('.nav-link').forEach(l => l.classList.toggle('active', parseInt(l.dataset.idx) === idx));
+  currentPage = idx;
+  window.scrollTo(0, 0);
+}
+
+// ── LIGHTBOX ──
+let lbPhotos = [], lbIndex = 0;
+function getPagePhotos(el) {
+  const page = el.closest('.page');
+  return page ? Array.from(page.querySelectorAll('.photo-item')) : [el];
+}
+function showLightboxPhoto() {
+  const img = lbPhotos[lbIndex].querySelector('img');
+  document.getElementById('lightbox-img').src = img.src;
+  document.getElementById('lightbox-counter').textContent = (lbIndex+1)+' / '+lbPhotos.length;
+  document.querySelector('.lightbox-prev').style.display = lbPhotos.length > 1 ? '' : 'none';
+  document.querySelector('.lightbox-next').style.display = lbPhotos.length > 1 ? '' : 'none';
+}
+function openLightbox(el) {
+  lbPhotos = getPagePhotos(el);
+  lbIndex = lbPhotos.indexOf(el);
+  if (lbIndex === -1) lbIndex = 0;
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  showLightboxPhoto();
+}
+function navigateLightbox(dir) {
+  lbIndex = (lbIndex + dir + lbPhotos.length) % lbPhotos.length;
+  showLightboxPhoto();
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function onLightboxClick(e) {
+  if (e.target === document.getElementById('lightbox') || e.target === document.getElementById('lightbox-img')) {
+    const rect = document.getElementById('lightbox').getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const third = rect.width / 3;
+    if (lbPhotos.length > 1 && x < third) navigateLightbox(-1);
+    else if (lbPhotos.length > 1 && x > third * 2) navigateLightbox(1);
+    else closeLightbox();
+  }
+}
+document.addEventListener('keydown', e => {
+  if (document.getElementById('lightbox').classList.contains('open')) {
+    if (e.key === 'Escape') closeLightbox();
+    else if (e.key === 'ArrowLeft') navigateLightbox(-1);
+    else if (e.key === 'ArrowRight') navigateLightbox(1);
+    return;
+  }
+  if (e.key === 'ArrowLeft' && currentPage > 0) goTo(currentPage - 1);
+  else if (e.key === 'ArrowRight' && currentPage < PAGES.length - 1) goTo(currentPage + 1);
+});
+
+render();
+</script>
+</body>
+</html>
