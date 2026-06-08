@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>306 &middot; Dakar 2026 &middot; The Story of Car #306</title>
+<title>306 &middot; Dakar 2026 &middot; A Hist&oacute;ria do Carro #306</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=JetBrains+Mono:wght@400;600&display=swap');
 
@@ -410,7 +410,7 @@
 <nav>
   <div class="nav-inner" id="nav-inner">
     <span class="nav-brand" onclick="goTo(0)">#306</span>
-    <span class="lang-switch"><a href="index.html" class="active">EN</a><span class="sep">|</span><a href="pt.html">PT</a></span>
+    <span class="lang-switch"><a href="index.html">EN</a><span class="sep">|</span><a href="pt.html" class="active">PT</a></span>
   </div>
 </nav>
 
@@ -427,7 +427,7 @@
 <div id="app"></div>
 
 <footer>
-  Car #306 &middot; Pedro Gon&ccedil;alves / Hugo Magalh&atilde;es &middot;
+  Carro #306 &middot; Pedro Gon&ccedil;alves / Hugo Magalh&atilde;es &middot;
   BBR Motorsport &middot; Taurus T3 Max &middot; Dakar 2026
 </footer>
 
@@ -456,7 +456,7 @@ const PHOTOS = {
 };
 
 function tbl(rows, ourPos) {
-  let h = '<table class="standings-table"><thead><tr><th>P</th><th>#</th><th>Driver</th><th>Time</th><th>Gap</th></tr></thead><tbody>';
+  let h = '<table class="standings-table"><thead><tr><th>P</th><th>#</th><th>Piloto</th><th>Tempo</th><th>Dif.</th></tr></thead><tbody>';
   const posNum = parseInt(ourPos.replace('P',''));
   rows.forEach(r => {
     const rp = parseInt(r[0].replace('P',''));
@@ -470,305 +470,305 @@ function tbl(rows, ourPos) {
 // ── PAGE DATA ──
 const PAGES = [
 {id:'hero', navLabel:'', isHero: true},
-{id:'intro', navLabel:'Intro', tag:'Introduction', title:'The Journey to the Dakar',
+{id:'intro', navLabel:'Intro', tag:'Introdu\u00e7\u00e3o', title:'O Caminho at\u00e9 ao Dakar',
  badges:['Pedro Gon\u00e7alves / Hugo Magalh\u00e3es','BBR Motorsport','Taurus T3 Max'],
- highlightBadges:['Car #306'],
+ highlightBadges:['Carro #306'],
  photoDirs:['Prologue'],
- story:`<p>On the 21st of April 2023, a 45-year-old Pedro Gon\u00e7alves climbed into a modest Yamaha YXZ1000R at a local cross-country raid in the hills of central Portugal. It was his absolute debut. Twenty months after that debut at Ferraria, he would line up at the start of the Dakar Rally.</p>
-<p>The path between a Hobby race and the Dakar was paved with ambition and broken machinery. Two races in 2023: the Ferraria raid and the Baja Portalegre 500, where he finished P12 out of 13 in the SSV TT2 class, P42 out of 68 overall. Then six races in 2024, including his first taste of African desert at the Yamaha Desert Challenge in Morocco, where he finished second out of eight. His first W2RC round at Rally-Raid Portugal, P14 Challenger out of 32. But also three retirements, and a last-place finish in his class at Baja TT Norte de Portugal. The learning curve was steep and unforgiving.</p>
-<div class="highlight-block"><p>He changed navigators, changed cars, changed teams. Pedro Ara\u00fajo in 2023. Rui Franco and Lu\u00eds Engeitado rotating through 2024. Then Hugo Magalh\u00e3es arrived for the Dakar 2025. Hugo was at the other end of the spectrum: a professional co-driver in stage rallies, including WRC, for the last 18 years.</p></div>
-<p>The 2025 Dakar was Pedro and Hugo's rookie attempt, and it was not an easy debut. A broken clutch on Stage 6 dropped them into the Dakar Experience category, and the same issue struck again on Stage 11, leaving them out of the race. The disappointment was crushing. The setbacks kept coming. But then the Fenic gave way to a Taurus T3 Max when Pedro joined BBR Motorsport in July 2025. And suddenly: P6 Challenger at Rally-Raid Portugal, P5 at Baja Morocco, P5 at Rallye du Maroc. Three consecutive top-six category finishes to close the 2025 season.</p>
-<p>Now it was January 3, 2026. His 48th birthday. And the second Dakar was about to begin.</p>
-<p>Pedro's family was in Saudi Arabia, they spent some rest days together before the rally began. On January 3rd, their last day in Saudi, they would stood at the start podium and watch Pedro roll down the ramp into the desert, the beginning of the adventure they had all been building toward.</p>`,
+ story:`<p>No dia 21 de Abril de 2023, um Pedro Gon\u00e7alves de 45 anos entrou num modesto Yamaha YXZ1000R num raide cross-country local nas colinas do centro de Portugal. Era a sua estreia absoluta. Vinte meses depois dessa estreia na Ferraria, alinharia na partida do Rali Dakar.</p>
+<p>O caminho entre uma corrida Hobby e o Dakar foi pavimentado com ambi\u00e7\u00e3o e m\u00e1quinas partidas. Duas corridas em 2023: o raide da Ferraria e a Baja Portalegre 500, onde terminou P12 em 13 na classe SSV TT2, P42 em 68 \u00e0 geral. Depois seis corridas em 2024, incluindo a sua primeira experi\u00eancia no deserto africano no Yamaha Desert Challenge em Marrocos, onde terminou segundo em oito. A sua primeira ronda W2RC no Rally-Raid Portugal, P14 Challenger em 32. Mas tamb\u00e9m tr\u00eas desist\u00eancias, e um \u00faltimo lugar na sua classe na Baja TT Norte de Portugal. A curva de aprendizagem foi \u00edngreme e implac\u00e1vel.</p>
+<div class="highlight-block"><p>Mudou de navegadores, mudou de carros, mudou de equipas. Pedro Ara\u00fajo em 2023. Rui Franco e Lu\u00eds Engeitado a alternarem ao longo de 2024. Depois Hugo Magalh\u00e3es chegou para o Dakar 2025. Hugo estava no extremo oposto do espectro: um co-piloto profissional em ralis de etapas, incluindo WRC, h\u00e1 18 anos.</p></div>
+<p>O Dakar 2025 foi a tentativa rookie de Pedro e Hugo, e n\u00e3o foi uma estreia f\u00e1cil. Uma embraiagem partida na Etapa 6 atirou-os para a categoria Dakar Experience, e o mesmo problema atacou de novo na Etapa 11, deixando-os fora da corrida. A desilus\u00e3o foi devastadora. Os contratempos continuaram. Mas depois o Fenic deu lugar a um Taurus T3 Max quando Pedro se juntou \u00e0 BBR Motorsport em Julho de 2025. E de repente: P6 Challenger no Rally-Raid Portugal, P5 na Baja Marrocos, P5 no Rallye du Maroc. Tr\u00eas top-seis consecutivos na categoria para fechar a temporada de 2025.</p>
+<p>Agora era 3 de Janeiro de 2026. O seu 48\u00ba anivers\u00e1rio. E o segundo Dakar estava prestes a come\u00e7ar.</p>
+<p>A fam\u00edlia de Pedro estava na Ar\u00e1bia Saudita, passaram alguns dias de descanso juntos antes do rali come\u00e7ar. A 3 de Janeiro, no seu \u00faltimo dia na Ar\u00e1bia, estiveram no p\u00f3dio de partida a ver Pedro descer a rampa em direc\u00e7\u00e3o ao deserto, o in\u00edcio da aventura para a qual todos tinham trabalhado.</p>`,
  resultBoxes:null,
  stageClass:null, stageOurPos:null, genClass:null, genOurPos:null
 },
-{id:'shakedown', navLabel:'Shakedown', tag:'Shakedown & Verifications \u00b7 January 1\u20132', title:'Final Preparations in Yanbu',
- badges:['Yanbu','Technical Scrutineering','Shakedown'],
- highlightBadges:['Car #306 Ready'],
+{id:'shakedown', navLabel:'Shakedown', tag:'Shakedown & Verifica\u00e7\u00f5es \u00b7 1\u20132 Janeiro', title:'Prepara\u00e7\u00f5es Finais em Yanbu',
+ badges:['Yanbu','Verifica\u00e7\u00f5es T\u00e9cnicas','Shakedown'],
+ highlightBadges:['Carro #306 Pronto'],
  photoDirs:['2026-01-01','2026-01-02'],
- story:`<p>Before a single competitive kilometre, there was work to do. The first two days of January were dedicated to the rituals that precede every Dakar: the shakedown test, administrative checks, and technical scrutineering.</p>
-<p>On January 1st, the shakedown \u2014 a short, controlled test run on a designated course near the bivouac. Not a race, but a chance to feel the car on Saudi terrain for the first time, to check that every system worked as intended after the long journey from Portugal. Suspension, engine response, navigation equipment, intercom \u2014 all tested under real conditions.</p>
-<p>January 2nd was dedicated to the verifications. The team went through scrutineering in Yanbu. Every detail of the Taurus T3 Max was inspected \u2014 safety equipment, roll cage, harnesses, fire extinguishers, navigation instruments, tracking systems. The car had to comply with FIA regulations down to the millimetre. For Pedro and Hugo, it was also the moment to collect their credentials, verify documentation, and officially confirm their entry as car #306.</p>
-<div class="highlight-block"><p>For BBR Motorsport, these two days were about making sure nothing was left to chance. The mechanics ran their final checks. Pedro and Hugo settled into their routines: seat position, harness tension, the rhythm of communication between driver and navigator. Everything had to be second nature before the flag dropped.</p></div>
-<p>By the evening of January 2nd, car #306 was cleared, tested, and parked in the bivouac. The next morning \u2014 Pedro\u2019s 48th birthday \u2014 would bring the Prologue.</p>`,
+ story:`<p>Antes de um \u00fanico quil\u00f3metro competitivo, havia trabalho a fazer. Os primeiros dois dias de Janeiro foram dedicados aos rituais que precedem cada Dakar: o teste de shakedown, verifica\u00e7\u00f5es administrativas, e a scrutineering t\u00e9cnica.</p>
+<p>A 1 de Janeiro, o shakedown \u2014 uma volta de teste curta e controlada num percurso designado perto do bivouac. N\u00e3o uma corrida, mas uma oportunidade de sentir o carro em terreno saudita pela primeira vez, de verificar que todos os sistemas funcionavam como previsto ap\u00f3s a longa viagem desde Portugal. Suspens\u00e3o, resposta do motor, equipamento de navega\u00e7\u00e3o, intercom \u2014 tudo testado em condi\u00e7\u00f5es reais.</p>
+<p>O dia 2 de Janeiro foi dedicado \u00e0s verifica\u00e7\u00f5es. A equipa passou pela scrutineering em Yanbu. Cada detalhe do Taurus T3 Max foi inspeccionado \u2014 equipamento de seguran\u00e7a, arco de seguran\u00e7a, cintos, extintores, instrumentos de navega\u00e7\u00e3o, sistemas de rastreamento. O carro tinha de cumprir os regulamentos da FIA at\u00e9 ao mil\u00edmetro. Para Pedro e Hugo, foi tamb\u00e9m o momento de recolher as credenciais, verificar a documenta\u00e7\u00e3o, e confirmar oficialmente a inscri\u00e7\u00e3o como carro #306.</p>
+<div class="highlight-block"><p>Para a BBR Motorsport, estes dois dias foram para garantir que nada ficava ao acaso. Os mec\u00e2nicos fizeram as suas verifica\u00e7\u00f5es finais. Pedro e Hugo entraram nas suas rotinas: posi\u00e7\u00e3o do banco, tens\u00e3o dos cintos, o ritmo da comunica\u00e7\u00e3o entre piloto e navegador. Tudo tinha de ser uma segunda natureza antes da bandeira cair.</p></div>
+<p>Ao fim do dia 2 de Janeiro, o carro #306 estava aprovado, testado e estacionado no bivouac. A manh\u00e3 seguinte \u2014 o 48\u00ba anivers\u00e1rio de Pedro \u2014 traria o Pr\u00f3logo.</p>`,
  resultBoxes:null,
  stageClass:null, stageOurPos:null, genClass:null, genOurPos:null
 },
-{id:'prologue', navLabel:'Prologue', tag:'Prologue \u00b7 January 3', title:'Birthday at the Start Ramp',
+{id:'prologue', navLabel:'Pr\u00f3logo', tag:'Pr\u00f3logo \u00b7 3 Janeiro', title:'Anivers\u00e1rio na Rampa de Partida',
  badges:['Yanbu \u2192 Yanbu','22 km SS'],
  highlightBadges:['P18/37 CHG','+0:51'],
  photoDirs:['2026-01-03'],
- story:`<p>The start ramp. The cameras. The Saudi sun on the Red Sea coast. Pedro and Hugo rolled out of Yanbu as the 88th car, into 22 kilometres of canyons and rocky sections. A short prologue, designed to set the starting order for the days ahead.</p>
-<p>No problems. Clean run. They crossed the finish 51 seconds behind the fastest Challenger, in P18 out of 37 in class. A controlled opening on a birthday that already meant more than any cake or candle could.</p>
-<p>One year earlier, on this exact date, Pedro had started the Dakar that would end in retirement. This time, it was different, they were prepared and looking for more than just a finish.</p>
-<p>After the Prologue, they gathered at the bivouac. That evening, under the Saudi sky, they sang happy birthday to a man about to spend two weeks racing across a country the size of Western Europe. The next morning, Sandra, Diogo, and Mariana flew home to Portugal. Pedro and Hugo headed for the start line of Stage 1. The family would not see each other again for fourteen days.</p>`,
- resultBoxes:[{v:'P18',l:'Stage CHG'},{v:'P92',l:'Stage Overall'},{v:'+0:51',l:'Gap to P1'}],
- resultNote:'Clean run. Controlled opening on a birthday that already meant more than any cake or candle could.',
+ story:`<p>A rampa de partida. As c\u00e2maras. O sol saudita sobre a costa do Mar Vermelho. Pedro e Hugo sa\u00edram de Yanbu como o 88\u00ba carro, em direc\u00e7\u00e3o a 22 quil\u00f3metros de canyons e sec\u00e7\u00f5es rochosas. Um pr\u00f3logo curto, desenhado para definir a ordem de partida para os dias seguintes.</p>
+<p>Sem problemas. Volta limpa. Cruzaram a meta 51 segundos atr\u00e1s do Challenger mais r\u00e1pido, em P18 de 37 na classe. Uma abertura controlada num anivers\u00e1rio que j\u00e1 significava mais do que qualquer bolo ou vela poderiam significar.</p>
+<p>Um ano antes, exactamente nesta data, Pedro tinha come\u00e7ado o Dakar que terminaria em desist\u00eancia. Desta vez era diferente, estavam preparados e \u00e0 procura de mais do que apenas terminar.</p>
+<p>Ap\u00f3s o Pr\u00f3logo, juntaram-se no bivouac. Nessa noite, sob o c\u00e9u saudita, cantaram parab\u00e9ns a um homem prestes a passar duas semanas a competir num pa\u00eds do tamanho da Europa Ocidental. Na manh\u00e3 seguinte, Sandra, Diogo e Mariana voaram para Portugal. Pedro e Hugo dirigiram-se para a linha de partida da Etapa 1. A fam\u00edlia n\u00e3o se voltaria a ver durante catorze dias.</p>`,
+ resultBoxes:[{v:'P18',l:'Etapa CHG'},{v:'P92',l:'Etapa Geral'},{v:'+0:51',l:'Dif. P1'}],
+ resultNote:'Volta limpa. Abertura controlada num anivers\u00e1rio que j\u00e1 significava mais do que qualquer bolo ou vela.',
  stageClass:[['P1','310','P. Spierings','12:31',''],['P2','302','P. Klaassen','12:37','+0:06'],['P3','301','D. Akeel','12:44','+0:13'],['P4','300','N. Cavigliasso','12:46','+0:15'],['P5','305','D. Zille','12:46','+0:15'],['P6','304','Y. Seaidan','12:52','+0:21'],['P7','347','K. Benavides','12:53','+0:22'],['P8','338','L. Del Rio','12:56','+0:25'],['P9','314','I. Casale','12:59','+0:28'],['P10','317','O. Ral','12:59','+0:28'],['P18','306','P. Gon\u00e7alves','13:22','+0:51']],
  stageOurPos:'P18', genClass:null, genOurPos:null
 },
-{id:'stage1', navLabel:'S1', tag:'Stage 1 \u00b7 January 4', title:'Into the Canyons',
+{id:'stage1', navLabel:'E1', tag:'Etapa 1 \u00b7 4 Janeiro', title:'Pelos Canyons',
  badges:['Yanbu \u2192 Yanbu','305 km SS'],highlightBadges:['P12/37 CHG','+13:53'],
  photoDirs:['2026-01-04'],
- story:`<p>Starting 92nd, deep in the pack, Pedro and Hugo drove into the sandy canyons west of Yanbu. Beautiful canyons alternating between fast and very fast, then deteriorating rocky tracks through wadis reshaped by recent rains. After a pit stop at halfway, the stage would finish in sand and the first dunes of the 2026 Dakar.</p>
-<p>The problems started early. The gearbox was hard to shift, not working properly. Probably a shift sensor issue. Every gear change was a negotiation with the car instead of an instinct.</p>
-<p>Then, in the final 60 kilometres, they lost power. Pedro had switched to engine Map 4, and the car felt like it had no front traction. Dunes that should have been routine became a fight, the Taurus struggling to climb where it should have charged.</p>
-<p>Despite fighting the car for 305 kilometres, they finished P12 out of 37 Challengers, +13:53 from the stage winner. A solid result hiding a worrying machine.</p>`,
- resultBoxes:[{v:'P12',l:'Stage CHG'},{v:'P63',l:'Stage Overall'},{v:'+13:53',l:'Gap to P1'}],
+ story:`<p>A partir do 92\u00ba lugar, no fundo do pelot\u00e3o, Pedro e Hugo entraram nos canyons arenosos a oeste de Yanbu. Lindos canyons a alternar entre r\u00e1pido e muito r\u00e1pido, depois pistas rochosas degradadas atrav\u00e9s de wadis reformados pelas chuvas recentes. Ap\u00f3s uma paragem nas boxes a meio, a etapa terminaria na areia e nas primeiras dunas do Dakar 2026.</p>
+<p>Os problemas come\u00e7aram cedo. A caixa de velocidades estava dif\u00edcil de engatar, n\u00e3o funcionava bem. Provavelmente um problema no sensor de mudan\u00e7as. Cada mudan\u00e7a de velocidade era uma negocia\u00e7\u00e3o com o carro em vez de um instinto.</p>
+<p>Depois, nos \u00faltimos 60 quil\u00f3metros, perderam pot\u00eancia. Pedro tinha mudado para o Mapa 4 do motor, e o carro parecia n\u00e3o ter trac\u00e7\u00e3o dianteira. Dunas que deviam ser rotina tornaram-se uma luta, com o Taurus a esfor\u00e7ar-se para subir onde devia ter atacado.</p>
+<p>Apesar de lutar com o carro durante 305 quil\u00f3metros, terminaram P12 em 37 Challengers, a +13:53 do vencedor da etapa. Um resultado s\u00f3lido a esconder uma m\u00e1quina preocupante.</p>`,
+ resultBoxes:[{v:'P12',l:'Etapa CHG'},{v:'P63',l:'Etapa Geral'},{v:'+13:53',l:'Dif. P1'}],
  stageClass:[['P1','305','D. Zille','3:32:50',''],['P2','310','P. Spierings','3:33:32','+0:42'],['P3','300','N. Cavigliasso','3:34:53','+2:03'],['P4','336','P. Navarro','3:37:40','+4:50'],['P5','316','A. Al-Kuwari','3:38:20','+5:30'],['P6','304','Y. Seaidan','3:41:32','+8:42'],['P7','347','K. Benavides','3:41:58','+9:08'],['P8','301','D. Akeel','3:42:46','+9:56'],['P9','338','L. Del Rio','3:44:36','+11:46'],['P10','321','R. Carneiro','3:44:37','+11:47'],['P12','306','P. Gon\u00e7alves','3:46:43','+13:53']],
  stageOurPos:'P12',
  genClass:[['P1','305','D. Zille','3:32:50',''],['P2','310','P. Spierings','3:33:32','+0:42'],['P3','300','N. Cavigliasso','3:34:53','+2:03'],['P4','336','P. Navarro','3:37:40','+4:50'],['P5','316','A. Al-Kuwari','3:38:20','+5:30'],['P6','304','Y. Seaidan','3:41:32','+8:42'],['P7','347','K. Benavides','3:41:58','+9:08'],['P8','301','D. Akeel','3:42:46','+9:56'],['P9','338','L. Del Rio','3:44:36','+11:46'],['P10','321','R. Carneiro','3:44:37','+11:47'],['P12','306','P. Gon\u00e7alves','3:46:43','+13:53']],
  genOurPos:'P12'
 },
-{id:'stage2', navLabel:'S2', tag:'Stage 2 \u00b7 January 5', title:'Finding the Rhythm',
+{id:'stage2', navLabel:'E2', tag:'Etapa 2 \u00b7 5 Janeiro', title:'\u00c0 Procura do Ritmo',
  badges:['Yanbu \u2192 Al-Ula','400 km SS'],highlightBadges:['P7/37 CHG','+13:44'],
  photoDirs:['2026-01-05'],
- story:`<p>The stage headed into the Hejaz Mountains on very winding and rocky tracks before opening into faster sandy plains and undulating terrain toward Al-Ula. Starting 47th, a big jump forward from the Prologue, Pedro and Hugo had cleaner air and a better rhythm.</p>
-<p>The shifting problems were still there. But the rest was ok.</p>
-<p>They finished P7 Challenger on stage, their best stage result of the first week, and climbed to P8 in the general classification. The gap to the Challenger stage winner was +13:44, the closest Pedro would get to a category leader in the entire rally. At roughly 3 minutes and 26 seconds per 100 kilometres of gap, this was their best normalized pace of the two weeks.</p>
-<p>Al-Ula welcomed them. Halfway through the first week, running inside the top 10 Challenger. The car was not perfect, but the crew was finding its rhythm.</p>`,
- resultBoxes:[{v:'P7',l:'Stage CHG'},{v:'P8',l:'General CHG'},{v:'+13:44',l:'Gap to P1'}],
- resultNote:'Best stage result of the first week. Best normalized pace of the entire rally.',
+ story:`<p>A etapa entrou pelas montanhas Hejaz em pistas muito sinuosas e rochosas antes de abrir para plan\u00edcies arenosas mais r\u00e1pidas e terreno ondulado em direc\u00e7\u00e3o a Al-Ula. A partir do 47\u00ba, um grande salto \u00e0 frente em rela\u00e7\u00e3o ao Pr\u00f3logo, Pedro e Hugo tinham ar mais limpo e um ritmo melhor.</p>
+<p>Os problemas das mudan\u00e7as continuavam l\u00e1. Mas o resto estava ok.</p>
+<p>Terminaram P7 Challenger na etapa, o seu melhor resultado de etapa da primeira semana, e subiram a P8 na classifica\u00e7\u00e3o geral. A diferen\u00e7a para o vencedor de etapa Challenger foi +13:44, o mais perto que Pedro chegaria de um l\u00edder de categoria em todo o rali. A aproximadamente 3 minutos e 26 segundos por 100 quil\u00f3metros de diferen\u00e7a, foi o seu melhor ritmo normalizado das duas semanas.</p>
+<p>Al-Ula recebeu-os. A meio da primeira semana, a correr dentro do top 10 Challenger. O carro n\u00e3o estava perfeito, mas a tripula\u00e7\u00e3o estava a encontrar o ritmo.</p>`,
+ resultBoxes:[{v:'P7',l:'Etapa CHG'},{v:'P8',l:'Geral CHG'},{v:'+13:44',l:'Dif. P1'}],
+ resultNote:'Melhor resultado de etapa da primeira semana. Melhor ritmo normalizado de todo o rali.',
  stageClass:[['P1','338','L. Del Rio','4:26:49',''],['P2','304','Y. Seaidan','4:29:29','+2:40'],['P3','302','P. Klaassen','4:30:46','+3:57'],['P4','305','D. Zille','4:36:13','+9:24'],['P5','336','P. Navarro','4:38:00','+11:11'],['P6','316','A. Al-Kuwari','4:39:00','+12:11'],['P7','306','P. Gon\u00e7alves','4:40:33','+13:44'],['P8','323','P. Klaassen Jr','4:42:34','+15:45'],['P9','300','N. Cavigliasso','4:45:29','+18:40'],['P10','321','R. Carneiro','4:46:16','+19:27']],
  stageOurPos:'P7',
  genClass:[['P1','305','D. Zille','8:09:03',''],['P2','304','Y. Seaidan','8:11:01','+1:58'],['P3','338','L. Del Rio','8:11:25','+2:22'],['P4','336','P. Navarro','8:15:40','+6:37'],['P5','316','A. Al-Kuwari','8:17:20','+8:17'],['P6','300','N. Cavigliasso','8:20:22','+11:19'],['P7','302','P. Klaassen','8:22:19','+13:16'],['P8','306','P. Gon\u00e7alves','8:27:16','+18:13'],['P9','321','R. Carneiro','8:30:53','+21:50'],['P10','301','D. Akeel','8:35:46','+26:43']],
  genOurPos:'P8'
 },
-{id:'stage3', navLabel:'S3', tag:'Stage 3 \u00b7 January 6', title:'The Highest Climb',
+{id:'stage3', navLabel:'E3', tag:'Etapa 3 \u00b7 6 Janeiro', title:'A Subida Mais Alta',
  badges:['Al-Ula \u2192 Al-Ula','421 km SS'],highlightBadges:['P6/37 CHG','+20:01'],
  photoDirs:['2026-01-06'],
- story:`<p>The magnificent sandy canyons of Al-Ula. The briefing had warned that navigation would play a leading role: tracks had largely disappeared on the empty plateaus, erased by months of rain. Winding gravel surfaces, with rhythms and terrain changing regularly between plateaus and canyons.</p>
-<p>Starting 48th, Pedro and Hugo pushed through 421 kilometres and had a puncture. It cost them about five minutes. They still finished P6 Challenger on stage and climbed to P7 in the general, P45 overall out of nearly 200 cars. Their highest general classification position of the entire rally.</p>
-<div class="highlight-block"><p>But there was a catch. Their stage time fell outside the 107% window compared to the Challenger stage winner. Under Dakar rules, that meant a pushback in the starting order for the next stage. Instead of starting around 48th again, matching their general classification, they would be shoved back in the queue.</p>
-<p>And the next stage was the marathon.</p></div>`,
- resultBoxes:[{v:'P6',l:'Stage CHG'},{v:'P7',l:'General CHG'},{v:'+20:01',l:'Gap to P1'}],
+ story:`<p>Os magn\u00edficos canyons arenosos de Al-Ula. O briefing tinha avisado que a navega\u00e7\u00e3o ia ter um papel principal: as pistas tinham praticamente desaparecido nos planaltos vazios, apagadas por meses de chuva. Superf\u00edcies sinuosas em gravilha, com ritmos e terreno a mudar regularmente entre planaltos e canyons.</p>
+<p>A partir do 48\u00ba, Pedro e Hugo empurraram por 421 quil\u00f3metros e tiveram um furo. Custou-lhes cerca de cinco minutos. Mesmo assim terminaram P6 Challenger na etapa e subiram a P7 na geral, P45 \u00e0 geral absoluta em quase 200 carros. A sua melhor posi\u00e7\u00e3o na classifica\u00e7\u00e3o geral de todo o rali.</p>
+<div class="highlight-block"><p>Mas havia um sen\u00e3o. O seu tempo de etapa caiu fora da janela dos 107% face ao vencedor de etapa Challenger. Pelas regras do Dakar, isso significava ser empurrado para tr\u00e1s na ordem de partida da etapa seguinte. Em vez de partirem novamente perto do 48\u00ba, em linha com a sua classifica\u00e7\u00e3o geral, seriam atirados para o fundo da fila.</p>
+<p>E a etapa seguinte era a maratona.</p></div>`,
+ resultBoxes:[{v:'P6',l:'Etapa CHG'},{v:'P7',l:'Geral CHG'},{v:'+20:01',l:'Dif. P1'}],
  stageClass:[['P1','302','P. Klaassen','4:28:25',''],['P2','304','Y. Seaidan','4:36:50','+8:25'],['P3','336','P. Navarro','4:39:43','+11:18'],['P4','338','L. Del Rio','4:40:16','+11:51'],['P5','300','N. Cavigliasso','4:43:30','+15:05'],['P6','306','P. Gon\u00e7alves','4:48:26','+20:01'],['P7','305','D. Zille','4:50:52','+22:27'],['P8','310','P. Spierings','4:59:06','+30:41'],['P9','314','I. Casale','5:00:51','+32:26'],['P10','330','L. Peters','5:13:16','+44:51']],
  stageOurPos:'P6',
  genClass:[['P1','304','Y. Seaidan','12:47:51',''],['P2','302','P. Klaassen','12:50:44','+2:53'],['P3','338','L. Del Rio','12:51:41','+3:50'],['P4','336','P. Navarro','12:55:23','+7:32'],['P5','305','D. Zille','12:59:55','+12:04'],['P6','300','N. Cavigliasso','13:03:52','+16:01'],['P7','306','P. Gon\u00e7alves','13:15:42','+27:51'],['P8','303','K. Koolen','14:00:49','+1:12:58'],['P9','323','P. Klaassen Jr','14:10:11','+1:22:20'],['P10','335','C. Munster','14:14:15','+1:26:24']],
  genOurPos:'P7'
 },
-{id:'stage4', navLabel:'S4', tag:'Stage 4 \u00b7 Marathon 1a \u00b7 January 7', title:'The Marathon Begins',
+{id:'stage4', navLabel:'E4', tag:'Etapa 4 \u00b7 Maratona 1a \u00b7 7 Janeiro', title:'A Maratona Come\u00e7a',
  badges:['Al-Ula \u2192 Marathon Bivouac','452 km SS'],highlightBadges:['P16/36 CHG','+1:08:21'],
  photoDirs:['2026-01-07'],
- story:`<p>The first marathon stage. Sandy canyons off-piste, then flatter terrain with intense CAP navigation on rocky and rough plateaus, then magnificent sandy plateaus with alternating pace and winding tracks. After this stage, there would be no team, no mechanics, no support. Just a tent in the desert and a military ration.</p>
-<p>Pedro and Hugo started 76th. Pushed back almost 30 positions from where they deserved to be by the 107% rule, behind several trucks and slower cars from other categories. More dust, more traffic, more vehicles clogging narrow tracks where overtaking was impossible.</p>
-<div class="highlight-block"><p>Around KP 140, they had gotten caught in a queue of cars and trucks creeping through a narrow canyon section full of rocks. The car leading the queue made a navigation error, drifted off course, and Pedro followed. By the time they realized, it was too late. They had missed a waypoint. Pedro made the tactical call: not worth going back to search for it. Accept the 15-minute penalty and push on.</p></div>
-<p>Around KP 231, shortly before the refueling point, they hit a narrow section. No more than five metres wide. Another car was stuck in the sand, blocking the passage. Pedro tried to squeeze past and the Taurus got wedged side by side with the other car, both buried in sand in a corridor barely wide enough for one vehicle. Twenty minutes. They sat there for twenty minutes while the rally drove on without them. Eventually, locals arrived with a 4x4 and a rope and pulled them free.</p>
-<p>At the finish, the 15-minute waypoint penalty was applied to their time. Combined with the 20 minutes lost stuck and the time lost in the canyon queue, they finished P16 Challenger on stage, +1:08:21 from the stage winner. They lost roughly 45 minutes to incidents alone.</p>
-<p>But the paradox of the Dakar: despite the worst stage of their rally, they climbed to P6 in the Challenger general classification. Others had suffered even more.</p>
-<p>Pedro drove the Taurus into the marathon bivouac as the sun dropped behind the Saudi plateau. No team waiting. No mechanics. Just the desert, a refuge, and whatever they could carry.</p>`,
- resultBoxes:[{v:'P16',l:'Stage CHG'},{v:'P6',l:'General CHG'},{v:'+1:08:21',l:'Gap to P1'}],
- resultNote:'+15:00 penalty (missed waypoint) + ~20 min stuck in sand + canyon queue. ~45 minutes lost to incidents.',
+ story:`<p>A primeira etapa maratona. Canyons arenosos fora de pista, depois terreno mais plano com navega\u00e7\u00e3o CAP intensa em planaltos rochosos e acidentados, depois magn\u00edficos planaltos arenosos com ritmo alternado e pistas sinuosas. Depois desta etapa, n\u00e3o haveria equipa, n\u00e3o haveria mec\u00e2nicos, n\u00e3o haveria apoio. Apenas uma tenda no deserto e uma ra\u00e7\u00e3o militar.</p>
+<p>Pedro e Hugo partiram do 76\u00ba. Empurrados quase 30 posi\u00e7\u00f5es para tr\u00e1s daquilo que mereceriam pela regra dos 107%, atr\u00e1s de v\u00e1rios cami\u00f5es e carros mais lentos de outras categorias. Mais p\u00f3, mais tr\u00e1fego, mais ve\u00edculos a entupir pistas estreitas onde ultrapassar era imposs\u00edvel.</p>
+<div class="highlight-block"><p>Por volta do KP 140, ficaram presos numa fila de carros e cami\u00f5es que se arrastavam por uma sec\u00e7\u00e3o estreita de canyon cheia de pedras. O carro que liderava a fila cometeu um erro de navega\u00e7\u00e3o, saiu da rota, e Pedro seguiu. Quando se aperceberam, era tarde demais. Tinham falhado um waypoint. Pedro tomou a decis\u00e3o t\u00e1ctica: n\u00e3o valia a pena voltar atr\u00e1s \u00e0 procura dele. Aceitar a penaliza\u00e7\u00e3o de 15 minutos e continuar.</p></div>
+<p>Por volta do KP 231, pouco antes do ponto de reabastecimento, encontraram uma sec\u00e7\u00e3o estreita. N\u00e3o mais de cinco metros de largura. Outro carro estava encalhado na areia, a bloquear a passagem. Pedro tentou passar e o Taurus ficou encravado lado a lado com o outro carro, ambos enterrados na areia num corredor mal com espa\u00e7o para um ve\u00edculo. Vinte minutos. Ficaram ali parados durante vinte minutos enquanto o rali seguia sem eles. Eventualmente, locais chegaram com um 4x4 e uma corda e libertaram-nos.</p>
+<p>Na meta, a penaliza\u00e7\u00e3o de 15 minutos pelo waypoint foi aplicada ao seu tempo. Combinada com os 20 minutos perdidos encalhados e o tempo perdido na fila do canyon, terminaram P16 Challenger na etapa, a +1:08:21 do vencedor. Perderam cerca de 45 minutos s\u00f3 em incidentes.</p>
+<p>Mas o paradoxo do Dakar: apesar da pior etapa do seu rali, subiram a P6 na classifica\u00e7\u00e3o geral Challenger. Outros tinham sofrido ainda mais.</p>
+<p>Pedro conduziu o Taurus para o marathon bivouac enquanto o sol descia atr\u00e1s do planalto saudita. Sem equipa \u00e0 espera. Sem mec\u00e2nicos. Apenas o deserto, um ref\u00fagio, e o que conseguissem transportar.</p>`,
+ resultBoxes:[{v:'P16',l:'Etapa CHG'},{v:'P6',l:'Geral CHG'},{v:'+1:08:21',l:'Dif. P1'}],
+ resultNote:'Penaliza\u00e7\u00e3o +15:00 (waypoint falhado) + ~20 min preso na areia + fila no canyon. ~45 minutos perdidos em incidentes.',
  stageClass:[['P1','300','N. Cavigliasso','5:23:12',''],['P2','336','P. Navarro','5:25:41','+2:29'],['P3','301','D. Akeel','5:27:48','+4:36'],['P4','304','Y. Seaidan','5:32:28','+9:16'],['P5','321','R. Carneiro','5:40:40','+17:28'],['P6','338','L. Del Rio','5:42:10','+18:58'],['P7','335','C. Munster','5:47:54','+24:42'],['P8','347','K. Benavides','5:54:49','+31:37'],['P9','314','I. Casale','5:55:20','+32:08'],['P10','303','K. Koolen','6:06:19','+43:07'],['P16','306','P. Gon\u00e7alves','6:31:33','+1:08:21']],
  stageOurPos:'P16',
  genClass:[['P1','304','Y. Seaidan','18:20:19',''],['P2','336','P. Navarro','18:21:04','+0:45'],['P3','300','N. Cavigliasso','18:27:04','+6:45'],['P4','338','L. Del Rio','18:33:51','+13:32'],['P5','305','D. Zille','19:14:11','+53:52'],['P6','306','P. Gon\u00e7alves','19:47:15','+1:26:56'],['P7','302','P. Klaassen','19:59:20','+1:39:01'],['P8','335','C. Munster','20:02:09','+1:41:50'],['P9','303','K. Koolen','20:07:08','+1:46:49'],['P10','314','I. Casale','20:12:47','+1:52:28']],
  genOurPos:'P6'
 },
-{id:'stage5', navLabel:'S5', tag:'Stage 5 \u00b7 Marathon 1b \u00b7 January 8', title:'Wounded but Standing',
+{id:'stage5', navLabel:'E5', tag:'Etapa 5 \u00b7 Maratona 1b \u00b7 8 Janeiro', title:'Feridos mas de P\u00e9',
  badges:['Marathon Bivouac \u2192 Ha\u2019il','356 km SS'],highlightBadges:['P21/36 CHG','+34:41'],
  photoDirs:['2026-01-08'],
- story:`<p>The second half of the marathon. Starting 103rd, the furthest back of the entire rally. Sandy winding tracks deteriorating into stony passages with complicated navigation. Large sandy valleys until the neutralisation, then rough terrain and small valleys demanding careful route-finding.</p>
-<p>Three problems. A puncture. A 6-minute speed zone penalty, they were inside a restricted area and did not realize for a while, exactly the kind of trap the briefing had flagged. And in the final part of the stage, the steering partially broke.</p>
-<p>They finished P21 Challenger on stage, +34:41 from the stage winner. Dropped from P6 to P9 in the general classification. Accumulated 21 minutes of penalties across two stages.</p>
-<p>But they finished. They drove the wounded Taurus into the Ha\u2019il bivouac where, for the first time since leaving Al-Ula, the full BBR team and mechanics were waiting. The marathon was over. The mechanics replaced the broken steering and got to work preparing the car for the longest day of the rally.</p>`,
- resultBoxes:[{v:'P21',l:'Stage CHG'},{v:'P9',l:'General CHG'},{v:'+34:41',l:'Gap to P1'}],
+ story:`<p>A segunda metade da maratona. A partir do 103\u00ba, o mais atr\u00e1s de todo o rali. Pistas sinuosas arenosas a degradarem-se em passagens pedregosas com navega\u00e7\u00e3o complicada. Grandes vales arenosos at\u00e9 \u00e0 neutraliza\u00e7\u00e3o, depois terreno acidentado e pequenos vales a exigir uma escolha de rota cuidadosa.</p>
+<p>Tr\u00eas problemas. Um furo. Uma penaliza\u00e7\u00e3o de 6 minutos por zona de velocidade, estavam dentro de uma \u00e1rea restrita e n\u00e3o se aperceberam durante algum tempo, exactamente o tipo de armadilha que o briefing tinha assinalado. E na parte final da etapa, a direc\u00e7\u00e3o partiu parcialmente.</p>
+<p>Terminaram P21 Challenger na etapa, a +34:41 do vencedor. Ca\u00edram de P6 para P9 na classifica\u00e7\u00e3o geral. Acumularam 21 minutos de penaliza\u00e7\u00f5es em duas etapas.</p>
+<p>Mas terminaram. Conduziram o Taurus ferido para o bivouac de Ha\u2019il onde, pela primeira vez desde que sa\u00edram de Al-Ula, a equipa BBR completa e os mec\u00e2nicos estavam \u00e0 espera. A maratona estava terminada. Os mec\u00e2nicos substitu\u00edram a direc\u00e7\u00e3o partida e come\u00e7aram a trabalhar para preparar o carro para o dia mais longo do rali.</p>`,
+ resultBoxes:[{v:'P21',l:'Etapa CHG'},{v:'P9',l:'Geral CHG'},{v:'+34:41',l:'Dif. P1'}],
  stageClass:[['P1','338','L. Del Rio','4:18:09',''],['P2','336','P. Navarro','4:18:33','+0:24'],['P3','301','D. Akeel','4:18:37','+0:28'],['P4','305','D. Zille','4:19:08','+0:59'],['P5','300','N. Cavigliasso','4:20:58','+2:49'],['P6','302','P. Klaassen','4:21:16','+3:07'],['P7','304','Y. Seaidan','4:23:44','+5:35'],['P8','310','P. Spierings','4:25:44','+7:35'],['P9','335','C. Munster','4:27:23','+9:14'],['P10','347','K. Benavides','4:27:48','+9:39'],['P21','306','P. Gon\u00e7alves','4:52:50','+34:41']],
  stageOurPos:'P21',
  genClass:[['P1','336','P. Navarro','22:39:37',''],['P2','304','Y. Seaidan','22:44:03','+4:26'],['P3','300','N. Cavigliasso','22:48:02','+8:25'],['P4','338','L. Del Rio','22:52:00','+12:23'],['P5','305','D. Zille','23:33:19','+53:42'],['P6','302','P. Klaassen','24:20:36','+1:40:59'],['P7','335','C. Munster','24:29:32','+1:49:55'],['P8','303','K. Koolen','24:35:46','+1:56:09'],['P9','306','P. Gon\u00e7alves','24:40:05','+2:00:28'],['P10','314','I. Casale','24:41:19','+2:01:42']],
  genOurPos:'P9'
 },
-{id:'stage6', navLabel:'S6', tag:'Stage 6 \u00b7 January 9', title:'Into Riyadh',
- badges:['Ha\u2019il \u2192 Riyadh','326 km SS (920 km total)'],highlightBadges:['P11/36 CHG','+25:49'],
+{id:'stage6', navLabel:'E6', tag:'Etapa 6 \u00b7 9 Janeiro', title:'Rumo a Riade',
+ badges:['Ha\u2019il \u2192 Riade','326 km SS (920 km total)'],highlightBadges:['P11/36 CHG','+25:49'],
  photoDirs:['2026-01-09'],
- story:`<p>A 100% sand stage. Dunes all day. The briefing was unambiguous: alternating between high speed sections in the dunes and track sections between fast ergs, with broken dunes warned in the roadbook. The longest total stage of the rally at 920 kilometres including liaisons, though the timed section was 326 km. A refueling stop at two-thirds distance.</p>
-<p>Starting 100th, still deep in the pack from the marathon fallout, Pedro and Hugo drove into the dunes with a new problem. The power steering was gradually failing. It was a different issue from the broken steering on Stage 5, which the mechanics had replaced. This was something progressive, the steering getting heavier and heavier throughout the stage. On a day of nothing but sand and dunes, where every direction change and every dune correction demands the steering to respond, the car was fighting Pedro with increasing force.</p>
-<p>By the middle of the stage, Pedro was thinking the car was about to die. But it survived.</p>
-<p>The final 10 kilometres were driven in the dark. The lights were not working properly, there was heavy dust, and the briefing had warned this was a difficult navigation zone. Starting 100th meant they were among the last to reach the finish, and by then the sun was gone.</p>
-<p>They finished P11 Challenger on stage, +25:49. Held P9 in the general. Then came the longest liaison of the rally: the drive to Riyadh, and the rest day.</p>`,
- resultBoxes:[{v:'P11',l:'Stage CHG'},{v:'P9',l:'General CHG'},{v:'+25:49',l:'Gap to P1'}],
+ story:`<p>Uma etapa 100% areia. Dunas o dia todo. O briefing foi inequ\u00edvoco: alternar entre sec\u00e7\u00f5es de alta velocidade nas dunas e sec\u00e7\u00f5es de pista entre ergs r\u00e1pidos, com dunas partidas avisadas no roadbook. A etapa total mais longa do rali com 920 quil\u00f3metros incluindo liaisons, embora o sector cronometrado fosse de 326 km. Uma paragem de reabastecimento a dois ter\u00e7os da dist\u00e2ncia.</p>
+<p>A partir do 100\u00ba, ainda no fundo do pelot\u00e3o devido \u00e0s consequ\u00eancias da maratona, Pedro e Hugo entraram nas dunas com um novo problema. A direc\u00e7\u00e3o assistida estava gradualmente a falhar. Era um problema diferente da direc\u00e7\u00e3o partida na Etapa 5, que os mec\u00e2nicos tinham substitu\u00eddo. Este era algo progressivo, com a direc\u00e7\u00e3o a ficar cada vez mais pesada ao longo da etapa. Num dia s\u00f3 de areia e dunas, onde cada mudan\u00e7a de direc\u00e7\u00e3o e cada correc\u00e7\u00e3o numa duna exige que a direc\u00e7\u00e3o responda, o carro estava a lutar contra Pedro com for\u00e7a crescente.</p>
+<p>A meio da etapa, Pedro pensava que o carro estava prestes a morrer. Mas sobreviveu.</p>
+<p>Os \u00faltimos 10 quil\u00f3metros foram percorridos no escuro. As luzes n\u00e3o funcionavam bem, havia muito p\u00f3, e o briefing tinha avisado que esta era uma zona de navega\u00e7\u00e3o dif\u00edcil. Partir em 100\u00ba significava estarem entre os \u00faltimos a chegar \u00e0 meta, e a essa altura o sol j\u00e1 tinha desaparecido.</p>
+<p>Terminaram P11 Challenger na etapa, a +25:49. Mantiveram P9 na geral. Depois veio a liaison mais longa do rali: a viagem at\u00e9 Riade, e o dia de descanso.</p>`,
+ resultBoxes:[{v:'P11',l:'Etapa CHG'},{v:'P9',l:'Geral CHG'},{v:'+25:49',l:'Dif. P1'}],
  stageClass:[['P1','314','I. Casale','3:58:57',''],['P2','301','D. Akeel','3:59:35','+0:38'],['P3','347','K. Benavides','4:00:37','+1:40'],['P4','300','N. Cavigliasso','4:03:12','+4:15'],['P5','302','P. Klaassen','4:05:03','+6:06'],['P6','336','P. Navarro','4:06:40','+7:43'],['P7','335','C. Munster','4:12:14','+13:17'],['P8','317','O. Ral','4:15:05','+16:08'],['P9','338','L. Del Rio','4:20:11','+21:14'],['P10','308','A. Giroud','4:21:56','+22:59'],['P11','306','P. Gon\u00e7alves','4:24:46','+25:49']],
  stageOurPos:'P11',
  genClass:[['P1','336','P. Navarro','26:46:17',''],['P2','300','N. Cavigliasso','26:51:14','+4:57'],['P3','338','L. Del Rio','27:12:11','+25:54'],['P4','304','Y. Seaidan','27:32:47','+46:30'],['P5','305','D. Zille','28:09:56','+1:23:39'],['P6','302','P. Klaassen','28:25:39','+1:39:22'],['P7','314','I. Casale','28:40:16','+1:53:59'],['P8','335','C. Munster','28:41:46','+1:55:29'],['P9','306','P. Gon\u00e7alves','29:04:51','+2:18:34'],['P10','303','K. Koolen','29:05:57','+2:19:40']],
  genOurPos:'P9'
 },
-{id:'rest', navLabel:'Rest', tag:'Rest Day', title:'Alive',
- badges:['Riyadh','January 10, 2026'],highlightBadges:['P9 CHG \u00b7 P52 Overall'],
+{id:'rest', navLabel:'Descanso', tag:'Dia de Descanso', title:'Vivos',
+ badges:['Riade','10 Janeiro 2026'],highlightBadges:['P9 CHG \u00b7 P52 Geral'],
  photoDirs:['2026-01-10'],
- story:`<p>P9 Challenger. P52 overall. Six stages done, seven to go. The mechanics had a full day to work on the Taurus: the power steering, the engine map selector that had not yet shown its worst, and the accumulated wear of a car that had been through canyons, dunes, broken steering, punctures, and 20 minutes wedged in a five-metre-wide passage.</p>
-<p>Pedro arrived at the rest day with high morale. The first week had thrown everything at them: mechanical problems from Stage 1, a puncture on Stage 3, the canyon disaster on Stage 4, a marathon night in the desert, broken steering on Stage 5, power steering failing through dunes on Stage 6, driving the last 10 km in the dark. Six retirements in their career had taught Pedro and Hugo what mattered most. Not the position on the timing screen. Not the gap to the leader. Just the act of arriving at the next bivouac with a car that could start again the next morning.</p>
-<div class="highlight-block"><p>They were P9 Challenger. Alive. And the second week had not started yet.</p></div>`,
- resultBoxes:[{v:'P9',l:'Challenger'},{v:'P52',l:'Overall'},{v:'6/6',l:'Stages Done'}],
+ story:`<p>P9 Challenger. P52 \u00e0 geral. Seis etapas feitas, sete por fazer. Os mec\u00e2nicos tiveram um dia inteiro para trabalhar no Taurus: a direc\u00e7\u00e3o assistida, o selector do mapa do motor que ainda n\u00e3o tinha mostrado o pior, e o desgaste acumulado de um carro que j\u00e1 tinha passado por canyons, dunas, direc\u00e7\u00e3o partida, furos, e 20 minutos encravado numa passagem de cinco metros de largura.</p>
+<p>Pedro chegou ao dia de descanso com a moral em alta. A primeira semana tinha-lhes atirado de tudo: problemas mec\u00e2nicos desde a Etapa 1, um furo na Etapa 3, o desastre do canyon na Etapa 4, uma noite de maratona no deserto, direc\u00e7\u00e3o partida na Etapa 5, direc\u00e7\u00e3o assistida a falhar nas dunas na Etapa 6, a conduzir os \u00faltimos 10 km no escuro. Seis desist\u00eancias na carreira tinham ensinado a Pedro e Hugo o que mais importava. N\u00e3o a posi\u00e7\u00e3o no painel de tempos. N\u00e3o a diferen\u00e7a para o l\u00edder. Apenas o acto de chegar ao pr\u00f3ximo bivouac com um carro que pudesse arrancar na manh\u00e3 seguinte.</p>
+<div class="highlight-block"><p>Estavam em P9 Challenger. Vivos. E a segunda semana ainda n\u00e3o tinha come\u00e7ado.</p></div>`,
+ resultBoxes:[{v:'P9',l:'Challenger'},{v:'P52',l:'Geral'},{v:'6/6',l:'Etapas Feitas'}],
  stageClass:null, stageOurPos:null, genClass:null, genOurPos:null
 },
-{id:'stage7', navLabel:'S7', tag:'Stage 7 \u00b7 January 11', title:'Holding Ground',
- badges:['Riyadh \u2192 Wadi Ad-Dawasir','459 km SS'],highlightBadges:['P15/35 CHG','+18:13'],
+{id:'stage7', navLabel:'E7', tag:'Etapa 7 \u00b7 11 Janeiro', title:'A Manter Posi\u00e7\u00e3o',
+ badges:['Riade \u2192 Wadi Ad-Dawasir','459 km SS'],highlightBadges:['P15/35 CHG','+18:13'],
  photoDirs:['2026-01-11'],
- story:`<p>The second week began with the longest southbound stage of the rally, overall very fast. Wide valleys with well-marked tracks to start, then high speed with tricky navigation through a region with many tracks, then off-piste sections where rocks became more present and the canyons narrowed. Dust was significant. Only the final kilometres would allow higher speeds again.</p>
-<p>Before the selective section even started, Pedro and Hugo had to replace a tire by precaution. It had lost some pressure on the liaison.</p>
-<p>Then came the main problem. The engine map selector was malfunctioning. From the beginning of the stage, it was randomly alternating between Map 2 (normal race power), Map 4 (reduced power, designed for lower octane fuel), and even Map 1, the lowest power setting, meant only for road liaisons, not racing. Pedro would be pushing through a fast valley at full pace and the engine would suddenly drop to liaison power. On a 459 km stage where speed was everything, the car was randomly sabotaging itself.</p>
-<p>Despite the unpredictable power, they finished P15 Challenger, +18:13 from the stage winner. Dropped from P9 to P9 in the general, holding position.</p>`,
- resultBoxes:[{v:'P15',l:'Stage CHG'},{v:'P9',l:'General CHG'},{v:'+18:13',l:'Gap to P1'}],
+ story:`<p>A segunda semana come\u00e7ou com a etapa mais longa para sul do rali, no geral muito r\u00e1pida. Vales largos com pistas bem marcadas para come\u00e7ar, depois alta velocidade com navega\u00e7\u00e3o trai\u00e7oeira atrav\u00e9s de uma regi\u00e3o com muitas pistas, depois sec\u00e7\u00f5es fora de pista onde as pedras se tornaram mais presentes e os canyons estreitaram. O p\u00f3 foi significativo. S\u00f3 os \u00faltimos quil\u00f3metros permitiriam novamente velocidades altas.</p>
+<p>Antes do sector selectivo sequer come\u00e7ar, Pedro e Hugo tiveram que substituir um pneu por precau\u00e7\u00e3o. Tinha perdido alguma press\u00e3o na liaison.</p>
+<p>Depois veio o problema principal. O selector do mapa do motor estava avariado. Desde o in\u00edcio da etapa, alternava aleatoriamente entre Mapa 2 (pot\u00eancia normal de corrida), Mapa 4 (pot\u00eancia reduzida, desenhado para combust\u00edvel de octanas mais baixas), e at\u00e9 Mapa 1, a defini\u00e7\u00e3o de pot\u00eancia mais baixa, destinada apenas a liaisons em estrada, n\u00e3o a competi\u00e7\u00e3o. Pedro ia a empurrar por um vale r\u00e1pido a todo o ritmo e o motor ca\u00eda subitamente para pot\u00eancia de liaison. Numa etapa de 459 km onde a velocidade era tudo, o carro sabotava-se aleatoriamente a si pr\u00f3prio.</p>
+<p>Apesar da pot\u00eancia imprevis\u00edvel, terminaram P15 Challenger, a +18:13 do vencedor. Mantiveram-se em P9 na geral, sem altera\u00e7\u00f5es.</p>`,
+ resultBoxes:[{v:'P15',l:'Etapa CHG'},{v:'P9',l:'Geral CHG'},{v:'+18:13',l:'Dif. P1'}],
  stageClass:[['P1','347','K. Benavides','4:22:57',''],['P2','304','Y. Seaidan','4:27:36','+4:39'],['P3','300','N. Cavigliasso','4:28:37','+5:40'],['P4','301','D. Akeel','4:29:47','+6:50'],['P5','336','P. Navarro','4:30:46','+7:49'],['P6','317','O. Ral','4:31:21','+8:24'],['P7','314','I. Casale','4:31:23','+8:26'],['P8','305','D. Zille','4:31:57','+9:00'],['P9','310','P. Spierings','4:32:05','+9:08'],['P10','302','P. Klaassen','4:33:34','+10:37'],['P15','306','P. Gon\u00e7alves','4:41:10','+18:13']],
  stageOurPos:'P15',
  genClass:[['P1','336','P. Navarro','31:17:03',''],['P2','300','N. Cavigliasso','31:19:51','+2:48'],['P3','338','L. Del Rio','31:46:12','+29:09'],['P4','304','Y. Seaidan','32:00:23','+43:20'],['P5','305','D. Zille','32:41:53','+1:24:50'],['P6','302','P. Klaassen','32:59:13','+1:42:10'],['P7','314','I. Casale','33:11:39','+1:54:36'],['P8','301','D. Akeel','33:39:40','+2:22:37'],['P9','306','P. Gon\u00e7alves','33:46:01','+2:28:58'],['P10','303','K. Koolen','33:49:32','+2:32:29']],
  genOurPos:'P9'
 },
-{id:'stage8', navLabel:'S8', tag:'Stage 8 \u00b7 January 12', title:'483 Kilometres',
+{id:'stage8', navLabel:'E8', tag:'Etapa 8 \u00b7 12 Janeiro', title:'483 Quil\u00f3metros',
  badges:['Wadi Ad-Dawasir','483 km SS'],highlightBadges:['P14/35 CHG','+22:36'],
  photoDirs:['2026-01-12'],
- story:`<p>The longest selective section of the entire 2026 Dakar. 483 kilometres through a complete and varied landscape: a fast start, then dune belts breaking the rhythm, spectacular valleys, rockier sections heading north, frequent terrain changes, and winding tracks. The briefing had called it beautiful. It was also relentless.</p>
-<p>The engine map selector was still malfunctioning, randomly switching between power maps without warning. The same gremlin from Stage 7, unfixed. But Stage 8 brought something else: fatigue. Ten days into the rally, on the longest timed stage, Pedro felt the cumulative weight of everything. The shifting problems from Stage 1. The canyon disaster on Stage 4. The marathon nights. The failing power steering. The engine dropping power without reason. 483 kilometres is a long time to concentrate when your body is telling you it has had enough.</p>
-<p>They finished P14 Challenger, +22:36. Held P10 in the general. The fatigue had a direct impact on the pace, but they managed the stage and kept the car intact heading into the second marathon.</p>`,
- resultBoxes:[{v:'P14',l:'Stage CHG'},{v:'P10',l:'General CHG'},{v:'+22:36',l:'Gap to P1'}],
+ story:`<p>O sector selectivo mais longo de todo o Dakar 2026. 483 quil\u00f3metros por uma paisagem completa e variada: um in\u00edcio r\u00e1pido, depois cinturas de dunas a quebrar o ritmo, vales espectaculares, sec\u00e7\u00f5es mais rochosas a norte, mudan\u00e7as frequentes de terreno, e pistas sinuosas. O briefing tinha-a chamado de bonita. Tamb\u00e9m foi implac\u00e1vel.</p>
+<p>O selector do mapa do motor continuava avariado, a mudar aleatoriamente entre mapas de pot\u00eancia sem aviso. O mesmo problema da Etapa 7, por resolver. Mas a Etapa 8 trouxe outra coisa: cansa\u00e7o. Dez dias dentro do rali, na etapa cronometrada mais longa, Pedro sentiu o peso cumulativo de tudo. Os problemas das mudan\u00e7as desde a Etapa 1. O desastre do canyon na Etapa 4. As noites da maratona. A direc\u00e7\u00e3o assistida a falhar. O motor a cair de pot\u00eancia sem raz\u00e3o. 483 quil\u00f3metros \u00e9 muito tempo para concentra\u00e7\u00e3o quando o corpo est\u00e1 a dizer que j\u00e1 chega.</p>
+<p>Terminaram P14 Challenger, a +22:36. Mantiveram P10 na geral. O cansa\u00e7o teve impacto directo no ritmo, mas geriram a etapa e mantiveram o carro intacto para a segunda maratona.</p>`,
+ resultBoxes:[{v:'P14',l:'Etapa CHG'},{v:'P10',l:'Geral CHG'},{v:'+22:36',l:'Dif. P1'}],
  stageClass:[['P1','302','P. Klaassen','4:55:38',''],['P2','301','D. Akeel','4:55:41','+0:03'],['P3','310','P. Spierings','4:55:59','+0:21'],['P4','305','D. Zille','4:56:36','+0:58'],['P5','314','I. Casale','4:58:58','+3:20'],['P6','300','N. Cavigliasso','5:00:16','+4:38'],['P7','304','Y. Seaidan','5:00:44','+5:06'],['P8','347','K. Benavides','5:00:50','+5:12'],['P9','336','P. Navarro','5:01:02','+5:24'],['P10','321','R. Carneiro','5:06:07','+10:29'],['P14','306','P. Gon\u00e7alves','5:18:14','+22:36']],
  stageOurPos:'P14',
  genClass:[['P1','336','P. Navarro','36:18:05',''],['P2','300','N. Cavigliasso','36:20:07','+2:02'],['P3','338','L. Del Rio','36:58:51','+40:46'],['P4','304','Y. Seaidan','37:01:07','+43:02'],['P5','305','D. Zille','37:38:29','+1:20:24'],['P6','302','P. Klaassen','37:54:51','+1:36:46'],['P7','314','I. Casale','38:10:37','+1:52:32'],['P8','301','D. Akeel','38:35:21','+2:17:16'],['P9','321','R. Carneiro','38:57:54','+2:39:49'],['P10','306','P. Gon\u00e7alves','39:04:15','+2:46:10']],
  genOurPos:'P10'
 },
-{id:'stage9', navLabel:'S9', tag:'Stage 9 \u00b7 Marathon 2a \u00b7 January 13', title:'Best of the Second Week',
+{id:'stage9', navLabel:'E9', tag:'Etapa 9 \u00b7 Maratona 2a \u00b7 13 Janeiro', title:'O Melhor da Segunda Semana',
  badges:['Wadi Ad-Dawasir \u2192 Marathon Refuge','410 km SS'],highlightBadges:['P8/35 CHG','+24:08'],
  photoDirs:['2026-01-13'],
- story:`<p>The second marathon sequence began. Generally fast terrain: canyons at the start, then open and faster sections, sand discreet at first but very soft in places, then dunes at the end. The common thread between all itineraries was sand.</p>
-<div class="highlight-block"><p>Before the stage even started, drama. At the starting connection between the liaison and the selective section, the front brakes over-pressurized and completely locked the car. Pedro and Hugo could not move. They had to remove a wheel, disassemble the brake pads, release the pressure, and reassemble everything. A mechanical problem that had nothing to do with driving, solved with tools and composure in the dust at the side of the road.</p></div>
-<p>Once the brakes were sorted, the 410-km selective section itself was clean. No problems. And the result showed it: P8 Challenger on stage, +24:08, their best second-week stage result. When the car worked and the crew was free from incidents, the pace was genuinely strong.</p>
-<p>Pedro drove into the second marathon bivouac. Same routine as the first: Hugo checked the car, Pedro set up the tents, military rations, early to bed. No drama. The desert was becoming familiar.</p>`,
- resultBoxes:[{v:'P8',l:'Stage CHG'},{v:'P8',l:'General CHG'},{v:'+24:08',l:'Gap to P1'}],
- resultNote:'Best second-week stage result. When the car worked, the pace was genuinely strong.',
+ story:`<p>A segunda sequ\u00eancia de maratona come\u00e7ou. Terreno geralmente r\u00e1pido: canyons no in\u00edcio, depois sec\u00e7\u00f5es abertas e mais r\u00e1pidas, areia discreta a princ\u00edpio mas muito mole em alguns s\u00edtios, depois dunas no final. O fio comum entre todos os itiner\u00e1rios era a areia.</p>
+<div class="highlight-block"><p>Antes mesmo da etapa come\u00e7ar, drama. Na liga\u00e7\u00e3o inicial entre a liaison e o sector selectivo, os trav\u00f5es dianteiros sobre-pressurizaram e bloquearam completamente o carro. Pedro e Hugo n\u00e3o se conseguiam mexer. Tiveram que tirar uma roda, desmontar as pastilhas dos trav\u00f5es, libertar a press\u00e3o, e voltar a montar tudo. Um problema mec\u00e2nico que nada tinha a ver com a condu\u00e7\u00e3o, resolvido com ferramentas e calma no p\u00f3 \u00e0 berma da pista.</p></div>
+<p>Resolvidos os trav\u00f5es, o sector selectivo de 410 km foi limpo. Sem problemas. E o resultado mostrou-o: P8 Challenger na etapa, +24:08, o seu melhor resultado de etapa da segunda semana. Quando o carro funcionava e a tripula\u00e7\u00e3o estava livre de incidentes, o ritmo era genuinamente forte.</p>
+<p>Pedro conduziu para o bivouac da segunda maratona. A mesma rotina da primeira: Hugo verificou o carro, Pedro montou as tendas, ra\u00e7\u00f5es militares, cedo para a cama. Sem drama. O deserto estava a tornar-se familiar.</p>`,
+ resultBoxes:[{v:'P8',l:'Etapa CHG'},{v:'P8',l:'Geral CHG'},{v:'+24:08',l:'Dif. P1'}],
+ resultNote:'Melhor resultado de etapa da segunda semana. Quando o carro funcionou, o ritmo foi genuinamente forte.',
  stageClass:[['P1','310','P. Spierings','4:08:57',''],['P2','347','K. Benavides','4:10:17','+1:20'],['P3','305','D. Zille','4:15:31','+6:34'],['P4','302','P. Klaassen','4:16:10','+7:13'],['P5','304','Y. Seaidan','4:27:37','+18:40'],['P6','336','P. Navarro','4:28:58','+20:01'],['P7','303','K. Koolen','4:31:38','+22:41'],['P8','306','P. Gon\u00e7alves','4:33:05','+24:08'],['P9','314','I. Casale','4:39:55','+30:58'],['P10','338','L. Del Rio','4:45:46','+36:49']],
  stageOurPos:'P8',
  genClass:[['P1','336','P. Navarro','40:47:03',''],['P2','304','Y. Seaidan','41:28:44','+41:41'],['P3','338','L. Del Rio','41:44:37','+57:34'],['P4','305','D. Zille','41:54:00','+1:06:57'],['P5','300','N. Cavigliasso','42:00:26','+1:13:23'],['P6','302','P. Klaassen','42:11:01','+1:23:58'],['P7','314','I. Casale','42:50:32','+2:03:29'],['P8','306','P. Gon\u00e7alves','43:37:20','+2:50:17'],['P9','301','D. Akeel','43:38:39','+2:51:36'],['P10','310','P. Spierings','43:52:20','+3:05:17']],
  genOurPos:'P8'
 },
-{id:'stage10', navLabel:'S10', tag:'Stage 10 \u00b7 Marathon 2b \u00b7 January 14', title:'The Strategic Choice',
+{id:'stage10', navLabel:'E10', tag:'Etapa 10 \u00b7 Maratona 2b \u00b7 14 Janeiro', title:'A Escolha Estrat\u00e9gica',
  badges:['Marathon Refuge \u2192 Bisha','420 km SS'],highlightBadges:['P13/35 CHG','+35:50'],
  photoDirs:['2026-01-14'],
- story:`<p>The big sand stage. The briefing had presented it as the second dedicated sand stage of the rally, with categories starting in parallel facing the dunes. Regular dunes at first, with ergs and fast off-piste plateaus, but as the stage progressed the dunes changed character. Soft, demanding sand that required careful fuel management. Back-and-forth sections in a wadi crossing with fesh-fesh-like dust demanding vigilance. Orange dunes gaining height, with passages between dark rocks. Then faster plateaus and more winding, rockier sections to the finish.</p>
-<p>Coming off the second marathon night with no mechanics, on a car that had been giving them problems all rally, Pedro and Hugo made a deliberate choice: be conservative. Protect the car. Protect the finish. Do not take risks in the soft dunes that could end the rally three days from Yanbu.</p>
-<p>Looking back, it was probably too conservative. There was pace left on the table. But after everything that had happened, being careful on the hardest sand stage of the Dakar was a rational decision. They could afford to lose positions. They could not afford to lose the car.</p>
-<p>They finished P13 Challenger, +35:50. Dropped from P8 to P11 in the general classification. The marathon was over. The full BBR team was waiting in Bisha. Three stages left.</p>`,
- resultBoxes:[{v:'P13',l:'Stage CHG'},{v:'P11',l:'General CHG'},{v:'+35:50',l:'Gap to P1'}],
+ story:`<p>A grande etapa de areia. O briefing tinha-a apresentado como a segunda etapa dedicada \u00e0 areia do rali, com categorias a arrancar em paralelo de frente para as dunas. Dunas regulares ao princ\u00edpio, com ergs e planaltos r\u00e1pidos fora de pista, mas \u00e0 medida que a etapa progrediu as dunas mudaram de car\u00e1cter. Areia mole e exigente que requeria uma gest\u00e3o cuidada do combust\u00edvel. Sec\u00e7\u00f5es de vai-e-vem numa travessia de wadi com p\u00f3 tipo fesh-fesh a exigir vigil\u00e2ncia. Dunas alaranjadas a ganhar altura, com passagens entre pedras escuras. Depois planaltos mais r\u00e1pidos e sec\u00e7\u00f5es mais sinuosas e rochosas at\u00e9 \u00e0 meta.</p>
+<p>A sair da segunda noite de maratona sem mec\u00e2nicos, num carro que lhes tinha dado problemas todo o rali, Pedro e Hugo fizeram uma escolha deliberada: ser conservadores. Proteger o carro. Proteger a chegada. N\u00e3o correr riscos nas dunas moles que pudessem acabar com o rali a tr\u00eas dias de Yanbu.</p>
+<p>Olhando para tr\u00e1s, foi provavelmente demasiado conservador. Houve ritmo deixado em cima da mesa. Mas depois de tudo o que tinha acontecido, ser cuidadoso na etapa de areia mais dura do Dakar foi uma decis\u00e3o racional. Podiam dar-se ao luxo de perder posi\u00e7\u00f5es. N\u00e3o se podiam dar ao luxo de perder o carro.</p>
+<p>Terminaram P13 Challenger, a +35:50. Ca\u00edram de P8 para P11 na classifica\u00e7\u00e3o geral. A maratona estava terminada. A equipa BBR completa estava \u00e0 espera em Bisha. Faltavam tr\u00eas etapas.</p>`,
+ resultBoxes:[{v:'P13',l:'Etapa CHG'},{v:'P11',l:'Geral CHG'},{v:'+35:50',l:'Dif. P1'}],
  stageClass:[['P1','310','P. Spierings','5:14:55',''],['P2','304','Y. Seaidan','5:17:45','+2:50'],['P3','300','N. Cavigliasso','5:18:57','+4:02'],['P4','301','D. Akeel','5:20:56','+6:01'],['P5','347','K. Benavides','5:23:17','+8:22'],['P6','314','I. Casale','5:23:35','+8:40'],['P7','302','P. Klaassen','5:24:28','+9:33'],['P8','338','L. Del Rio','5:29:10','+14:15'],['P9','315','J. Favre','5:30:33','+15:38'],['P10','336','P. Navarro','5:40:56','+26:01'],['P13','306','P. Gon\u00e7alves','5:50:45','+35:50']],
  stageOurPos:'P13',
  genClass:[['P1','336','P. Navarro','46:27:59',''],['P2','304','Y. Seaidan','46:46:29','+18:30'],['P3','338','L. Del Rio','47:13:47','+45:48'],['P4','300','N. Cavigliasso','47:19:23','+51:24'],['P5','302','P. Klaassen','47:35:29','+1:07:30'],['P6','305','D. Zille','47:54:51','+1:26:52'],['P7','314','I. Casale','48:14:07','+1:46:08'],['P8','301','D. Akeel','48:59:35','+2:31:36'],['P9','310','P. Spierings','49:07:15','+2:39:16'],['P10','347','K. Benavides','49:23:06','+2:55:07'],['P11','306','P. Gon\u00e7alves','49:28:05','+3:00:06']],
  genOurPos:'P11'
 },
-{id:'stage11', navLabel:'S11', tag:'Stage 11 \u00b7 January 15', title:'Two Stages to Go',
+{id:'stage11', navLabel:'E11', tag:'Etapa 11 \u00b7 15 Janeiro', title:'Faltam Duas Etapas',
  badges:['Bisha \u2192 Al Henakiyah','346 km SS'],highlightBadges:['P16/33 CHG','+17:30'],
  photoDirs:['2026-01-15'],
- story:`<p>Plateaus with little variation in terrain, but one of the fastest stages of the 2026 edition. A very high average speed that had to be managed carefully to avoid navigation traps on the open terrain. Dust from previous days had swept across the tracks. Rocky sectors over the first 150 kilometres. Nomadic camps settled in the area.</p>
-<p>The front brakes locked again at the road connection, the same over-pressurization problem from Stage 9. This time, the assistance team was there to help since the liaison was shared with the support vehicles, and support was allowed under the regulations. They fixed it before the selective section.</p>
-<p>During the stage, there were minor problems with the intercom system, the helmet-mounted microphones and headphones that allow driver and navigator to communicate. On a stage where navigation traps on fast open terrain were the main danger, having communication issues between Pedro and Hugo added an extra layer of difficulty. Hugo needed to call out the roadbook instructions clearly, and Pedro needed to hear them.</p>
-<p>Despite the brake scare and the intercom issues, the normalized pace was strong: about 5:04 per 100 km of gap, almost exactly their clean baseline. Once in the selective section, the car ran and the crew delivered. P16 Challenger, +17:30. Held P11 in the general. Two stages to go.</p>`,
- resultBoxes:[{v:'P16',l:'Stage CHG'},{v:'P11',l:'General CHG'},{v:'+17:30',l:'Gap to P1'}],
+ story:`<p>Planaltos com pouca varia\u00e7\u00e3o de terreno, mas uma das etapas mais r\u00e1pidas da edi\u00e7\u00e3o de 2026. Uma velocidade m\u00e9dia muito alta que tinha que ser gerida com cuidado para evitar armadilhas de navega\u00e7\u00e3o no terreno aberto. O p\u00f3 dos dias anteriores tinha varrido as pistas. Sectores rochosos nos primeiros 150 quil\u00f3metros. Acampamentos n\u00f3madas instalados na zona.</p>
+<p>Os trav\u00f5es dianteiros bloquearam de novo na liga\u00e7\u00e3o por estrada, o mesmo problema de sobre-pressuriza\u00e7\u00e3o da Etapa 9. Desta vez, a equipa de assist\u00eancia estava l\u00e1 para ajudar porque a liaison era partilhada com os ve\u00edculos de apoio, e o apoio era permitido pelos regulamentos. Resolveram-no antes do sector selectivo.</p>
+<p>Durante a etapa, houve pequenos problemas com o sistema de intercom, os microfones e auriculares montados no capacete que permitem ao piloto e ao navegador comunicar. Numa etapa onde as armadilhas de navega\u00e7\u00e3o no terreno aberto r\u00e1pido eram o principal perigo, ter problemas de comunica\u00e7\u00e3o entre Pedro e Hugo adicionou uma camada extra de dificuldade. Hugo precisava de soltar as instru\u00e7\u00f5es do roadbook com clareza, e Pedro precisava de as ouvir.</p>
+<p>Apesar do susto dos trav\u00f5es e dos problemas do intercom, o ritmo normalizado foi forte: cerca de 5:04 por 100 km de diferen\u00e7a, quase exactamente a sua refer\u00eancia limpa. Uma vez no sector selectivo, o carro andou e a tripula\u00e7\u00e3o cumpriu. P16 Challenger, +17:30. Mantiveram P11 na geral. Faltavam duas etapas.</p>`,
+ resultBoxes:[{v:'P16',l:'Etapa CHG'},{v:'P11',l:'Geral CHG'},{v:'+17:30',l:'Dif. P1'}],
  stageClass:[['P1','300','N. Cavigliasso','3:17:27',''],['P2','310','P. Spierings','3:17:56','+0:29'],['P3','301','D. Akeel','3:18:30','+1:03'],['P4','347','K. Benavides','3:18:45','+1:18'],['P5','302','P. Klaassen','3:20:17','+2:50'],['P6','336','P. Navarro','3:24:47','+7:20'],['P7','338','L. Del Rio','3:24:48','+7:21'],['P8','315','J. Favre','3:26:24','+8:57'],['P9','305','D. Zille','3:28:34','+11:07'],['P10','335','C. Munster','3:30:22','+12:55'],['P16','306','P. Gon\u00e7alves','3:34:57','+17:30']],
  stageOurPos:'P16',
  genClass:[['P1','336','P. Navarro','49:52:46',''],['P2','304','Y. Seaidan','50:17:54','+25:08'],['P3','300','N. Cavigliasso','50:36:50','+44:04'],['P4','338','L. Del Rio','50:38:35','+45:49'],['P5','302','P. Klaassen','50:55:46','+1:03:00'],['P6','305','D. Zille','51:23:25','+1:30:39'],['P7','314','I. Casale','51:47:54','+1:55:08'],['P8','301','D. Akeel','52:18:05','+2:25:19'],['P9','310','P. Spierings','52:25:11','+2:32:25'],['P10','347','K. Benavides','52:41:51','+2:49:05'],['P11','306','P. Gon\u00e7alves','53:03:02','+3:10:16']],
  genOurPos:'P11'
 },
-{id:'stage12', navLabel:'S12', tag:'Stage 12 \u00b7 January 16', title:'280 km Without Brakes',
+{id:'stage12', navLabel:'E12', tag:'Etapa 12 \u00b7 16 Janeiro', title:'280 km Sem Trav\u00f5es',
  badges:['Al Henakiyah \u2192 Yanbu','311 km SS'],highlightBadges:['P15/33 CHG','+32:43'],
  photoDirs:['2026-01-16'],
- story:`<p>The final exam. The briefing had called it a summary of all types of Saudi terrain, with no room for approximation: driving, navigation and technical crossings would make this day the ultimate challenge. Wide sliding tracks, then slower wadi crossings with rougher terrain. Dunes with soft sand. Narrow rocky technical sections, almost trial-like. More dunes, softer than the first. Valleys with rocks. Fast open terrain. Small difficult dunes. Then a very rough section to the finish. Everything the Dakar had to offer, compressed into 311 kilometres.</p>
-<p>It became one of the hardest stages of the entire rally for car #306.</p>
-<p>A puncture in the first 10 kilometres. Then, around KP 30, they lost pressure on the rear brakes. A leak in the rear brake circuit. Pedro and Hugo had to close the rear circuit entirely and drive the remaining 280 kilometres with only the front brakes, which were very weak.</p>
-<p>280 kilometres of the hardest stage of the Dakar, with big rocks in the track and very soft sand, on brakes that barely worked. They had to reduce pace dramatically, and even doing that, there were curves where the front brakes alone could not stop the car in time and they went straight off the track.</p>
-<p>They finished. P15 Challenger, +32:43. Held P11 in the general. The gap rate of 10:31 per 100 km was their second worst of the rally after Stage 4, and this time there was no 15-minute penalty to explain it. Just 280 kilometres of driving a 180-horsepower car through rocks and dunes with almost no brakes.</p>
-<p><em>One stage left. 105 kilometres between them and the finish line in Yanbu.</em></p>`,
- resultBoxes:[{v:'P15',l:'Stage CHG'},{v:'P11',l:'General CHG'},{v:'+32:43',l:'Gap to P1'}],
- resultNote:'280 km with only front brakes. Second worst gap rate of the rally.',
+ story:`<p>O exame final. O briefing tinha-o chamado de um resumo de todos os tipos de terreno saudita, sem margem para aproxima\u00e7\u00f5es: condu\u00e7\u00e3o, navega\u00e7\u00e3o e travessias t\u00e9cnicas fariam deste dia o desafio m\u00e1ximo. Pistas largas e a derrapar, depois travessias de wadi mais lentas com terreno mais acidentado. Dunas com areia mole. Sec\u00e7\u00f5es t\u00e9cnicas rochosas e estreitas, quase \u00e0 trial. Mais dunas, mais moles que as primeiras. Vales com pedras. Terreno aberto r\u00e1pido. Pequenas dunas dif\u00edceis. Depois uma sec\u00e7\u00e3o muito acidentada at\u00e9 \u00e0 meta. Tudo o que o Dakar tinha para oferecer, comprimido em 311 quil\u00f3metros.</p>
+<p>Tornou-se numa das etapas mais dif\u00edceis de todo o rali para o carro #306.</p>
+<p>Um furo nos primeiros 10 quil\u00f3metros. Depois, por volta do KP 30, perderam press\u00e3o nos trav\u00f5es traseiros. Uma fuga no circuito traseiro dos trav\u00f5es. Pedro e Hugo tiveram que fechar o circuito traseiro por completo e percorrer os restantes 280 quil\u00f3metros apenas com os trav\u00f5es dianteiros, que estavam muito fracos.</p>
+<p>280 quil\u00f3metros da etapa mais dif\u00edcil do Dakar, com pedras grandes na pista e areia muito mole, em trav\u00f5es que mal funcionavam. Tiveram que reduzir o ritmo drasticamente, e mesmo assim, houve curvas em que os trav\u00f5es dianteiros sozinhos n\u00e3o conseguiam parar o carro a tempo e foram em frente para fora da pista.</p>
+<p>Terminaram. P15 Challenger, +32:43. Mantiveram P11 na geral. O r\u00e1cio de diferen\u00e7a de 10:31 por 100 km foi o seu segundo pior do rali depois da Etapa 4, e desta vez n\u00e3o havia uma penaliza\u00e7\u00e3o de 15 minutos para o explicar. Apenas 280 quil\u00f3metros a conduzir um carro de 180 cavalos por pedras e dunas quase sem trav\u00f5es.</p>
+<p><em>Falta uma etapa. 105 quil\u00f3metros entre eles e a meta em Yanbu.</em></p>`,
+ resultBoxes:[{v:'P15',l:'Etapa CHG'},{v:'P11',l:'Geral CHG'},{v:'+32:43',l:'Dif. P1'}],
+ resultNote:'280 km apenas com trav\u00f5es dianteiros. Segundo pior r\u00e1cio de diferen\u00e7a do rali.',
  stageClass:[['P1','347','K. Benavides','3:44:52',''],['P2','301','D. Akeel','3:47:07','+2:15'],['P3','305','D. Zille','3:48:29','+3:37'],['P4','302','P. Klaassen','3:48:53','+4:01'],['P5','300','N. Cavigliasso','3:50:47','+5:55'],['P6','338','L. Del Rio','3:51:10','+6:18'],['P7','314','I. Casale','3:54:55','+10:03'],['P8','336','P. Navarro','3:57:06','+12:14'],['P9','304','Y. Seaidan','3:57:51','+12:59'],['P10','335','C. Munster','4:03:28','+18:36'],['P15','306','P. Gon\u00e7alves','4:17:35','+32:43']],
  stageOurPos:'P15',
  genClass:[['P1','336','P. Navarro','53:49:52',''],['P2','304','Y. Seaidan','54:15:45','+25:53'],['P3','300','N. Cavigliasso','54:27:37','+37:45'],['P4','338','L. Del Rio','54:29:45','+39:53'],['P5','302','P. Klaassen','54:44:39','+54:47'],['P6','305','D. Zille','55:11:54','+1:22:02'],['P7','314','I. Casale','55:42:49','+1:52:57'],['P8','301','D. Akeel','56:05:12','+2:15:20'],['P9','347','K. Benavides','56:26:43','+2:36:51'],['P10','310','P. Spierings','57:03:54','+3:14:02'],['P11','306','P. Gon\u00e7alves','57:20:37','+3:30:45']],
  genOurPos:'P11'
 },
-{id:'stage13', navLabel:'S13', tag:'Stage 13 \u00b7 Final \u00b7 January 17', title:'105 km to the Finish',
+{id:'stage13', navLabel:'E13', tag:'Etapa 13 \u00b7 Final \u00b7 17 Janeiro', title:'105 km at\u00e9 \u00e0 Meta',
  badges:['Yanbu \u2192 Yanbu','105 km SS'],highlightBadges:['P11/33 CHG','+4:14'],
  photoDirs:['2026-01-17'],
- story:`<p>Sandy valleys, rocky sections, coastal tracks. 105 kilometres back to Yanbu and the Red Sea. The final stage of the 2026 Dakar Rally.</p>
-<p>Clean. No issues. They took it home.</p>
-<p>But the stage carried one last punch. Somewhere on the route, Pedro and Hugo passed the wrecked car of David Zille, their BBR teammate. An enormous crash. The car was completely destroyed. For two hours after finishing, they did not know if he was ok.</p>
-<p>Zille was ok. His car was destroyed, and he had to be towed to the finish line, but he was uninjured. He was classified P10 Challenger, 2 minutes and 33 seconds ahead of Pedro. The teammate whose crash they had witnessed on the final stage was the man who kept them out of the top 10.</p>
-<p>Pedro and Hugo crossed the finish line in Yanbu. P11 Challenger out of 33 finishers from 37 starters. P54 overall out of 152 finishers from 202 starters. Total time: 58 hours, 17 minutes and 19 seconds. 22 minutes of penalties. 2 minutes and 33 seconds from the top 10.</p>`,
- resultBoxes:[{v:'P11',l:'Stage CHG'},{v:'P11',l:'Final CHG'},{v:'+4:14',l:'Gap to P1'},{v:'58h17m19s',l:'Total Time'}],
+ story:`<p>Vales arenosos, sec\u00e7\u00f5es rochosas, pistas costeiras. 105 quil\u00f3metros de regresso a Yanbu e ao Mar Vermelho. A etapa final do Rali Dakar 2026.</p>
+<p>Limpa. Sem problemas. Levaram-no a casa.</p>
+<p>Mas a etapa trazia uma \u00faltima pancada. Algures pelo percurso, Pedro e Hugo passaram pelo carro destru\u00eddo de David Zille, o seu colega de equipa na BBR. Um acidente enorme. O carro estava completamente destru\u00eddo. Durante duas horas depois de terminar, n\u00e3o sabiam se ele estava bem.</p>
+<p>O Zille estava bem. O seu carro estava destru\u00eddo, e teve que ser rebocado at\u00e9 \u00e0 meta, mas estava ileso. Foi classificado em P10 Challenger, 2 minutos e 33 segundos \u00e0 frente de Pedro. O colega de equipa cujo acidente tinham testemunhado na etapa final era o homem que os manteve fora do top 10.</p>
+<p>Pedro e Hugo cruzaram a meta em Yanbu. P11 Challenger em 33 chegadas de 37 partidas. P54 \u00e0 geral em 152 chegadas de 202 partidas. Tempo total: 58 horas, 17 minutos e 19 segundos. 22 minutos de penaliza\u00e7\u00f5es. 2 minutos e 33 segundos do top 10.</p>`,
+ resultBoxes:[{v:'P11',l:'Etapa CHG'},{v:'P11',l:'Final CHG'},{v:'+4:14',l:'Dif. P1'},{v:'58h17m19s',l:'Tempo Total'}],
  stageClass:[['P1','347','K. Benavides','52:28',''],['P2','335','C. Munster','53:41','+1:13'],['P3','338','L. Del Rio','53:45','+1:17'],['P4','304','Y. Seaidan','53:58','+1:30'],['P5','300','N. Cavigliasso','54:36','+2:08'],['P6','315','J. Favre','54:37','+2:09'],['P7','310','P. Spierings','55:13','+2:45'],['P8','302','P. Klaassen','55:54','+3:26'],['P9','330','L. Peters','56:09','+3:41'],['P10','336','P. Navarro','56:29','+4:01'],['P11','306','P. Gon\u00e7alves','56:42','+4:14']],
  stageOurPos:'P11',
  genClass:[['P1','336','P. Navarro','54:46:21',''],['P2','304','Y. Seaidan','55:09:43','+23:22'],['P3','300','N. Cavigliasso','55:22:13','+35:52'],['P4','338','L. Del Rio','55:23:30','+37:09'],['P5','302','P. Klaassen','55:40:33','+54:12'],['P6','305','D. Zille','55:11:54','+1:22:02'],['P7','314','I. Casale','55:42:49','+1:52:57'],['P8','301','D. Akeel','56:05:12','+2:15:20'],['P9','347','K. Benavides','57:19:11','+2:32:50'],['P10','310','P. Spierings','57:59:07','+3:12:46'],['P11','306','P. Gon\u00e7alves','58:17:19','+3:30:58']],
  genOurPos:'P11'
 },
-{id:'epilogue', navLabel:'Epilogue', tag:'Epilogue', title:'Glory, and Hunger',
- badges:['Yanbu'],highlightBadges:['P11 Challenger','P54/152 Overall','58h 17m 19s'],
+{id:'epilogue', navLabel:'Epílogo', tag:'Epílogo', title:'Glória, e Fome',
+ badges:['Yanbu'],highlightBadges:['P11 Challenger','P54/152 Geral','58h 17m 19s'],
  photoDirs:['Epilogue'],
- story:`<p>At the finish line, Pedro felt proud. Proud of the progression from a Hobby race at Raid Ferraria to P11 Challenger at the Dakar. Proud of being a Dakar finisher, one year after the retirement that had left unfinished business in the Saudi desert. Proud of every stage survived, every problem solved, every sunrise seen from behind the wheel of a Taurus T3 Max in the middle of nowhere.</p>
-<p>But he also thought about how close he had gotten to the top 10. 2 minutes and 33 seconds. The 20 minutes stuck in the narrow passage on Stage 4 was eight times that gap. The 15-minute waypoint penalty was six times it. The 6-minute speed penalty on Stage 5 was more than double. Any single incident across the entire rally, avoided, would have put him inside the top 10.</p>
-<p>Looking back, he could have pushed a bit more. Stage 10, the conservative approach in the dunes, had cost positions that never came back. But the Dakar teaches humility before ambition. Finishing is the first victory. Everything else is negotiation.</p>
-<p>In the W2RC Challenger Championship, the Dakar earned Pedro 11 points and 10th position in the standings. Two months later, at Rally-Raid Portugal, he would finish P4 Challenger, his best W2RC result ever. The trajectory that began at Ferraria kept climbing. What will the future hold?</p>`,
- resultBoxes:[{v:'P11',l:'Challenger'},{v:'P54',l:'Overall'},{v:'58h17m',l:'Total Time'},{v:'2:33',l:'From Top 10'},{v:'13+P',l:'Stages Finished'},{v:'~4,845',l:'SS km'}],
+ story:`<p>Na meta, Pedro sentiu-se orgulhoso. Orgulhoso da progressão de uma corrida Hobby no Raid Ferraria a P11 Challenger no Dakar. Orgulhoso de ser um finisher do Dakar, um ano depois da desistência que tinha deixado assuntos por resolver no deserto saudita. Orgulhoso de cada etapa sobrevivida, cada problema resolvido, cada nascer do sol visto de trás do volante de um Taurus T3 Max no meio do nada.</p>
+<p>Mas também pensou no quão perto tinha chegado do top 10. 2 minutos e 33 segundos. Os 20 minutos preso na passagem estreita da Etapa 4 foram oito vezes essa diferença. A penalização de 15 minutos pelo waypoint foi seis vezes. A penalização de velocidade de 6 minutos na Etapa 5 foi mais do dobro. Qualquer um dos incidentes de todo o rali, evitado, tê-lo-ia colocado dentro do top 10.</p>
+<p>Olhando para trás, podia ter empurrado um pouco mais. A Etapa 10, a abordagem conservadora nas dunas, tinha custado posições que nunca voltaram. Mas o Dakar ensina humildade antes da ambição. Terminar é a primeira vitória. Tudo o resto é negociação.</p>
+<p>No Campeonato W2RC Challenger, o Dakar deu a Pedro 11 pontos e a 10ª posição na classificação. Dois meses depois, no Rally-Raid Portugal, terminaria em P4 Challenger, o seu melhor resultado W2RC de sempre. A trajectória que começou na Ferraria continuou a subir. O que reserva o futuro?</p>`,
+ resultBoxes:[{v:'P11',l:'Challenger'},{v:'P54',l:'Geral'},{v:'58h17m',l:'Tempo Total'},{v:'2:33',l:'Do Top 10'},{v:'13+P',l:'Etapas Terminadas'},{v:'~4.845',l:'km SS'}],
  stageClass:null, stageOurPos:null, genClass:null, genOurPos:null
 },
-{id:'career', navLabel:'Career', tag:'Complete Racing Career', title:'The Journey: 18 Races in 33 Months',
+{id:'career', navLabel:'Carreira', tag:'Carreira Desportiva Completa', title:'A Viagem: 18 Corridas em 33 Meses',
  badges:['Pedro Gon\u00e7alves / Hugo Magalh\u00e3es','Taurus T3 Max','BBR Motorsport'],
- highlightBadges:['P11 Challenger','P54 Overall','58h 17m 19s'],
+ highlightBadges:['P11 Challenger','P54 Geral','58h 17m 19s'],
  photoDirs:[],
  journeyOnly:true,
- story:`<div class="race-record-table"><table class="standings-table race-record"><thead><tr><th>Stage</th><th>Route</th><th>SS km</th><th>Stage P.</th><th>Stage Gap</th><th>GC P.</th><th>GC Gap</th></tr></thead><tbody>
+ story:`<div class="race-record-table"><table class="standings-table race-record"><thead><tr><th>Etapa</th><th>Rota</th><th>km SS</th><th>Pos. Etapa</th><th>Dif. Etapa</th><th>Pos. Geral</th><th>Dif. Geral</th></tr></thead><tbody>
 <tr><td>P</td><td>Yanbu \u2192 Yanbu</td><td>22</td><td>P18/37</td><td>+0:51</td><td>\u2014</td><td>\u2014</td></tr>
-<tr><td>S1</td><td>Yanbu \u2192 Yanbu</td><td>305</td><td>P12/37</td><td>+13:53</td><td>P12</td><td>+13:53</td></tr>
-<tr><td>S2</td><td>Yanbu \u2192 Al-Ula</td><td>400</td><td>P7/37</td><td>+13:44</td><td>P8</td><td>+18:13</td></tr>
-<tr><td>S3</td><td>Al-Ula \u2192 Al-Ula</td><td>421</td><td>P6/37</td><td>+20:01</td><td>P7</td><td>+27:51</td></tr>
-<tr><td>S4</td><td>Al-Ula \u2192 Marathon Bivouac</td><td>452</td><td>P16/36</td><td>+1:08:21</td><td>P6</td><td>+1:26:56</td></tr>
-<tr><td>S5</td><td>Marathon Bivouac \u2192 Ha\u2019il</td><td>356</td><td>P21/36</td><td>+34:41</td><td>P9</td><td>+2:00:28</td></tr>
-<tr><td>S6</td><td>Ha\u2019il \u2192 Riyadh</td><td>326</td><td>P11/36</td><td>+25:49</td><td>P9</td><td>+2:18:34</td></tr>
-<tr class="rest-row"><td colspan="7">Rest Day \u2014 Riyadh \u2014 January 10</td></tr>
-<tr><td>S7</td><td>Riyadh \u2192 Wadi Ad-Dawasir</td><td>459</td><td>P15/35</td><td>+18:13</td><td>P9</td><td>+2:28:58</td></tr>
-<tr><td>S8</td><td>Wadi Ad-Dawasir</td><td>483</td><td>P14/35</td><td>+22:36</td><td>P10</td><td>+2:46:10</td></tr>
-<tr><td>S9</td><td>Wadi Ad-Dawasir \u2192 Marathon Refuge</td><td>410</td><td>P8/35</td><td>+24:08</td><td>P8</td><td>+2:50:17</td></tr>
-<tr><td>S10</td><td>Marathon Refuge \u2192 Bisha</td><td>420</td><td>P13/35</td><td>+35:50</td><td>P11</td><td>+3:00:06</td></tr>
-<tr><td>S11</td><td>Bisha \u2192 Al Henakiyah</td><td>346</td><td>P16/33</td><td>+17:30</td><td>P11</td><td>+3:10:16</td></tr>
-<tr><td>S12</td><td>Al Henakiyah \u2192 Yanbu</td><td>311</td><td>P15/33</td><td>+32:43</td><td>P11</td><td>+3:30:45</td></tr>
-<tr class="our-team"><td>S13</td><td>Yanbu \u2192 Yanbu</td><td>105</td><td>P11/33</td><td>+4:14</td><td class="final-pos">P11</td><td>+3:30:58</td></tr>
+<tr><td>E1</td><td>Yanbu \u2192 Yanbu</td><td>305</td><td>P12/37</td><td>+13:53</td><td>P12</td><td>+13:53</td></tr>
+<tr><td>E2</td><td>Yanbu \u2192 Al-Ula</td><td>400</td><td>P7/37</td><td>+13:44</td><td>P8</td><td>+18:13</td></tr>
+<tr><td>E3</td><td>Al-Ula \u2192 Al-Ula</td><td>421</td><td>P6/37</td><td>+20:01</td><td>P7</td><td>+27:51</td></tr>
+<tr><td>E4</td><td>Al-Ula \u2192 Marathon Bivouac</td><td>452</td><td>P16/36</td><td>+1:08:21</td><td>P6</td><td>+1:26:56</td></tr>
+<tr><td>E5</td><td>Marathon Bivouac \u2192 Ha\u2019il</td><td>356</td><td>P21/36</td><td>+34:41</td><td>P9</td><td>+2:00:28</td></tr>
+<tr><td>E6</td><td>Ha\u2019il \u2192 Riade</td><td>326</td><td>P11/36</td><td>+25:49</td><td>P9</td><td>+2:18:34</td></tr>
+<tr class="rest-row"><td colspan="7">Dia de Descanso \u2014 Riade \u2014 10 Janeiro</td></tr>
+<tr><td>E7</td><td>Riade \u2192 Wadi Ad-Dawasir</td><td>459</td><td>P15/35</td><td>+18:13</td><td>P9</td><td>+2:28:58</td></tr>
+<tr><td>E8</td><td>Wadi Ad-Dawasir</td><td>483</td><td>P14/35</td><td>+22:36</td><td>P10</td><td>+2:46:10</td></tr>
+<tr><td>E9</td><td>Wadi Ad-Dawasir \u2192 Marathon Refuge</td><td>410</td><td>P8/35</td><td>+24:08</td><td>P8</td><td>+2:50:17</td></tr>
+<tr><td>E10</td><td>Marathon Refuge \u2192 Bisha</td><td>420</td><td>P13/35</td><td>+35:50</td><td>P11</td><td>+3:00:06</td></tr>
+<tr><td>E11</td><td>Bisha \u2192 Al Henakiyah</td><td>346</td><td>P16/33</td><td>+17:30</td><td>P11</td><td>+3:10:16</td></tr>
+<tr><td>E12</td><td>Al Henakiyah \u2192 Yanbu</td><td>311</td><td>P15/33</td><td>+32:43</td><td>P11</td><td>+3:30:45</td></tr>
+<tr class="our-team"><td>E13</td><td>Yanbu \u2192 Yanbu</td><td>105</td><td>P11/33</td><td>+4:14</td><td class="final-pos">P11</td><td>+3:30:58</td></tr>
 </tbody></table></div>
-<div class="record-summary"><div class="result-boxes" style="margin-top:1.5rem"><div class="result-box"><span class="result-value">P11</span><span class="result-label">Challenger</span></div><div class="result-box"><span class="result-value">P54</span><span class="result-label">Overall (152)</span></div><div class="result-box"><span class="result-value">58h17m</span><span class="result-label">Total Time</span></div><div class="result-box"><span class="result-value">2:33</span><span class="result-label">From Top 10</span></div><div class="result-box"><span class="result-value">~4,845</span><span class="result-label">SS km</span></div><div class="result-box"><span class="result-value">14/14</span><span class="result-label">Stages Finished</span></div></div></div>`,
+<div class="record-summary"><div class="result-boxes" style="margin-top:1.5rem"><div class="result-box"><span class="result-value">P11</span><span class="result-label">Challenger</span></div><div class="result-box"><span class="result-value">P54</span><span class="result-label">Geral (152)</span></div><div class="result-box"><span class="result-value">58h17m</span><span class="result-label">Tempo Total</span></div><div class="result-box"><span class="result-value">2:33</span><span class="result-label">Do Top 10</span></div><div class="result-box"><span class="result-value">~4.845</span><span class="result-label">km SS</span></div><div class="result-box"><span class="result-value">14/14</span><span class="result-label">Etapas Terminadas</span></div></div></div>`,
  resultBoxes:null,
  stageClass:null, stageOurPos:null, genClass:null, genOurPos:null,
  journey:{
-  title:'Complete Racing Career',
+  title:'Carreira Desportiva Completa',
   sections:[
     {heading:'2023 - Team Franco Sport, Yamaha YXZ1000R', races:[
-      {n:1, date:'Apr 23', event:'XXXV Raid Ferraria', nav:'Pedro Ara\u00fajo', team:'Franco Sport', cat:'P2 Hobby', ovr:'P2'},
-      {n:2, date:'Oct 23', event:'37th Baja Portalegre 500', nav:'Pedro Araujo', team:'Franco Sport', cat:'P12 SSV TT2', ovr:'P42'}
+      {n:1, date:'Abr 23', event:'XXXV Raid Ferraria', nav:'Pedro Ara\u00fajo', team:'Franco Sport', cat:'P2 Hobby', ovr:'P2'},
+      {n:2, date:'Out 23', event:'37\u00aa Baja Portalegre 500', nav:'Pedro Araujo', team:'Franco Sport', cat:'P12 SSV TT2', ovr:'P42'}
     ]},
     {heading:'2024 - Team Franco Sport, Yamaha X-raid YXZ 1000R', races:[
-      {n:3, date:'Mar 24', event:'Yamaha Desert Challenge (Morocco)', nav:'Lu\u00eds Engeitado', team:'Franco Sport', cat:'P2 SSV', ovr:'P2'},
-      {n:4, date:'Apr 24', event:'Rally-Raid Portugal (W2RC)', nav:'Rui Franco', team:'Franco Sport', cat:'P14 CHG', ovr:'P26'},
-      {n:5, date:'Apr 24', event:'XXXVI Raid Ferraria (FPAK)', nav:'Lu\u00eds Engeitado', team:'Franco Sport', cat:'DNF', ovr:''},
+      {n:3, date:'Mar 24', event:'Yamaha Desert Challenge (Marrocos)', nav:'Lu\u00eds Engeitado', team:'Franco Sport', cat:'P2 SSV', ovr:'P2'},
+      {n:4, date:'Abr 24', event:'Rally-Raid Portugal (W2RC)', nav:'Rui Franco', team:'Franco Sport', cat:'P14 CHG', ovr:'P26'},
+      {n:5, date:'Abr 24', event:'XXXVI Raid Ferraria (FPAK)', nav:'Lu\u00eds Engeitado', team:'Franco Sport', cat:'DNF', ovr:''},
       {n:6, date:'Jun 24', event:'Baja TT Norte de Portugal', nav:'Lu\u00eds Engeitado', team:'Franco Sport', cat:'P12 CHG', ovr:'P36'},
-      {n:7, date:'Jul 24', event:'Baja Espana Aragon (FIA)', nav:'Lu\u00eds Engeitado', team:'Franco Sport', cat:'DNF', ovr:''},
-      {n:8, date:'Oct 24', event:'Rallye du Maroc (W2RC)', nav:'Lu\u00eds Engeitado', team:'Franco Sport', cat:'DNF', ovr:''}
+      {n:7, date:'Jul 24', event:'Baja Espa\u00f1a Arag\u00f3n (FIA)', nav:'Lu\u00eds Engeitado', team:'Franco Sport', cat:'DNF', ovr:''},
+      {n:8, date:'Out 24', event:'Rallye du Maroc (W2RC)', nav:'Lu\u00eds Engeitado', team:'Franco Sport', cat:'DNF', ovr:''}
     ]},
-    {heading:'2025 - Franco Sport then BBR Motorsport', races:[
-      {n:9, date:'Jan 25', event:'Dakar Rally (W2RC)', nav:'Hugo Magalh\u00e3es', team:'Franco Sport', cat:'DNF (Stg 6)', ovr:''},
-      {n:10, date:'Feb 25', event:'Abu Dhabi Desert Challenge', nav:'Hugo Magalh\u00e3es', team:'Franco Sport', cat:'DNF', ovr:''},
-      {n:11, date:'Apr 25', event:'Carta Rallye (Morocco)', nav:'Hugo Magalh\u00e3es', team:'Franco Sport', cat:'P3 Open', ovr:'P4'},
-      {n:12, date:'May 25', event:'TH Clothes Raid Ferraria', nav:'Hugo Magalh\u00e3es', team:'Franco Sport', cat:'DNF', ovr:''},
-      {n:13, date:'Jul 25', event:'Baja Espana Aragon (BBR switch)', nav:'Hugo Magalh\u00e3es', team:'BBR Motorsport', cat:'P17 CHG', ovr:'P44'},
-      {n:14, date:'Sep 25', event:'Rally-Raid Portugal (W2RC)', nav:'Rui Franco', team:'BBR Motorsport', cat:'P6 CHG', ovr:'P21'},
-      {n:15, date:'Oct 25', event:'Baja Morocco', nav:'Hugo Magalh\u00e3es', team:'BBR Motorsport', cat:'P5 Open', ovr:'P8'},
-      {n:16, date:'Oct 25', event:'Rallye du Maroc (W2RC)', nav:'Hugo Magalh\u00e3es', team:'BBR Motorsport', cat:'P5 CHG', ovr:'P28'}
+    {heading:'2025 - Franco Sport depois BBR Motorsport', races:[
+      {n:9, date:'Jan 25', event:'Rali Dakar (W2RC)', nav:'Hugo Magalh\u00e3es', team:'Franco Sport', cat:'DNF (E6)', ovr:''},
+      {n:10, date:'Fev 25', event:'Abu Dhabi Desert Challenge', nav:'Hugo Magalh\u00e3es', team:'Franco Sport', cat:'DNF', ovr:''},
+      {n:11, date:'Abr 25', event:'Carta Rallye (Marrocos)', nav:'Hugo Magalh\u00e3es', team:'Franco Sport', cat:'P3 Open', ovr:'P4'},
+      {n:12, date:'Mai 25', event:'TH Clothes Raid Ferraria', nav:'Hugo Magalh\u00e3es', team:'Franco Sport', cat:'DNF', ovr:''},
+      {n:13, date:'Jul 25', event:'Baja Espa\u00f1a Arag\u00f3n (mudan\u00e7a para BBR)', nav:'Hugo Magalh\u00e3es', team:'BBR Motorsport', cat:'P17 CHG', ovr:'P44'},
+      {n:14, date:'Set 25', event:'Rally-Raid Portugal (W2RC)', nav:'Rui Franco', team:'BBR Motorsport', cat:'P6 CHG', ovr:'P21'},
+      {n:15, date:'Out 25', event:'Baja Marrocos', nav:'Hugo Magalh\u00e3es', team:'BBR Motorsport', cat:'P5 Open', ovr:'P8'},
+      {n:16, date:'Out 25', event:'Rallye du Maroc (W2RC)', nav:'Hugo Magalh\u00e3es', team:'BBR Motorsport', cat:'P5 CHG', ovr:'P28'}
     ]},
     {heading:'2026 - BBR Motorsport, Taurus T3 Max, #306', races:[
-      {n:17, date:'Jan 26', event:'Dakar Rally (W2RC)', nav:'Hugo Magalh\u00e3es', team:'BBR Motorsport', cat:'P11 CHG', ovr:'P54'},
+      {n:17, date:'Jan 26', event:'Rali Dakar (W2RC)', nav:'Hugo Magalh\u00e3es', team:'BBR Motorsport', cat:'P11 CHG', ovr:'P54'},
       {n:18, date:'Mar 26', event:'Rally-Raid Portugal (W2RC)', nav:'Hugo Magalh\u00e3es', team:'BBR Motorsport', cat:'P4 CHG', ovr:'P24'}
     ]}
   ],
-  footer:'18 races across 5 countries. 6 retirements, 12 finishes. From P2/2 Hobby to P11 Challenger at the Dakar.',
-  numbersTitle:'Dakar 2026: By the Numbers',
+  footer:'18 corridas em 5 pa\u00edses. 6 desist\u00eancias, 12 chegadas. De P2/2 Hobby a P11 Challenger no Dakar.',
+  numbersTitle:'Dakar 2026: Em N\u00fameros',
   numbers:[
-    '13 stages + Prologue | ~4,845 km of selective sections | ~8,000 km total',
-    'P11/33 Challenger | P54/152 Overall | 58h 17m 19s',
-    '22 minutes of penalties | 2m 33s from Top 10 | W2RC: P10, 11 points',
-    'Best stage: P6 CHG (Stage 3) | Best general: P6 CHG (after Stage 4)',
-    'Incidents: 3 punctures, broken steering, power steering failure, engine map malfunction, front brake locks (x2), rear brake leak, speed penalty, missed waypoint, 20 min stuck'
+    '13 etapas + Pr\u00f3logo | ~4.845 km de sectores selectivos | ~8.000 km total',
+    'P11/33 Challenger | P54/152 Geral | 58h 17m 19s',
+    '22 minutos de penaliza\u00e7\u00f5es | 2m 33s do Top 10 | W2RC: P10, 11 pontos',
+    'Melhor etapa: P6 CHG (Etapa 3) | Melhor geral: P6 CHG (depois da Etapa 4)',
+    'Incidentes: 3 furos, direc\u00e7\u00e3o partida, falha da direc\u00e7\u00e3o assistida, mau funcionamento do mapa de motor, bloqueios dos trav\u00f5es dianteiros (x2), fuga nos trav\u00f5es traseiros, penaliza\u00e7\u00e3o de velocidade, waypoint falhado, 20 min preso'
   ]
  }
 }
@@ -786,21 +786,21 @@ function render() {
       <span class="hero-number">306</span>
       <div class="hero-content">
         <div class="hero-tag">BBR Motorsport &middot; Taurus T3 Max &middot; Challenger</div>
-        <h1>Dakar 2026<br>The Story of Car #306</h1>
-        <p class="hero-subtitle">Finishing is the first victory. Everything else is negotiation. P11 Challenger. 58 hours, 17 minutes. 2:33 minutes from the Top 10.</p>
+        <h1>Dakar 2026<br>A Hist\u00f3ria do Carro #306</h1>
+        <p class="hero-subtitle">Terminar \u00e9 a primeira vit\u00f3ria. Tudo o resto \u00e9 negocia\u00e7\u00e3o. P11 Challenger. 58 horas, 17 minutos. A 2:33 do Top 10.</p>
         <div class="hero-meta">
-          <span class="hero-meta-item">Dakar Rally 2026</span>
-          <span class="hero-meta-item">W2RC Round 1</span>
-          <span class="hero-meta-item">January 3\u201317, 2026</span>
+          <span class="hero-meta-item">Rali Dakar 2026</span>
+          <span class="hero-meta-item">W2RC Ronda 1</span>
+          <span class="hero-meta-item">3\u201317 Janeiro 2026</span>
           <span class="hero-meta-item">Yanbu \u2192 Yanbu</span>
         </div>
         <div class="hero-stats">
           <div class="hero-stat"><div class="hero-stat-value">P11</div><div class="hero-stat-label">Challenger</div></div>
-          <div class="hero-stat"><div class="hero-stat-value">P54</div><div class="hero-stat-label">Overall</div></div>
-          <div class="hero-stat"><div class="hero-stat-value">58h17m</div><div class="hero-stat-label">Total Time</div></div>
-          <div class="hero-stat"><div class="hero-stat-value">2:33</div><div class="hero-stat-label">From Top 10</div></div>
+          <div class="hero-stat"><div class="hero-stat-value">P54</div><div class="hero-stat-label">Geral</div></div>
+          <div class="hero-stat"><div class="hero-stat-value">58h17m</div><div class="hero-stat-label">Tempo Total</div></div>
+          <div class="hero-stat"><div class="hero-stat-value">2:33</div><div class="hero-stat-label">Do Top 10</div></div>
         </div>
-        <button class="hero-start-btn" onclick="goTo(1)">Read the Story</button>
+        <button class="hero-start-btn" onclick="goTo(1)">Ler a Hist\u00f3ria</button>
       </div>
     </div>
   </div>`;
@@ -837,9 +837,9 @@ function render() {
     const jOnly = p.journeyOnly;
     if (!jOnly) {
       html += `<div class="tabs-bar" data-page="${p.id}">
-        <button class="tab-btn active" onclick="switchTab('${p.id}','story',this)">Story</button>
-        ${hasResults ? `<button class="tab-btn" onclick="switchTab('${p.id}','results',this)">Results</button>` : ''}
-        ${allPhotos.length ? `<button class="tab-btn" onclick="switchTab('${p.id}','photos',this)">Photos (${allPhotos.length})</button>` : ''}
+        <button class="tab-btn active" onclick="switchTab('${p.id}','story',this)">História</button>
+        ${hasResults ? `<button class="tab-btn" onclick="switchTab('${p.id}','results',this)">Resultados</button>` : ''}
+        ${allPhotos.length ? `<button class="tab-btn" onclick="switchTab('${p.id}','photos',this)">Fotos (${allPhotos.length})</button>` : ''}
       </div>`;
     }
 
@@ -882,11 +882,11 @@ function render() {
       }
       if (p.stageClass) {
         rhtml += '<div class="standings-wrapper"><div>';
-        rhtml += '<div class="standings-title">Stage Classification (CHG)</div>';
+        rhtml += '<div class="standings-title">Classificação da Etapa (CHG)</div>';
         rhtml += tbl(p.stageClass, p.stageOurPos);
         rhtml += '</div>';
         if (p.genClass) {
-          rhtml += '<div><div class="standings-title">General Classification (CHG)</div>';
+          rhtml += '<div><div class="standings-title">Classificação Geral (CHG)</div>';
           rhtml += tbl(p.genClass, p.genOurPos);
           rhtml += '</div>';
         }
@@ -900,7 +900,7 @@ function render() {
     if (p.journey) {
       let jhtml = '<div class="journey-content"><div class="journey-section">';
       jhtml += `<h3 class="journey-title">${p.journey.title}</h3>`;
-      jhtml += '<div class="race-record-table"><table class="standings-table journey-table"><thead><tr><th>#</th><th>Date</th><th>Event</th><th>Navigator</th><th>Team</th><th>Category</th><th>Overall</th></tr></thead><tbody>';
+      jhtml += '<div class="race-record-table"><table class="standings-table journey-table"><thead><tr><th>#</th><th>Data</th><th>Evento</th><th>Navegador</th><th>Equipa</th><th>Categoria</th><th>Geral</th></tr></thead><tbody>';
       p.journey.sections.forEach(s => {
         jhtml += `<tr class="section-row"><td colspan="7">${s.heading}</td></tr>`;
         s.races.forEach(r => {
@@ -933,7 +933,7 @@ function render() {
     const prevIdx = i - 1;
     const nextIdx = i + 1 < PAGES.length ? i + 1 : -1;
     html += `<div class="page-nav">
-      <button class="page-nav-btn${prevIdx < 0 ? ' hidden':''}" onclick="goTo(${prevIdx})">\u2190 ${prevIdx >= 0 ? PAGES[prevIdx].navLabel || 'Home' : ''}</button>
+      <button class="page-nav-btn${prevIdx < 0 ? ' hidden':''}" onclick="goTo(${prevIdx})">\u2190 ${prevIdx >= 0 ? PAGES[prevIdx].navLabel || 'In\u00edcio' : ''}</button>
       <button class="page-nav-btn${nextIdx < 0 ? ' hidden':''}" onclick="goTo(${nextIdx})">${nextIdx >= 0 ? PAGES[nextIdx].navLabel || '' : ''} \u2192</button>
     </div>`;
 
